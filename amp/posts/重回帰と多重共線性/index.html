@@ -29,21 +29,21 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <title>重回帰と多重共線性 - にっしーの備忘録</title>
     
-<meta name="description" content="はじめに おわりに 参考にした記事 http://ides.hatenablog.com/entry/2018/11/18/213222">
+<meta name="description" content="はじめに library(sem) data &lt;- read.csv(&quot;kawai_data.csv&quot;) SOL &lt;- data[&quot;SOL&quot;] WASO &lt;- data[&quot;WASO&quot;] efficiency &lt;- data[&quot;efficiency&quot;] N3_SPT &lt;- data[&quot;N3_SPT&quot;] q_1 &lt;- data[&quot;q_1&quot;] q_2 &lt;- data[&quot;q_2&quot;] q_3 &lt;- data[&quot;q_3&quot;] q_4 &lt;- data[&quot;q_4&quot;] q_5 &lt;- data[&quot;q_5&quot;] q_6 &lt;- data[&quot;q_6&quot;] q_7 &lt;- data[&quot;q_7&quot;] q_8 &lt;- data[&quot;q_8&quot;] model &lt;- specifyModel() 睡眠の質 -&gt; SOL, b11, NA 睡眠の質 -&gt; WASO, b12, NA 睡眠の質 -&gt; efficiency, b13, NA 睡眠の質 -&gt; N3_SPT, b14, NA 一日の過ごし方 -&gt; q_1, NA, 1 一日の過ごし方 -&gt; q_2, b2, NA #一日の過ごし方 -&gt; q_3, b3, NA #一日の過ごし方 -&gt; q_4, b4, NA #一日の過ごし方 -&gt; q_5, b5, NA #一日の過ごし方 -&gt; q_6, b6, NA #一日の過ごし方 -&gt; q_7, b7, NA #一日の過ごし方 -&gt; q_8, b8, NA 一日の過ごし方 -&gt; 睡眠の質, g1, NA SOL &lt;-&gt; SOL, e1, NA WASO &lt;-&gt; WASO, e2, NA efficiency &lt;-&gt; efficiency, e3, NA N3_SPT &lt;-&gt; N3_SPT, e4, NA q_1 &lt;-&gt; q_1, e5, NA q_2 &lt;-&gt; q_2, e6, NA #q_3 &lt;-&gt; q_3, e7, NA #q_4 &lt;-&gt; q_4, e8, NA #q_5 &lt;-&gt; q_5, e8, NA #q_6 &lt;-&gt; q_6, e10, NA #q_7 &lt;-&gt; q_7, e11, NA #q_8 &lt;-&gt; q_8, e12, NA 睡眠の質 &lt;-&gt; 睡眠の質, NA, 1 一日の過ごし方 &lt;-&gt; 一日の過ごし方, delta2, NA selected_columns &lt;- c(&quot;WASO&quot;, &quot;SOL&quot;, &quot;efficiency&quot;, &quot;N3_SPT&quot;, &quot;q_1&quot;, &quot;q_2&quot;) data_1 &lt;- data[, selected_columns] ans &lt;- sem(model,cor(data_1, use = &quot;complete.">
 
 <meta property="og:title" content="重回帰と多重共線性 - にっしーの備忘録">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://hirokinishimoto.github.io/amp/posts/%E9%87%8D%E5%9B%9E%E5%B8%B0%E3%81%A8%E5%A4%9A%E9%87%8D%E5%85%B1%E7%B7%9A%E6%80%A7/">
 <meta property="og:image" content="https://hirokinishimoto.github.io/images/default.png">
 <meta property="og:site_name" content="にっしーの備忘録">
-<meta property="og:description" content="はじめに おわりに 参考にした記事 http://ides.hatenablog.com/entry/2018/11/18/213222">
+<meta property="og:description" content="はじめに library(sem) data &lt;- read.csv(&quot;kawai_data.csv&quot;) SOL &lt;- data[&quot;SOL&quot;] WASO &lt;- data[&quot;WASO&quot;] efficiency &lt;- data[&quot;efficiency&quot;] N3_SPT &lt;- data[&quot;N3_SPT&quot;] q_1 &lt;- data[&quot;q_1&quot;] q_2 &lt;- data[&quot;q_2&quot;] q_3 &lt;- data[&quot;q_3&quot;] q_4 &lt;- data[&quot;q_4&quot;] q_5 &lt;- data[&quot;q_5&quot;] q_6 &lt;- data[&quot;q_6&quot;] q_7 &lt;- data[&quot;q_7&quot;] q_8 &lt;- data[&quot;q_8&quot;] model &lt;- specifyModel() 睡眠の質 -&gt; SOL, b11, NA 睡眠の質 -&gt; WASO, b12, NA 睡眠の質 -&gt; efficiency, b13, NA 睡眠の質 -&gt; N3_SPT, b14, NA 一日の過ごし方 -&gt; q_1, NA, 1 一日の過ごし方 -&gt; q_2, b2, NA #一日の過ごし方 -&gt; q_3, b3, NA #一日の過ごし方 -&gt; q_4, b4, NA #一日の過ごし方 -&gt; q_5, b5, NA #一日の過ごし方 -&gt; q_6, b6, NA #一日の過ごし方 -&gt; q_7, b7, NA #一日の過ごし方 -&gt; q_8, b8, NA 一日の過ごし方 -&gt; 睡眠の質, g1, NA SOL &lt;-&gt; SOL, e1, NA WASO &lt;-&gt; WASO, e2, NA efficiency &lt;-&gt; efficiency, e3, NA N3_SPT &lt;-&gt; N3_SPT, e4, NA q_1 &lt;-&gt; q_1, e5, NA q_2 &lt;-&gt; q_2, e6, NA #q_3 &lt;-&gt; q_3, e7, NA #q_4 &lt;-&gt; q_4, e8, NA #q_5 &lt;-&gt; q_5, e8, NA #q_6 &lt;-&gt; q_6, e10, NA #q_7 &lt;-&gt; q_7, e11, NA #q_8 &lt;-&gt; q_8, e12, NA 睡眠の質 &lt;-&gt; 睡眠の質, NA, 1 一日の過ごし方 &lt;-&gt; 一日の過ごし方, delta2, NA selected_columns &lt;- c(&quot;WASO&quot;, &quot;SOL&quot;, &quot;efficiency&quot;, &quot;N3_SPT&quot;, &quot;q_1&quot;, &quot;q_2&quot;) data_1 &lt;- data[, selected_columns] ans &lt;- sem(model,cor(data_1, use = &quot;complete.">
 <meta property="og:locale" content="ja_JP">
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="にっしーの備忘録">
 <meta name="twitter:url" content="https://hirokinishimoto.github.io/amp/posts/%E9%87%8D%E5%9B%9E%E5%B8%B0%E3%81%A8%E5%A4%9A%E9%87%8D%E5%85%B1%E7%B7%9A%E6%80%A7/">
 <meta name="twitter:title" content="重回帰と多重共線性 - にっしーの備忘録">
-<meta name="twitter:description" content="はじめに おわりに 参考にした記事 http://ides.hatenablog.com/entry/2018/11/18/213222">
+<meta name="twitter:description" content="はじめに library(sem) data &lt;- read.csv(&quot;kawai_data.csv&quot;) SOL &lt;- data[&quot;SOL&quot;] WASO &lt;- data[&quot;WASO&quot;] efficiency &lt;- data[&quot;efficiency&quot;] N3_SPT &lt;- data[&quot;N3_SPT&quot;] q_1 &lt;- data[&quot;q_1&quot;] q_2 &lt;- data[&quot;q_2&quot;] q_3 &lt;- data[&quot;q_3&quot;] q_4 &lt;- data[&quot;q_4&quot;] q_5 &lt;- data[&quot;q_5&quot;] q_6 &lt;- data[&quot;q_6&quot;] q_7 &lt;- data[&quot;q_7&quot;] q_8 &lt;- data[&quot;q_8&quot;] model &lt;- specifyModel() 睡眠の質 -&gt; SOL, b11, NA 睡眠の質 -&gt; WASO, b12, NA 睡眠の質 -&gt; efficiency, b13, NA 睡眠の質 -&gt; N3_SPT, b14, NA 一日の過ごし方 -&gt; q_1, NA, 1 一日の過ごし方 -&gt; q_2, b2, NA #一日の過ごし方 -&gt; q_3, b3, NA #一日の過ごし方 -&gt; q_4, b4, NA #一日の過ごし方 -&gt; q_5, b5, NA #一日の過ごし方 -&gt; q_6, b6, NA #一日の過ごし方 -&gt; q_7, b7, NA #一日の過ごし方 -&gt; q_8, b8, NA 一日の過ごし方 -&gt; 睡眠の質, g1, NA SOL &lt;-&gt; SOL, e1, NA WASO &lt;-&gt; WASO, e2, NA efficiency &lt;-&gt; efficiency, e3, NA N3_SPT &lt;-&gt; N3_SPT, e4, NA q_1 &lt;-&gt; q_1, e5, NA q_2 &lt;-&gt; q_2, e6, NA #q_3 &lt;-&gt; q_3, e7, NA #q_4 &lt;-&gt; q_4, e8, NA #q_5 &lt;-&gt; q_5, e8, NA #q_6 &lt;-&gt; q_6, e10, NA #q_7 &lt;-&gt; q_7, e11, NA #q_8 &lt;-&gt; q_8, e12, NA 睡眠の質 &lt;-&gt; 睡眠の質, NA, 1 一日の過ごし方 &lt;-&gt; 一日の過ごし方, delta2, NA selected_columns &lt;- c(&quot;WASO&quot;, &quot;SOL&quot;, &quot;efficiency&quot;, &quot;N3_SPT&quot;, &quot;q_1&quot;, &quot;q_2&quot;) data_1 &lt;- data[, selected_columns] ans &lt;- sem(model,cor(data_1, use = &quot;complete.">
 <meta name="twitter:image" content="https://hirokinishimoto.github.io/images/default.png">
 
 
@@ -78,7 +78,7 @@
         "height": 60
       }
     },
-    "description": "はじめに おわりに 参考にした記事 http:\/\/ides.hatenablog.com\/entry\/2018\/11\/18\/213222"
+    "description": "はじめに library(sem) data \x26lt;- read.csv(\x26quot;kawai_data.csv\x26quot;) SOL \x26lt;- data[\x26quot;SOL\x26quot;] WASO \x26lt;- data[\x26quot;WASO\x26quot;] efficiency \x26lt;- data[\x26quot;efficiency\x26quot;] N3_SPT \x26lt;- data[\x26quot;N3_SPT\x26quot;] q_1 \x26lt;- data[\x26quot;q_1\x26quot;] q_2 \x26lt;- data[\x26quot;q_2\x26quot;] q_3 \x26lt;- data[\x26quot;q_3\x26quot;] q_4 \x26lt;- data[\x26quot;q_4\x26quot;] q_5 \x26lt;- data[\x26quot;q_5\x26quot;] q_6 \x26lt;- data[\x26quot;q_6\x26quot;] q_7 \x26lt;- data[\x26quot;q_7\x26quot;] q_8 \x26lt;- data[\x26quot;q_8\x26quot;] model \x26lt;- specifyModel() 睡眠の質 -\x26gt; SOL, b11, NA 睡眠の質 -\x26gt; WASO, b12, NA 睡眠の質 -\x26gt; efficiency, b13, NA 睡眠の質 -\x26gt; N3_SPT, b14, NA 一日の過ごし方 -\x26gt; q_1, NA, 1 一日の過ごし方 -\x26gt; q_2, b2, NA #一日の過ごし方 -\x26gt; q_3, b3, NA #一日の過ごし方 -\x26gt; q_4, b4, NA #一日の過ごし方 -\x26gt; q_5, b5, NA #一日の過ごし方 -\x26gt; q_6, b6, NA #一日の過ごし方 -\x26gt; q_7, b7, NA #一日の過ごし方 -\x26gt; q_8, b8, NA 一日の過ごし方 -\x26gt; 睡眠の質, g1, NA SOL \x26lt;-\x26gt; SOL, e1, NA WASO \x26lt;-\x26gt; WASO, e2, NA efficiency \x26lt;-\x26gt; efficiency, e3, NA N3_SPT \x26lt;-\x26gt; N3_SPT, e4, NA q_1 \x26lt;-\x26gt; q_1, e5, NA q_2 \x26lt;-\x26gt; q_2, e6, NA #q_3 \x26lt;-\x26gt; q_3, e7, NA #q_4 \x26lt;-\x26gt; q_4, e8, NA #q_5 \x26lt;-\x26gt; q_5, e8, NA #q_6 \x26lt;-\x26gt; q_6, e10, NA #q_7 \x26lt;-\x26gt; q_7, e11, NA #q_8 \x26lt;-\x26gt; q_8, e12, NA 睡眠の質 \x26lt;-\x26gt; 睡眠の質, NA, 1 一日の過ごし方 \x26lt;-\x26gt; 一日の過ごし方, delta2, NA selected_columns \x26lt;- c(\x26quot;WASO\x26quot;, \x26quot;SOL\x26quot;, \x26quot;efficiency\x26quot;, \x26quot;N3_SPT\x26quot;, \x26quot;q_1\x26quot;, \x26quot;q_2\x26quot;) data_1 \x26lt;- data[, selected_columns] ans \x26lt;- sem(model,cor(data_1, use = \x26quot;complete."
   }
 </script>
 
@@ -843,6 +843,65 @@ section.footer > header a {
   <div class="article-body">
 
 <h2 id="はじめに">はじめに</h2>
+
+<pre><code>library(sem)
+
+data &lt;- read.csv(&quot;kawai_data.csv&quot;)
+
+SOL &lt;- data[&quot;SOL&quot;]
+WASO &lt;- data[&quot;WASO&quot;]
+efficiency &lt;- data[&quot;efficiency&quot;]
+N3_SPT &lt;- data[&quot;N3_SPT&quot;]
+
+q_1 &lt;- data[&quot;q_1&quot;]
+q_2 &lt;- data[&quot;q_2&quot;]
+q_3 &lt;- data[&quot;q_3&quot;]
+q_4 &lt;- data[&quot;q_4&quot;]
+q_5 &lt;- data[&quot;q_5&quot;]
+q_6 &lt;- data[&quot;q_6&quot;]
+q_7 &lt;- data[&quot;q_7&quot;]
+q_8 &lt;- data[&quot;q_8&quot;]
+
+model &lt;- specifyModel()
+睡眠の質 -&gt; SOL, b11, NA
+睡眠の質 -&gt; WASO, b12, NA
+睡眠の質 -&gt; efficiency, b13, NA
+睡眠の質 -&gt; N3_SPT, b14, NA
+一日の過ごし方 -&gt; q_1, NA, 1
+一日の過ごし方 -&gt; q_2, b2, NA
+#一日の過ごし方 -&gt; q_3, b3, NA
+#一日の過ごし方 -&gt; q_4, b4, NA
+#一日の過ごし方 -&gt; q_5, b5, NA
+#一日の過ごし方 -&gt; q_6, b6, NA
+#一日の過ごし方 -&gt; q_7, b7, NA
+#一日の過ごし方 -&gt; q_8, b8, NA
+一日の過ごし方 -&gt; 睡眠の質, g1, NA
+SOL &lt;-&gt; SOL, e1, NA
+WASO &lt;-&gt; WASO, e2, NA
+efficiency &lt;-&gt; efficiency, e3, NA
+N3_SPT &lt;-&gt; N3_SPT, e4, NA
+q_1 &lt;-&gt; q_1, e5, NA
+q_2 &lt;-&gt; q_2, e6, NA
+#q_3 &lt;-&gt; q_3, e7, NA
+#q_4 &lt;-&gt; q_4, e8, NA
+#q_5 &lt;-&gt; q_5, e8, NA
+#q_6 &lt;-&gt; q_6, e10, NA
+#q_7 &lt;-&gt; q_7, e11, NA
+#q_8 &lt;-&gt; q_8, e12, NA
+睡眠の質 &lt;-&gt; 睡眠の質, NA, 1
+一日の過ごし方 &lt;-&gt; 一日の過ごし方, delta2, NA
+
+
+selected_columns &lt;- c(&quot;WASO&quot;, &quot;SOL&quot;, &quot;efficiency&quot;, &quot;N3_SPT&quot;, &quot;q_1&quot;, &quot;q_2&quot;)
+data_1 &lt;- data[, selected_columns]
+
+ans &lt;- sem(model,cor(data_1, use = &quot;complete.obs&quot;),length(selected_columns))
+summary(ans)
+
+pathDiagram(ans, ignore.double=FALSE, edge.labels=&quot;values&quot;, digits=3)
+
+
+</code></pre>
 
 <h2 id="おわりに">おわりに</h2>
 
