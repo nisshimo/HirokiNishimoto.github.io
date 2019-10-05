@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>にっしーの備忘録</title>
-    <link>https://hirokinishimoto.github.io/</link>
-    <description>Recent content on にっしーの備忘録</description>
+    <title>Posts on にっしーの備忘録</title>
+    <link>https://hirokinishimoto.github.io/posts/</link>
+    <description>Recent content in Posts on にっしーの備忘録</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 05 Oct 2019 16:12:47 +0900</lastBuildDate>
     
-	<atom:link href="https://hirokinishimoto.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://hirokinishimoto.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -18,15 +18,6 @@
       
       <guid>https://hirokinishimoto.github.io/posts/%E9%87%8D%E5%9B%9E%E5%B8%B0%E3%81%A8%E5%A4%9A%E9%87%8D%E5%85%B1%E7%B7%9A%E6%80%A7/</guid>
       <description>はじめに おわりに 参考にした記事 http://ides.hatenablog.com/entry/2018/11/18/213222</description>
-    </item>
-    
-    <item>
-      <title>Contact</title>
-      <link>https://hirokinishimoto.github.io/page/contact/</link>
-      <pubDate>Wed, 02 Oct 2019 16:18:19 +0900</pubDate>
-      
-      <guid>https://hirokinishimoto.github.io/page/contact/</guid>
-      <description> Hello </description>
     </item>
     
   </channel>
