@@ -3,7 +3,32 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://hirokinishimoto.github.io/categories/</loc>
+    <lastmod>2019-10-07T14:00:46+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hirokinishimoto.github.io/tags/hello/</loc>
+    <lastmod>2019-10-07T14:00:46+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hirokinishimoto.github.io/categories/hugo/</loc>
+    <lastmod>2019-10-07T14:00:46+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://hirokinishimoto.github.io/posts/</loc>
+    <lastmod>2019-10-07T14:00:46+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hirokinishimoto.github.io/tags/</loc>
+    <lastmod>2019-10-07T14:00:46+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://hirokinishimoto.github.io/tags/world/</loc>
     <lastmod>2019-10-07T14:00:46+09:00</lastmod>
   </url>
   
@@ -30,14 +55,6 @@
   <url>
     <loc>https://hirokinishimoto.github.io/page/</loc>
     <lastmod>2019-10-02T16:18:19+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://hirokinishimoto.github.io/categories/</loc>
-  </url>
-  
-  <url>
-    <loc>https://hirokinishimoto.github.io/tags/</loc>
   </url>
   
 </urlset>

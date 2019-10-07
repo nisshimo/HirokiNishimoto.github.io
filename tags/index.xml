@@ -6,9 +6,28 @@
     <description>Recent content in Tags on にっしーの備忘録</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Mon, 07 Oct 2019 14:00:46 +0900</lastBuildDate>
     
 	<atom:link href="https://hirokinishimoto.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>hello</title>
+      <link>https://hirokinishimoto.github.io/tags/hello/</link>
+      <pubDate>Mon, 07 Oct 2019 14:00:46 +0900</pubDate>
+      
+      <guid>https://hirokinishimoto.github.io/tags/hello/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>world</title>
+      <link>https://hirokinishimoto.github.io/tags/world/</link>
+      <pubDate>Mon, 07 Oct 2019 14:00:46 +0900</pubDate>
+      
+      <guid>https://hirokinishimoto.github.io/tags/world/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>
