@@ -11,18 +11,102 @@
 <link rel="apple-touch-icon" href="https://hirokinishimoto.github.io/images/logo.png">
 
 
-<link rel="alternate" type="application/rss+xml" href="https://hirokinishimoto.github.io/tags/index.xml" title="にっしーの備忘録">
+<link rel="amphtml" type="text/html" href="https://hirokinishimoto.github.io/amp/posts/c&#43;&#43;%E3%81%AE%E6%A8%99%E6%BA%96%E3%83%87%E3%83%BC%E3%82%BF%E6%A7%8B%E9%80%A0/" title="にっしーの備忘録">
 
 
 
-    <link rel="canonical" href="https://hirokinishimoto.github.io/tags/">
+    <link rel="canonical" href="https://hirokinishimoto.github.io/posts/c&#43;&#43;%E3%81%AE%E6%A8%99%E6%BA%96%E3%83%87%E3%83%BC%E3%82%BF%E6%A7%8B%E9%80%A0/">
     
     <link href="https://fonts.googleapis.com/css?family=Lobster%7cLato:400,700" rel="stylesheet">
     
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-    <title>Tags - にっしーの備忘録</title>
+    <title>C&#43;&#43;の標準データ構造 - にっしーの備忘録</title>
     
+<meta name="description" content="stack LIFOのデータ構造
+メンバ関数  push() : 要素の挿入 top() : 先頭の要素の参照 pop() : 先頭の要素の破棄 size() : 現在の要素数  計算コストは全てO(1)
+練習問題
+queue FIFOのデータ構造
+メンバ関数  push() : 要素の挿入 front() : 先頭の要素の参照 pop() : 先頭の要素の破棄 size() : 現在の要素数  計算コストは全てO(1)
+練習問題
+priority_queue 挿入されたデータの中で最大の要素の参照が低数時間でできる。 実装には2分ヒープなど
+メンバ関数  push() : 要素の挿入 top() : 先頭の要素の参照 pop() : 先頭の要素の破棄 size() : 現在の要素数  計算コストはtop() : O(1), push(), pop() : O(logN)
+練習問題
+set 集合を表現するライブラリ
+種類 要素の重複を許さないもの  set : データに順序をつけて管理">
+
+<meta property="og:title" content="C&#43;&#43;の標準データ構造 - にっしーの備忘録">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hirokinishimoto.github.io/posts/c&#43;&#43;%E3%81%AE%E6%A8%99%E6%BA%96%E3%83%87%E3%83%BC%E3%82%BF%E6%A7%8B%E9%80%A0/">
+<meta property="og:image" content="https://hirokinishimoto.github.io/images/default.png">
+<meta property="og:site_name" content="にっしーの備忘録">
+<meta property="og:description" content="stack LIFOのデータ構造
+メンバ関数  push() : 要素の挿入 top() : 先頭の要素の参照 pop() : 先頭の要素の破棄 size() : 現在の要素数  計算コストは全てO(1)
+練習問題
+queue FIFOのデータ構造
+メンバ関数  push() : 要素の挿入 front() : 先頭の要素の参照 pop() : 先頭の要素の破棄 size() : 現在の要素数  計算コストは全てO(1)
+練習問題
+priority_queue 挿入されたデータの中で最大の要素の参照が低数時間でできる。 実装には2分ヒープなど
+メンバ関数  push() : 要素の挿入 top() : 先頭の要素の参照 pop() : 先頭の要素の破棄 size() : 現在の要素数  計算コストはtop() : O(1), push(), pop() : O(logN)
+練習問題
+set 集合を表現するライブラリ
+種類 要素の重複を許さないもの  set : データに順序をつけて管理">
+<meta property="og:locale" content="ja_JP">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="にっしーの備忘録">
+<meta name="twitter:url" content="https://hirokinishimoto.github.io/posts/c&#43;&#43;%E3%81%AE%E6%A8%99%E6%BA%96%E3%83%87%E3%83%BC%E3%82%BF%E6%A7%8B%E9%80%A0/">
+<meta name="twitter:title" content="C&#43;&#43;の標準データ構造 - にっしーの備忘録">
+<meta name="twitter:description" content="stack LIFOのデータ構造
+メンバ関数  push() : 要素の挿入 top() : 先頭の要素の参照 pop() : 先頭の要素の破棄 size() : 現在の要素数  計算コストは全てO(1)
+練習問題
+queue FIFOのデータ構造
+メンバ関数  push() : 要素の挿入 front() : 先頭の要素の参照 pop() : 先頭の要素の破棄 size() : 現在の要素数  計算コストは全てO(1)
+練習問題
+priority_queue 挿入されたデータの中で最大の要素の参照が低数時間でできる。 実装には2分ヒープなど
+メンバ関数  push() : 要素の挿入 top() : 先頭の要素の参照 pop() : 先頭の要素の破棄 size() : 現在の要素数  計算コストはtop() : O(1), push(), pop() : O(logN)
+練習問題
+set 集合を表現するライブラリ
+種類 要素の重複を許さないもの  set : データに順序をつけて管理">
+<meta name="twitter:image" content="https://hirokinishimoto.github.io/images/default.png">
+
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "NewsArticle",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id":"https:\/\/hirokinishimoto.github.io\/"
+    },
+    "headline": "C++の標準データ構造-にっしーの備忘録",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https:\/\/hirokinishimoto.github.io\/images\/default.png",
+      "height": 800,
+      "width": 800
+    },
+    "datePublished": "2019-10-14T22:45:17JST",
+    "dateModified": "2019-10-14T22:45:17JST",
+    "author": {
+      "@type": "Person",
+      "name": "にっしーの備忘録"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "にっしーの備忘録",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https:\/\/hirokinishimoto.github.io\/images/logo.png",
+        "width": 600,
+        "height": 60
+      }
+    },
+    "description": "stack LIFOのデータ構造\nメンバ関数  push() : 要素の挿入 top() : 先頭の要素の参照 pop() : 先頭の要素の破棄 size() : 現在の要素数  計算コストは全てO(1)\n練習問題\nqueue FIFOのデータ構造\nメンバ関数  push() : 要素の挿入 front() : 先頭の要素の参照 pop() : 先頭の要素の破棄 size() : 現在の要素数  計算コストは全てO(1)\n練習問題\npriority_queue 挿入されたデータの中で最大の要素の参照が低数時間でできる。 実装には2分ヒープなど\nメンバ関数  push() : 要素の挿入 top() : 先頭の要素の参照 pop() : 先頭の要素の破棄 size() : 現在の要素数  計算コストはtop() : O(1), push(), pop() : O(logN)\n練習問題\nset 集合を表現するライブラリ\n種類 要素の重複を許さないもの  set : データに順序をつけて管理"
+  }
+</script>
+
+
     <style>
 html {
   font-size: 18px;
@@ -770,39 +854,272 @@ ga('send', 'pageview');
 <div class="mrow">
   <div class="mcol c8">
 
-    <header class="page-title">
-      <h1 class="title">Tags</h1>
-    </header>
+    <article class="sn">
 
-    <ul class="terms">
+  <div class="thumb thumb-9413c7705bf431c141c527348c85242d"></div>
+
+  <header class="article-header">
+    <h1 class="title">C&#43;&#43;の標準データ構造</h1>
+
+    <ul class="facts">
+      <li><i class="fas fa-calendar" aria-hidden="true"></i><time datetime="2019-10-14T22:45:17JST">Oct 14, 2019</time></li>
       
-      
-      <li>
-        <h2 class="terms-title">
-          <a href="https://hirokinishimoto.github.io/tags/c&#43;&#43;">c&#43;&#43; (1)</a>
-        </h2>
-      </li>
-      
-      <li>
-        <h2 class="terms-title">
-          <a href="https://hirokinishimoto.github.io/tags/hello">hello (1)</a>
-        </h2>
-      </li>
-      
-      <li>
-        <h2 class="terms-title">
-          <a href="https://hirokinishimoto.github.io/tags/world">world (1)</a>
-        </h2>
-      </li>
-      
-      <li>
-        <h2 class="terms-title">
-          <a href="https://hirokinishimoto.github.io/tags/%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0">アルゴリズム (1)</a>
-        </h2>
-      </li>
+      <li><i class="fas fa-bookmark" aria-hidden="true"></i><a href="https://hirokinishimoto.github.io/posts/">POSTS</a></li>
       
     </ul>
 
+    <aside class="share">
+  <a href="https://b.hatena.ne.jp/add?mode=confirm&url=https%3a%2f%2fhirokinishimoto.github.io%2fposts%2fc%2b%2b%25E3%2581%25AE%25E6%25A8%2599%25E6%25BA%2596%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E6%25A7%258B%25E9%2580%25A0%2f&title=C%2b%2b%e3%81%ae%e6%a8%99%e6%ba%96%e3%83%87%e3%83%bc%e3%82%bf%e6%a7%8b%e9%80%a0" title="はてなブックマーク" class="ht" target="_blank" rel="nofollow">B!</a>
+  <a href="https://twitter.com/intent/tweet?url=https%3a%2f%2fhirokinishimoto.github.io%2fposts%2fc%2b%2b%25E3%2581%25AE%25E6%25A8%2599%25E6%25BA%2596%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E6%25A7%258B%25E9%2580%25A0%2f&text=C%2b%2b%e3%81%ae%e6%a8%99%e6%ba%96%e3%83%87%e3%83%bc%e3%82%bf%e6%a7%8b%e9%80%a0&tw_p=tweetbutton" title="Twitterでシェア" class="tw" target="_blank" rel="nofollow"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+  <a href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fhirokinishimoto.github.io%2fposts%2fc%2b%2b%25E3%2581%25AE%25E6%25A8%2599%25E6%25BA%2596%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E6%25A7%258B%25E9%2580%25A0%2f&t=C%2b%2b%e3%81%ae%e6%a8%99%e6%ba%96%e3%83%87%e3%83%bc%e3%82%bf%e6%a7%8b%e9%80%a0" title="Facebookでシェア" class="fb" target="_blank" rel="nofollow"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+  <a href="https://getpocket.com/edit?url=https%3a%2f%2fhirokinishimoto.github.io%2fposts%2fc%2b%2b%25E3%2581%25AE%25E6%25A8%2599%25E6%25BA%2596%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E6%25A7%258B%25E9%2580%25A0%2f&title=C%2b%2b%e3%81%ae%e6%a8%99%e6%ba%96%e3%83%87%e3%83%bc%e3%82%bf%e6%a7%8b%e9%80%a0" title="Pocketに保存" class="pk" target="_blank" rel="nofollow"><i class="fab fa-get-pocket" aria-hidden="true"></i></a>
+  <a href="https://social-plugins.line.me/lineit/share?url=https%3a%2f%2fhirokinishimoto.github.io%2fposts%2fc%2b%2b%25E3%2581%25AE%25E6%25A8%2599%25E6%25BA%2596%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E6%25A7%258B%25E9%2580%25A0%2f" title="LINEでシェア" class="ln" target="_blank" rel="nofollow"><i class="fab fa-line" aria-hidden="true"></i></a>
+</aside>
+
+  </header>
+
+  
+
+  <div class="article-body">
+
+<h2 id="stack">stack</h2>
+
+<p>LIFOのデータ構造</p>
+
+<h3 id="メンバ関数">メンバ関数</h3>
+
+<ul>
+<li>push() : 要素の挿入</li>
+<li>top() : 先頭の要素の参照</li>
+<li>pop() : 先頭の要素の破棄</li>
+<li>size() : 現在の要素数</li>
+</ul>
+
+<p>計算コストは全てO(1)</p>
+
+<p><a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_3_ A&amp;lang=jp">練習問題</a></p>
+
+<h2 id="queue">queue</h2>
+
+<p>FIFOのデータ構造</p>
+
+<h3 id="メンバ関数-1">メンバ関数</h3>
+
+<ul>
+<li>push() : 要素の挿入</li>
+<li>front() : 先頭の要素の参照</li>
+<li>pop() : 先頭の要素の破棄</li>
+<li>size() : 現在の要素数</li>
+</ul>
+
+<p>計算コストは全てO(1)</p>
+
+<p><a href="ttp://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_3_ B&amp;lang=jp">練習問題</a></p>
+
+<h2 id="priority-queue">priority_queue</h2>
+
+<p>挿入されたデータの中で最大の要素の参照が低数時間でできる。
+実装には2分ヒープなど</p>
+
+<h3 id="メンバ関数-2">メンバ関数</h3>
+
+<ul>
+<li>push() : 要素の挿入</li>
+<li>top() : 先頭の要素の参照</li>
+<li>pop() : 先頭の要素の破棄</li>
+<li>size() : 現在の要素数</li>
+</ul>
+
+<p>計算コストはtop() : O(1), push(), pop() : O(logN)</p>
+
+<p><a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_9_ C&amp;lang=jp">練習問題</a></p>
+
+<h2 id="set">set</h2>
+
+<p>集合を表現するライブラリ</p>
+
+<h3 id="種類">種類</h3>
+
+<h4 id="要素の重複を許さないもの">要素の重複を許さないもの</h4>
+
+<ul>
+<li><p>set : データに順序をつけて管理</p>
+
+<ul>
+<li>通常２分探索木で実装される</li>
+<li>挿入や探索0(ligN)</li>
+</ul></li>
+
+<li><p>unorderd_set : データの順序を無視して管理</p>
+
+<ul>
+<li>通常ハッシュテーブルで実装される</li>
+<li>各操作は平均的には低数時間で収まると期待される</li>
+</ul></li>
+</ul>
+
+<h4 id="要素の重複を許すもの">要素の重複を許すもの</h4>
+
+<ul>
+<li>multiset</li>
+<li>unorderd_multiset</li>
+</ul>
+
+<h3 id="メンバ関数-3">メンバ関数</h3>
+
+<ul>
+<li>insert(element) : 要素の挿入</li>
+<li>count(element) : 要素の数を数える（要素の重複を許さないsetなら0 or 1)</li>
+<li>size() : 現在の要素数</li>
+</ul>
+
+<p><a href="ttp://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_4_ C&amp;lang=jp">練習問題</a></p>
+
+<h2 id="map">map</h2>
+
+<p>keyに対するvalueを管理する抽象データ型</p>
+
+<h3 id="種類-1">種類</h3>
+
+<ul>
+<li>map</li>
+<li>unorderd_map</li>
+</ul>
+
+<h3 id="使用例">使用例</h3>
+
+<pre><code class="language-cpp">#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;map&gt;
+using namespace std;
+map&lt;string,int&gt; table;
+int main() {
+    string /*入力用*/word, /*最大頻度*/frequent, /*最長*/longest;
+    size_t N=0; /*文字列frequentの頻度*/
+    while (cin &gt;&gt; word) {
+        // table[word]を一つ増やす
+        // table[word]がNより大きければ，Nとfrequentを更新
+        // word.size() &gt; longest.size() ならlongest を更新
+    }
+    //frequent と longest を出力
+ }
+</code></pre>
+
+<p><a href="http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=0029&amp; lang=jp">練習問題</a></p>
+</div>
+
+  <footer class="article-footer">
+
+    <aside class="share">
+  <a href="https://b.hatena.ne.jp/add?mode=confirm&url=https%3a%2f%2fhirokinishimoto.github.io%2fposts%2fc%2b%2b%25E3%2581%25AE%25E6%25A8%2599%25E6%25BA%2596%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E6%25A7%258B%25E9%2580%25A0%2f&title=C%2b%2b%e3%81%ae%e6%a8%99%e6%ba%96%e3%83%87%e3%83%bc%e3%82%bf%e6%a7%8b%e9%80%a0" title="はてなブックマーク" class="ht" target="_blank" rel="nofollow">B!</a>
+  <a href="https://twitter.com/intent/tweet?url=https%3a%2f%2fhirokinishimoto.github.io%2fposts%2fc%2b%2b%25E3%2581%25AE%25E6%25A8%2599%25E6%25BA%2596%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E6%25A7%258B%25E9%2580%25A0%2f&text=C%2b%2b%e3%81%ae%e6%a8%99%e6%ba%96%e3%83%87%e3%83%bc%e3%82%bf%e6%a7%8b%e9%80%a0&tw_p=tweetbutton" title="Twitterでシェア" class="tw" target="_blank" rel="nofollow"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+  <a href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fhirokinishimoto.github.io%2fposts%2fc%2b%2b%25E3%2581%25AE%25E6%25A8%2599%25E6%25BA%2596%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E6%25A7%258B%25E9%2580%25A0%2f&t=C%2b%2b%e3%81%ae%e6%a8%99%e6%ba%96%e3%83%87%e3%83%bc%e3%82%bf%e6%a7%8b%e9%80%a0" title="Facebookでシェア" class="fb" target="_blank" rel="nofollow"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+  <a href="https://getpocket.com/edit?url=https%3a%2f%2fhirokinishimoto.github.io%2fposts%2fc%2b%2b%25E3%2581%25AE%25E6%25A8%2599%25E6%25BA%2596%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E6%25A7%258B%25E9%2580%25A0%2f&title=C%2b%2b%e3%81%ae%e6%a8%99%e6%ba%96%e3%83%87%e3%83%bc%e3%82%bf%e6%a7%8b%e9%80%a0" title="Pocketに保存" class="pk" target="_blank" rel="nofollow"><i class="fab fa-get-pocket" aria-hidden="true"></i></a>
+  <a href="https://social-plugins.line.me/lineit/share?url=https%3a%2f%2fhirokinishimoto.github.io%2fposts%2fc%2b%2b%25E3%2581%25AE%25E6%25A8%2599%25E6%25BA%2596%25E3%2583%2587%25E3%2583%25BC%25E3%2582%25BF%25E6%25A7%258B%25E9%2580%25A0%2f" title="LINEでシェア" class="ln" target="_blank" rel="nofollow"><i class="fab fa-line" aria-hidden="true"></i></a>
+</aside>
+
+
+    <section class="footer">
+      <div>
+        <nav class="crumb">
+          <ol>
+            <li><a href="https://hirokinishimoto.github.io/"><i class="fas fa-home" aria-hidden="true"></i>TOP</a></li>
+            
+            <li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="https://hirokinishimoto.github.io/posts/" itemprop="url"><span itemprop="title">POSTS</span></a></li>
+            
+            <li class="active">C&#43;&#43;の標準データ構造</li>
+          </ol>
+        </nav>
+      </div>
+    </section>
+
+    
+    
+    
+    <section class="footer">
+      <header>
+        <a href="https://hirokinishimoto.github.io/categories/">CATEGORIES</a>
+      </header>
+      <div>
+        <ul class="terms">
+          
+          <li><a href="https://hirokinishimoto.github.io/categories/c&#43;&#43;/">c&#43;&#43;</a></li>
+          
+        </ul>
+      </div>
+    </section>
+    
+    
+    
+    <section class="footer">
+      <header>
+        <a href="https://hirokinishimoto.github.io/tags/">TAGS</a>
+      </header>
+      <div>
+        <ul class="terms">
+          
+          <li><a href="https://hirokinishimoto.github.io/tags/%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0/">アルゴリズム</a></li>
+          
+          <li><a href="https://hirokinishimoto.github.io/tags/c&#43;&#43;/">c&#43;&#43;</a></li>
+          
+        </ul>
+      </div>
+    </section>
+    
+    
+  </footer>
+
+</article>
+
+
+    <div class="adj">
+      <div class="mrow">
+        
+        <div class="mcol c6">
+          <header>Previous Article</header>
+          <article class="lism">
+  <a href="https://hirokinishimoto.github.io/posts/sem/">
+    <div class="thumb thumb-aae85506df328f7204e4b3bb9bbde5a2"></div>
+
+    <div class="inner">
+      <div class="title">SEM</div>
+
+      <ul class="facts sm">
+        <li><i class="fas fa-calendar" aria-hidden="true"></i><time datetime="14007-10-14T01:09:04JST">Oct 14, 2019</time></li>
+        <li><i class="fas fa-bookmark" aria-hidden="true"></i>POSTS</li>
+        
+      </ul>
+
+    </div>
+  </a>
+</article>
+
+        </div>
+        
+        
+      </div>
+    </div>
+
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "XYW" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
   </div>
   <div class="mcol c4">
     <aside class="l-sidebar">

@@ -6,10 +6,19 @@
     <description>Recent content in Categories on にっしーの備忘録</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 07 Oct 2019 14:00:46 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 14 Oct 2019 22:45:17 +0900</lastBuildDate>
     
 	<atom:link href="https://hirokinishimoto.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>c&#43;&#43;</title>
+      <link>https://hirokinishimoto.github.io/categories/c&#43;&#43;/</link>
+      <pubDate>Mon, 14 Oct 2019 22:45:17 +0900</pubDate>
+      
+      <guid>https://hirokinishimoto.github.io/categories/c&#43;&#43;/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>hugo</title>

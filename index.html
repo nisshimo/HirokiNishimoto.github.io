@@ -731,6 +731,12 @@ section.footer > header a {
 
 
 
+
+
+
+
+
+
  body { font-family: Lato,YuGothic,'Hiragino Kaku Gothic Pro',Meiryo,sans-serif; } 
  .h-logo { font-family: Lobster, cursive; } 
     </style>
@@ -771,6 +777,79 @@ ga('send', 'pageview');
         
         
         
+        
+        <div class="mcol c6"><article class="li">
+  <a href="https://hirokinishimoto.github.io/posts/c&#43;&#43;%E3%81%AE%E6%A8%99%E6%BA%96%E3%83%87%E3%83%BC%E3%82%BF%E6%A7%8B%E9%80%A0/">
+    <div class="thumb thumb-9413c7705bf431c141c527348c85242d"></div>
+
+    <div class="inner">
+      <h2 class="title">C&#43;&#43;の標準データ構造</h2>
+
+      <ul class="facts">
+        <li><i class="fas fa-calendar" aria-hidden="true"></i><time datetime="2019-10-14T22:45:17JST">Oct 14, 2019</time></li>
+        <li><i class="fas fa-bookmark" aria-hidden="true"></i>POSTS</li>
+        
+      </ul>
+
+      <div class="summary">stack LIFOのデータ構造
+メンバ関数  push() : 要素の挿入 top() : 先頭の要素の参照 pop() : 先頭の要素の破棄 size() : 現在の要素数  計算コストは全てO(1)
+練習問題
+queue FIFOのデータ構造
+メンバ関数  push() : 要素の挿入 front() : 先頭の要素の参照 pop() : 先頭の要素の破棄 size() : 現在の要素数  計算コストは全てO(1)
+練習問題
+priority_queue 挿入されたデータの中で最大の要素の参照が低数時間でできる。 実装には2分ヒープなど
+メンバ関数  push() : 要素の挿入 top() : 先頭の要素の参照 pop() : 先頭の要素の破棄 size() : 現在の要素数  計算コストはtop() : O(1), push(), pop() : O(logN)
+練習問題
+set 集合を表現するライブラリ
+種類 要素の重複を許さないもの  set : データに順序をつけて管理</div>
+    </div>
+  </a>
+</article>
+</div>
+        
+        <div class="mcol c6"><article class="li">
+  <a href="https://hirokinishimoto.github.io/posts/sem/">
+    <div class="thumb thumb-aae85506df328f7204e4b3bb9bbde5a2"></div>
+
+    <div class="inner">
+      <h2 class="title">SEM</h2>
+
+      <ul class="facts">
+        <li><i class="fas fa-calendar" aria-hidden="true"></i><time datetime="2019-10-14T01:09:04JST">Oct 14, 2019</time></li>
+        <li><i class="fas fa-bookmark" aria-hidden="true"></i>POSTS</li>
+        
+      </ul>
+
+      <div class="summary">構造方程式モデリング  構造方程式モデリング : Struvtual Equation Modeling (SEM) 共分散構造分析ともいうけど&hellip; 構造方程式モデリングと呼ぶほうが良い。  共分散だけでなく、平均を構造化する分析もあるため。   構造方程式モデリングの特徴 特徴1. 変数間の関係を統計的に検証できる。  変数の間の関係を記述して、データとの当てはまりを評価する、統計的な分析方法。  特徴2. 潜在変数を導入した分析ができる。  複数の変数で潜在変数（構成概念）を規定することができる。 構成概念？  とりあえずその存在を仮定することによって、複雑に込み入った現象を比較的単純に理解することを目的に構成する概念。 指導力、抑うつ傾向、ブランドイメージなど&hellip;   特徴3. わかりやすいパス図そ使ったビジュアル表現が可能。  変数間の関係をパス図を使ってビジュアル化  矢印は「もと」から「さき」へ向かって影響を表現 長方形や楕円は変数の特徴を表現  関係性がわかりやすい  直感的に変数の関係がわかる！   ↑パス図という
+パス図の書き方のルール  観測変数  既知の変数 直接観測できるデータ 長方形で表す    潜在変数
+ 未知の変数 直接観測できないデータ 楕円で表す   残差
+ 外生変数では説明しきれない効果を１つにまとめたもの    パス係数(回帰係数)
+ 片方向の矢印→で表す  共分散（相関係数)</div>
+    </div>
+  </a>
+</article>
+</div>
+        
+        <div class="mcol c6"><article class="li">
+  <a href="https://hirokinishimoto.github.io/posts/r%E3%81%A7sem/">
+    <div class="thumb thumb-e6e9b3222e5c03dea45f762404d3b61c"></div>
+
+    <div class="inner">
+      <h2 class="title">RでSEM</h2>
+
+      <ul class="facts">
+        <li><i class="fas fa-calendar" aria-hidden="true"></i><time datetime="2019-10-14T01:07:22JST">Oct 14, 2019</time></li>
+        <li><i class="fas fa-bookmark" aria-hidden="true"></i>POSTS</li>
+        
+      </ul>
+
+      <div class="summary">はじめに 本稿では、トイデータを使って、Rで共分散構造分析を行う方法について解説する。
+状況 例えば、下のようなモデルが下のトイデータに整合するかを共分散構造分析で検証したいとする。
+トイデータ # データの読み込み dat &lt;- matrix(c( + -2.11, -1.12, 1.42, 2.23, 1.53, + 0.06, 1.81, -0.59, -0.75, 10.12, + 2.58, -0.20, -1.92, -0.49, -0.35, + 0.69, -0.66, -0.77, -1.92, 0.38, + -1.05, 0.07, -0.37, -0.89, -1.62, + -2.73, 1.40, 0.18, -0.09, 0.13, + 0.95, 0.84, 1.19, 1.19, 0.10, + 0.93, 1.17, -1.70, 1.46, -0.25, + -0.04, -0.12, -0.34, -0.24, 1.88, + 0.16, 1.03, -0.05, -0.73, 0.</div>
+    </div>
+  </a>
+</article>
+</div>
         
         <div class="mcol c6"><article class="li">
   <a href="https://hirokinishimoto.github.io/posts/%E7%BE%A4/">
@@ -865,6 +944,60 @@ ga('send', 'pageview');
     <div class="articles sm">
       
       <article class="lism">
+  <a href="https://hirokinishimoto.github.io/posts/c&#43;&#43;%E3%81%AE%E6%A8%99%E6%BA%96%E3%83%87%E3%83%BC%E3%82%BF%E6%A7%8B%E9%80%A0/">
+    <div class="thumb thumb-9413c7705bf431c141c527348c85242d"></div>
+
+    <div class="inner">
+      <div class="title">C&#43;&#43;の標準データ構造</div>
+
+      <ul class="facts sm">
+        <li><i class="fas fa-calendar" aria-hidden="true"></i><time datetime="14007-10-14T22:45:17JST">Oct 14, 2019</time></li>
+        <li><i class="fas fa-bookmark" aria-hidden="true"></i>POSTS</li>
+        
+      </ul>
+
+    </div>
+  </a>
+</article>
+
+      
+      <article class="lism">
+  <a href="https://hirokinishimoto.github.io/posts/sem/">
+    <div class="thumb thumb-aae85506df328f7204e4b3bb9bbde5a2"></div>
+
+    <div class="inner">
+      <div class="title">SEM</div>
+
+      <ul class="facts sm">
+        <li><i class="fas fa-calendar" aria-hidden="true"></i><time datetime="14007-10-14T01:09:04JST">Oct 14, 2019</time></li>
+        <li><i class="fas fa-bookmark" aria-hidden="true"></i>POSTS</li>
+        
+      </ul>
+
+    </div>
+  </a>
+</article>
+
+      
+      <article class="lism">
+  <a href="https://hirokinishimoto.github.io/posts/r%E3%81%A7sem/">
+    <div class="thumb thumb-e6e9b3222e5c03dea45f762404d3b61c"></div>
+
+    <div class="inner">
+      <div class="title">RでSEM</div>
+
+      <ul class="facts sm">
+        <li><i class="fas fa-calendar" aria-hidden="true"></i><time datetime="14007-10-14T01:07:22JST">Oct 14, 2019</time></li>
+        <li><i class="fas fa-bookmark" aria-hidden="true"></i>POSTS</li>
+        
+      </ul>
+
+    </div>
+  </a>
+</article>
+
+      
+      <article class="lism">
   <a href="https://hirokinishimoto.github.io/posts/%E7%BE%A4/">
     <div class="thumb thumb-5f1872acb5a425aa01158015841197e1"></div>
 
@@ -927,7 +1060,7 @@ ga('send', 'pageview');
   <header>CATEGORIES</header>
   <div>
     <ul class="terms">
-      <li><a href="https://hirokinishimoto.github.io/categories/hugo">hugo <span class="count">(1)</span></a></li>
+      <li><a href="https://hirokinishimoto.github.io/categories/c&#43;&#43;">c&#43;&#43; <span class="count">(1)</span></a></li><li><a href="https://hirokinishimoto.github.io/categories/hugo">hugo <span class="count">(1)</span></a></li>
     </ul>
   </div>
 </section>
@@ -939,7 +1072,7 @@ ga('send', 'pageview');
   <header>TAGS</header>
   <div>
     <ul class="terms">
-      <li><a href="https://hirokinishimoto.github.io/tags/hello">hello <span class="count">(1)</span></a></li><li><a href="https://hirokinishimoto.github.io/tags/world">world <span class="count">(1)</span></a></li>
+      <li><a href="https://hirokinishimoto.github.io/tags/c&#43;&#43;">c&#43;&#43; <span class="count">(1)</span></a></li><li><a href="https://hirokinishimoto.github.io/tags/hello">hello <span class="count">(1)</span></a></li><li><a href="https://hirokinishimoto.github.io/tags/world">world <span class="count">(1)</span></a></li><li><a href="https://hirokinishimoto.github.io/tags/%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0">アルゴリズム <span class="count">(1)</span></a></li>
     </ul>
   </div>
 </section>

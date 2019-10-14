@@ -11,7 +11,7 @@
 <link rel="apple-touch-icon" href="https://hirokinishimoto.github.io/images/logo.png">
 
 
-<link rel="canonical" type="text/html" href="https://hirokinishimoto.github.io/page/contact/" title="にっしーの備忘録">
+<link rel="canonical" type="text/html" href="https://hirokinishimoto.github.io/posts/r%E3%81%A7sem/" title="にっしーの備忘録">
 
 
 
@@ -27,23 +27,29 @@
     <link href="https://fonts.googleapis.com/css?family=Lobster%7cLato:400,700" rel="stylesheet">
     
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-    <title>Contact - にっしーの備忘録</title>
+    <title>RでSEM - にっしーの備忘録</title>
     
-<meta name="description" content=" Hello ">
+<meta name="description" content="はじめに 本稿では、トイデータを使って、Rで共分散構造分析を行う方法について解説する。
+状況 例えば、下のようなモデルが下のトイデータに整合するかを共分散構造分析で検証したいとする。
+トイデータ # データの読み込み dat &lt;- matrix(c( &#43; -2.11, -1.12, 1.42, 2.23, 1.53, &#43; 0.06, 1.81, -0.59, -0.75, 10.12, &#43; 2.58, -0.20, -1.92, -0.49, -0.35, &#43; 0.69, -0.66, -0.77, -1.92, 0.38, &#43; -1.05, 0.07, -0.37, -0.89, -1.62, &#43; -2.73, 1.40, 0.18, -0.09, 0.13, &#43; 0.95, 0.84, 1.19, 1.19, 0.10, &#43; 0.93, 1.17, -1.70, 1.46, -0.25, &#43; -0.04, -0.12, -0.34, -0.24, 1.88, &#43; 0.16, 1.03, -0.05, -0.73, 0.">
 
-<meta property="og:title" content="Contact - にっしーの備忘録">
+<meta property="og:title" content="RでSEM - にっしーの備忘録">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://hirokinishimoto.github.io/amp/page/contact/">
+<meta property="og:url" content="https://hirokinishimoto.github.io/amp/posts/r%E3%81%A7sem/">
 <meta property="og:image" content="https://hirokinishimoto.github.io/images/default.png">
 <meta property="og:site_name" content="にっしーの備忘録">
-<meta property="og:description" content=" Hello ">
+<meta property="og:description" content="はじめに 本稿では、トイデータを使って、Rで共分散構造分析を行う方法について解説する。
+状況 例えば、下のようなモデルが下のトイデータに整合するかを共分散構造分析で検証したいとする。
+トイデータ # データの読み込み dat &lt;- matrix(c( &#43; -2.11, -1.12, 1.42, 2.23, 1.53, &#43; 0.06, 1.81, -0.59, -0.75, 10.12, &#43; 2.58, -0.20, -1.92, -0.49, -0.35, &#43; 0.69, -0.66, -0.77, -1.92, 0.38, &#43; -1.05, 0.07, -0.37, -0.89, -1.62, &#43; -2.73, 1.40, 0.18, -0.09, 0.13, &#43; 0.95, 0.84, 1.19, 1.19, 0.10, &#43; 0.93, 1.17, -1.70, 1.46, -0.25, &#43; -0.04, -0.12, -0.34, -0.24, 1.88, &#43; 0.16, 1.03, -0.05, -0.73, 0.">
 <meta property="og:locale" content="ja_JP">
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="にっしーの備忘録">
-<meta name="twitter:url" content="https://hirokinishimoto.github.io/amp/page/contact/">
-<meta name="twitter:title" content="Contact - にっしーの備忘録">
-<meta name="twitter:description" content=" Hello ">
+<meta name="twitter:url" content="https://hirokinishimoto.github.io/amp/posts/r%E3%81%A7sem/">
+<meta name="twitter:title" content="RでSEM - にっしーの備忘録">
+<meta name="twitter:description" content="はじめに 本稿では、トイデータを使って、Rで共分散構造分析を行う方法について解説する。
+状況 例えば、下のようなモデルが下のトイデータに整合するかを共分散構造分析で検証したいとする。
+トイデータ # データの読み込み dat &lt;- matrix(c( &#43; -2.11, -1.12, 1.42, 2.23, 1.53, &#43; 0.06, 1.81, -0.59, -0.75, 10.12, &#43; 2.58, -0.20, -1.92, -0.49, -0.35, &#43; 0.69, -0.66, -0.77, -1.92, 0.38, &#43; -1.05, 0.07, -0.37, -0.89, -1.62, &#43; -2.73, 1.40, 0.18, -0.09, 0.13, &#43; 0.95, 0.84, 1.19, 1.19, 0.10, &#43; 0.93, 1.17, -1.70, 1.46, -0.25, &#43; -0.04, -0.12, -0.34, -0.24, 1.88, &#43; 0.16, 1.03, -0.05, -0.73, 0.">
 <meta name="twitter:image" content="https://hirokinishimoto.github.io/images/default.png">
 
 
@@ -55,15 +61,15 @@
       "@type": "WebPage",
       "@id":"https:\/\/hirokinishimoto.github.io\/"
     },
-    "headline": "Contact-にっしーの備忘録",
+    "headline": "RでSEM-にっしーの備忘録",
     "image": {
       "@type": "ImageObject",
       "url": "https:\/\/hirokinishimoto.github.io\/images\/default.png",
       "height": 800,
       "width": 800
     },
-    "datePublished": "2019-10-02T16:18:19JST",
-    "dateModified": "2019-10-02T16:18:19JST",
+    "datePublished": "2019-10-14T01:07:22JST",
+    "dateModified": "2019-10-14T01:07:22JST",
     "author": {
       "@type": "Person",
       "name": "にっしーの備忘録"
@@ -78,7 +84,7 @@
         "height": 60
       }
     },
-    "description": " Hello "
+    "description": "はじめに 本稿では、トイデータを使って、Rで共分散構造分析を行う方法について解説する。\n状況 例えば、下のようなモデルが下のトイデータに整合するかを共分散構造分析で検証したいとする。\nトイデータ # データの読み込み dat \x26lt;- matrix(c( \x2b -2.11, -1.12, 1.42, 2.23, 1.53, \x2b 0.06, 1.81, -0.59, -0.75, 10.12, \x2b 2.58, -0.20, -1.92, -0.49, -0.35, \x2b 0.69, -0.66, -0.77, -1.92, 0.38, \x2b -1.05, 0.07, -0.37, -0.89, -1.62, \x2b -2.73, 1.40, 0.18, -0.09, 0.13, \x2b 0.95, 0.84, 1.19, 1.19, 0.10, \x2b 0.93, 1.17, -1.70, 1.46, -0.25, \x2b -0.04, -0.12, -0.34, -0.24, 1.88, \x2b 0.16, 1.03, -0.05, -0.73, 0."
   }
 </script>
 
@@ -824,24 +830,24 @@ section.footer > header a {
         
 <article class="sn">
 
-  <div class="thumb thumb-b87ca90824d6009c5c19c1667d72cefa"></div>
+  <div class="thumb thumb-e6e9b3222e5c03dea45f762404d3b61c"></div>
 
   <header class="article-header">
-    <h1 class="title">Contact</h1>
+    <h1 class="title">RでSEM</h1>
 
     <ul class="facts">
-      <li><i class="fas fa-calendar" aria-hidden="true"></i><time datetime="2019-10-02T16:18:19JST">Oct 2, 2019</time></li>
+      <li><i class="fas fa-calendar" aria-hidden="true"></i><time datetime="2019-10-14T01:07:22JST">Oct 14, 2019</time></li>
       
-      <li><i class="fas fa-bookmark" aria-hidden="true"></i><a href="https://hirokinishimoto.github.io/page/">PAGE</a></li>
+      <li><i class="fas fa-bookmark" aria-hidden="true"></i><a href="https://hirokinishimoto.github.io/posts/">POSTS</a></li>
       
     </ul>
 
     <aside class="share">
-  <a href="https://b.hatena.ne.jp/add?mode=confirm&url=https%3a%2f%2fhirokinishimoto.github.io%2famp%2fpage%2fcontact%2f&title=Contact" title="はてなブックマーク" class="ht" target="_blank" rel="nofollow">B!</a>
-  <a href="https://twitter.com/intent/tweet?url=https%3a%2f%2fhirokinishimoto.github.io%2famp%2fpage%2fcontact%2f&text=Contact&tw_p=tweetbutton" title="Twitterでシェア" class="tw" target="_blank" rel="nofollow"><i class="fab fa-twitter" aria-hidden="true"></i></a>
-  <a href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fhirokinishimoto.github.io%2famp%2fpage%2fcontact%2f&t=Contact" title="Facebookでシェア" class="fb" target="_blank" rel="nofollow"><i class="fab fa-facebook" aria-hidden="true"></i></a>
-  <a href="https://getpocket.com/edit?url=https%3a%2f%2fhirokinishimoto.github.io%2famp%2fpage%2fcontact%2f&title=Contact" title="Pocketに保存" class="pk" target="_blank" rel="nofollow"><i class="fab fa-get-pocket" aria-hidden="true"></i></a>
-  <a href="https://social-plugins.line.me/lineit/share?url=https%3a%2f%2fhirokinishimoto.github.io%2famp%2fpage%2fcontact%2f" title="LINEでシェア" class="ln" target="_blank" rel="nofollow"><i class="fab fa-line" aria-hidden="true"></i></a>
+  <a href="https://b.hatena.ne.jp/add?mode=confirm&url=https%3a%2f%2fhirokinishimoto.github.io%2famp%2fposts%2fr%25E3%2581%25A7sem%2f&title=R%e3%81%a7SEM" title="はてなブックマーク" class="ht" target="_blank" rel="nofollow">B!</a>
+  <a href="https://twitter.com/intent/tweet?url=https%3a%2f%2fhirokinishimoto.github.io%2famp%2fposts%2fr%25E3%2581%25A7sem%2f&text=R%e3%81%a7SEM&tw_p=tweetbutton" title="Twitterでシェア" class="tw" target="_blank" rel="nofollow"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+  <a href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fhirokinishimoto.github.io%2famp%2fposts%2fr%25E3%2581%25A7sem%2f&t=R%e3%81%a7SEM" title="Facebookでシェア" class="fb" target="_blank" rel="nofollow"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+  <a href="https://getpocket.com/edit?url=https%3a%2f%2fhirokinishimoto.github.io%2famp%2fposts%2fr%25E3%2581%25A7sem%2f&title=R%e3%81%a7SEM" title="Pocketに保存" class="pk" target="_blank" rel="nofollow"><i class="fab fa-get-pocket" aria-hidden="true"></i></a>
+  <a href="https://social-plugins.line.me/lineit/share?url=https%3a%2f%2fhirokinishimoto.github.io%2famp%2fposts%2fr%25E3%2581%25A7sem%2f" title="LINEでシェア" class="ln" target="_blank" rel="nofollow"><i class="fab fa-line" aria-hidden="true"></i></a>
 </aside>
 
   </header>
@@ -850,17 +856,135 @@ section.footer > header a {
 
   <div class="article-body">
 
-<h1 id="hello">Hello</h1>
+<h2 id="はじめに">はじめに</h2>
+
+<p>本稿では、トイデータを使って、Rで共分散構造分析を行う方法について解説する。</p>
+
+<h2 id="状況">状況</h2>
+
+<p>例えば、下のようなモデルが下のトイデータに整合するかを共分散構造分析で検証したいとする。</p>
+
+<h4 id="トイデータ">トイデータ</h4>
+
+<pre><code class="language-r"># データの読み込み
+dat &lt;- matrix(c(
++  -2.11, -1.12, 1.42, 2.23, 1.53,
++  0.06, 1.81, -0.59, -0.75, 10.12,
++  2.58, -0.20, -1.92, -0.49, -0.35,
++  0.69, -0.66, -0.77, -1.92, 0.38,
++  -1.05, 0.07, -0.37, -0.89, -1.62,
++  -2.73, 1.40, 0.18, -0.09, 0.13,
++  0.95, 0.84, 1.19, 1.19, 0.10,
++  0.93, 1.17, -1.70, 1.46, -0.25,
++  -0.04, -0.12, -0.34, -0.24, 1.88,
++  0.16, 1.03, -0.05, -0.73, 0.04
++ ), byrow=TRUE, ncol=5)
+colnames(dat) &lt;- c(&quot;v1&quot;,&quot;v2&quot;,&quot;v3&quot;,&quot;v4&quot;,&quot;v5&quot;)
+</code></pre>
+
+<h4 id="仮説">仮説</h4>
+
+<p>下のようなモデルにデータが適合するか検証する。</p>
+
+<p><img src="https://image.docbase.io/uploads/c0621218-50ee-4c79-b904-fa4440e49b0f.jpeg =WxH" alt="IMG_347687A5942C-1.jpeg" /></p>
+
+<h3 id="ライブラリの読み込み">ライブラリの読み込み</h3>
+
+<pre><code class="language-r">library(lavaaan)
+</code></pre>
+
+<p>初めて実行するときは、予め以下を実行しておく。</p>
+
+<pre><code class="language-r">install.packages('lavaan')
+</code></pre>
+
+<h3 id="モデルの定義">モデルの定義</h3>
+
+<p>仮説に従って、下のようにモデルを定義する。</p>
+
+<pre><code class="language-r">model &lt;- specifyModel()
+v1 &lt; F1,path1,1
+v2 &lt; F1,path2,NA
+v3 &lt; F1,path3,NA
+v4 &lt; F1,path4,NA
+v5 &lt; F1,path5,NA
+v1 &lt;&gt; v1,s1,NA
+v2 &lt;&gt; v2,s2,NA
+v3 &lt;&gt; v3,s3,NA
+v4 &lt;&gt; v4,s4,NA
+v5 &lt;&gt; v5,s5,NA
+F1 &lt;&gt; F1,NA,1
+
+</code></pre>
+
+<h3 id="モデルへの当てはめ">モデルへの当てはめ</h3>
+
+<p>一行。ライブラリすごい。</p>
+
+<pre><code class="language-r">ans &lt;- sem(model,cov(data_1, use = &quot;complete.obs&quot;),length(selected_columns))
+</code></pre>
+
+<h2 id="結果">結果</h2>
+
+<h3 id="パスダイアグラム">パスダイアグラム</h3>
+
+<pre><code class="language-r">pathDiagram(ans, ignore.double=FALSE, edge.labels=&quot;values&quot;, digits=3)
+</code></pre>
+
+<p>きれいな図が出力された。</p>
+
+<p><img src="https://gyazo.com/9860c7b35378a7447c7cedc6689c6d6e.png =500x" alt="https://gyazo.com/9860c7b35378a7447c7cedc6689c6d6e.png" /></p>
+
+<h3 id="適合度指標">適合度指標</h3>
+
+<pre><code class="language-r">summary(ans)
+</code></pre>
+
+<pre><code class="language-plaintext"> Model Chisquare =  1.925355   Df =  5 Pr(&gt;Chisq) = 0.8593742
+ AIC =  21.92536
+ BIC =  -9.58757
+
+ Normalized Residuals
+      Min.    1st Qu.     Median       Mean    3rd Qu.       Max.
+-0.3975998 -0.0000002  0.0155290  0.1220785  0.2434938  0.6971044
+
+ R-square for Endogenous Variables
+    v1     v2     v3     v4     v5
+0.6297 0.0809 0.4573 0.0583 0.0506
+
+ Parameter Estimates
+      Estimate   Std Error z value    Pr(&gt;|z|)
+path1  0.7935558 0.4882341  1.6253592 0.10408604 v1 &lt;--- F1
+path2 -0.2843858 0.3849962 -0.7386717 0.46010637 v2 &lt;--- F1
+path3 -0.6762525 0.4525192 -1.4944171 0.13506663 v3 &lt;--- F1
+path4 -0.2414672 0.3860898 -0.6254172 0.53169727 v4 &lt;--- F1
+path5  0.2248359 0.3864879  0.5817413 0.56074096 v5 &lt;--- F1
+s1     0.3702693 0.6626860  0.5587401 0.57633909 v1 &lt;--&gt; v1
+s2     0.9191248 0.4485423  2.0491376 0.04044867 v2 &lt;--&gt; v2
+s3     0.5426826 0.5322169  1.0196644 0.30788765 v3 &lt;--&gt; v3
+s4     0.9416935 0.4546109  2.0714275 0.03831887 v4 &lt;--&gt; v4
+s5     0.9494489 0.4567576  2.0786712 0.03764758 v5 &lt;--&gt; v5
+
+ Iterations =  15
+</code></pre>
+
+<h3 id="結果の解釈について">結果の解釈について</h3>
+
+<p>後日別で備忘録を書く予定。</p>
+
+<h2 id="参考文献">参考文献</h2>
+
+<p>検索するといろいろな記事が見つかるが、特に<a href="http://www.okadajp.org/RWiki/?R%E3%81%A7%E5%85%B1%E5%88%86%E6%95%A3%E6%A7%8B%E9%80%A0%E5%88%86%E6%9E%90%E3%83%BB%E6%A7%8B%E9%80%A0%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%83%A2%E3%83%87%E3%83%AB">この記事</a>がわかりやすかった。</p>
 </div>
 
   <footer class="article-footer">
 
     <aside class="share">
-  <a href="https://b.hatena.ne.jp/add?mode=confirm&url=https%3a%2f%2fhirokinishimoto.github.io%2famp%2fpage%2fcontact%2f&title=Contact" title="はてなブックマーク" class="ht" target="_blank" rel="nofollow">B!</a>
-  <a href="https://twitter.com/intent/tweet?url=https%3a%2f%2fhirokinishimoto.github.io%2famp%2fpage%2fcontact%2f&text=Contact&tw_p=tweetbutton" title="Twitterでシェア" class="tw" target="_blank" rel="nofollow"><i class="fab fa-twitter" aria-hidden="true"></i></a>
-  <a href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fhirokinishimoto.github.io%2famp%2fpage%2fcontact%2f&t=Contact" title="Facebookでシェア" class="fb" target="_blank" rel="nofollow"><i class="fab fa-facebook" aria-hidden="true"></i></a>
-  <a href="https://getpocket.com/edit?url=https%3a%2f%2fhirokinishimoto.github.io%2famp%2fpage%2fcontact%2f&title=Contact" title="Pocketに保存" class="pk" target="_blank" rel="nofollow"><i class="fab fa-get-pocket" aria-hidden="true"></i></a>
-  <a href="https://social-plugins.line.me/lineit/share?url=https%3a%2f%2fhirokinishimoto.github.io%2famp%2fpage%2fcontact%2f" title="LINEでシェア" class="ln" target="_blank" rel="nofollow"><i class="fab fa-line" aria-hidden="true"></i></a>
+  <a href="https://b.hatena.ne.jp/add?mode=confirm&url=https%3a%2f%2fhirokinishimoto.github.io%2famp%2fposts%2fr%25E3%2581%25A7sem%2f&title=R%e3%81%a7SEM" title="はてなブックマーク" class="ht" target="_blank" rel="nofollow">B!</a>
+  <a href="https://twitter.com/intent/tweet?url=https%3a%2f%2fhirokinishimoto.github.io%2famp%2fposts%2fr%25E3%2581%25A7sem%2f&text=R%e3%81%a7SEM&tw_p=tweetbutton" title="Twitterでシェア" class="tw" target="_blank" rel="nofollow"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+  <a href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fhirokinishimoto.github.io%2famp%2fposts%2fr%25E3%2581%25A7sem%2f&t=R%e3%81%a7SEM" title="Facebookでシェア" class="fb" target="_blank" rel="nofollow"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+  <a href="https://getpocket.com/edit?url=https%3a%2f%2fhirokinishimoto.github.io%2famp%2fposts%2fr%25E3%2581%25A7sem%2f&title=R%e3%81%a7SEM" title="Pocketに保存" class="pk" target="_blank" rel="nofollow"><i class="fab fa-get-pocket" aria-hidden="true"></i></a>
+  <a href="https://social-plugins.line.me/lineit/share?url=https%3a%2f%2fhirokinishimoto.github.io%2famp%2fposts%2fr%25E3%2581%25A7sem%2f" title="LINEでシェア" class="ln" target="_blank" rel="nofollow"><i class="fab fa-line" aria-hidden="true"></i></a>
 </aside>
 
 
@@ -870,9 +994,9 @@ section.footer > header a {
           <ol>
             <li><a href="https://hirokinishimoto.github.io/"><i class="fas fa-home" aria-hidden="true"></i>TOP</a></li>
             
-            <li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="https://hirokinishimoto.github.io/page/" itemprop="url"><span itemprop="title">PAGE</span></a></li>
+            <li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="https://hirokinishimoto.github.io/posts/" itemprop="url"><span itemprop="title">POSTS</span></a></li>
             
-            <li class="active">Contact</li>
+            <li class="active">RでSEM</li>
           </ol>
         </nav>
       </div>
@@ -892,6 +1016,48 @@ section.footer > header a {
 <div class="adj">
   <div class="mrow">
     
+    <div class="mcol c6">
+      <header>Previous Article</header>
+      <article class="lism">
+  <a href="https://hirokinishimoto.github.io/amp/posts/%E7%BE%A4/">
+    <div class="thumb thumb-5f1872acb5a425aa01158015841197e1"></div>
+
+    <div class="inner">
+      <div class="title">群①</div>
+
+      <ul class="facts sm">
+        <li><i class="fas fa-calendar" aria-hidden="true"></i><time datetime="7007-10-07T14:00:46JST">Oct 7, 2019</time></li>
+        <li><i class="fas fa-bookmark" aria-hidden="true"></i>POSTS</li>
+        
+      </ul>
+
+    </div>
+  </a>
+</article>
+
+    </div>
+    
+    
+    <div class="mcol c6">
+      <header>Next Article</header>
+      <article class="lism">
+  <a href="https://hirokinishimoto.github.io/amp/posts/sem/">
+    <div class="thumb thumb-aae85506df328f7204e4b3bb9bbde5a2"></div>
+
+    <div class="inner">
+      <div class="title">SEM</div>
+
+      <ul class="facts sm">
+        <li><i class="fas fa-calendar" aria-hidden="true"></i><time datetime="14007-10-14T01:09:04JST">Oct 14, 2019</time></li>
+        <li><i class="fas fa-bookmark" aria-hidden="true"></i>POSTS</li>
+        
+      </ul>
+
+    </div>
+  </a>
+</article>
+
+    </div>
     
   </div>
 </div>

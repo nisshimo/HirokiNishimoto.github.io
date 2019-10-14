@@ -1,0 +1,1234 @@
+<!DOCTYPE html>
+<html ⚡>
+  <head>
+    <meta charset="utf-8">
+<meta name="pinterest" content="nopin">
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<meta name="theme-color" content="#263238">
+
+<meta name="generator" content="Hugo 0.58.0" />
+
+<link rel="apple-touch-icon" href="https://hirokinishimoto.github.io/images/logo.png">
+
+
+<link rel="canonical" type="text/html" href="https://hirokinishimoto.github.io/posts/sem/" title="にっしーの備忘録">
+
+
+
+
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    
+    <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+    <meta name="amp-google-client-id-api" content="googleanalytics">
+    
+
+    
+    <link href="https://fonts.googleapis.com/css?family=Lobster%7cLato:400,700" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <title>SEM - にっしーの備忘録</title>
+    
+<meta name="description" content="構造方程式モデリング  構造方程式モデリング : Struvtual Equation Modeling (SEM) 共分散構造分析ともいうけど&hellip; 構造方程式モデリングと呼ぶほうが良い。  共分散だけでなく、平均を構造化する分析もあるため。   構造方程式モデリングの特徴 特徴1. 変数間の関係を統計的に検証できる。  変数の間の関係を記述して、データとの当てはまりを評価する、統計的な分析方法。  特徴2. 潜在変数を導入した分析ができる。  複数の変数で潜在変数（構成概念）を規定することができる。 構成概念？  とりあえずその存在を仮定することによって、複雑に込み入った現象を比較的単純に理解することを目的に構成する概念。 指導力、抑うつ傾向、ブランドイメージなど&hellip;   特徴3. わかりやすいパス図そ使ったビジュアル表現が可能。  変数間の関係をパス図を使ってビジュアル化  矢印は「もと」から「さき」へ向かって影響を表現 長方形や楕円は変数の特徴を表現  関係性がわかりやすい  直感的に変数の関係がわかる！   ↑パス図という
+パス図の書き方のルール  観測変数  既知の変数 直接観測できるデータ 長方形で表す    潜在変数
+ 未知の変数 直接観測できないデータ 楕円で表す   残差
+ 外生変数では説明しきれない効果を１つにまとめたもの    パス係数(回帰係数)
+ 片方向の矢印→で表す  共分散（相関係数)">
+
+<meta property="og:title" content="SEM - にっしーの備忘録">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hirokinishimoto.github.io/amp/posts/sem/">
+<meta property="og:image" content="https://hirokinishimoto.github.io/images/default.png">
+<meta property="og:site_name" content="にっしーの備忘録">
+<meta property="og:description" content="構造方程式モデリング  構造方程式モデリング : Struvtual Equation Modeling (SEM) 共分散構造分析ともいうけど&hellip; 構造方程式モデリングと呼ぶほうが良い。  共分散だけでなく、平均を構造化する分析もあるため。   構造方程式モデリングの特徴 特徴1. 変数間の関係を統計的に検証できる。  変数の間の関係を記述して、データとの当てはまりを評価する、統計的な分析方法。  特徴2. 潜在変数を導入した分析ができる。  複数の変数で潜在変数（構成概念）を規定することができる。 構成概念？  とりあえずその存在を仮定することによって、複雑に込み入った現象を比較的単純に理解することを目的に構成する概念。 指導力、抑うつ傾向、ブランドイメージなど&hellip;   特徴3. わかりやすいパス図そ使ったビジュアル表現が可能。  変数間の関係をパス図を使ってビジュアル化  矢印は「もと」から「さき」へ向かって影響を表現 長方形や楕円は変数の特徴を表現  関係性がわかりやすい  直感的に変数の関係がわかる！   ↑パス図という
+パス図の書き方のルール  観測変数  既知の変数 直接観測できるデータ 長方形で表す    潜在変数
+ 未知の変数 直接観測できないデータ 楕円で表す   残差
+ 外生変数では説明しきれない効果を１つにまとめたもの    パス係数(回帰係数)
+ 片方向の矢印→で表す  共分散（相関係数)">
+<meta property="og:locale" content="ja_JP">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="にっしーの備忘録">
+<meta name="twitter:url" content="https://hirokinishimoto.github.io/amp/posts/sem/">
+<meta name="twitter:title" content="SEM - にっしーの備忘録">
+<meta name="twitter:description" content="構造方程式モデリング  構造方程式モデリング : Struvtual Equation Modeling (SEM) 共分散構造分析ともいうけど&hellip; 構造方程式モデリングと呼ぶほうが良い。  共分散だけでなく、平均を構造化する分析もあるため。   構造方程式モデリングの特徴 特徴1. 変数間の関係を統計的に検証できる。  変数の間の関係を記述して、データとの当てはまりを評価する、統計的な分析方法。  特徴2. 潜在変数を導入した分析ができる。  複数の変数で潜在変数（構成概念）を規定することができる。 構成概念？  とりあえずその存在を仮定することによって、複雑に込み入った現象を比較的単純に理解することを目的に構成する概念。 指導力、抑うつ傾向、ブランドイメージなど&hellip;   特徴3. わかりやすいパス図そ使ったビジュアル表現が可能。  変数間の関係をパス図を使ってビジュアル化  矢印は「もと」から「さき」へ向かって影響を表現 長方形や楕円は変数の特徴を表現  関係性がわかりやすい  直感的に変数の関係がわかる！   ↑パス図という
+パス図の書き方のルール  観測変数  既知の変数 直接観測できるデータ 長方形で表す    潜在変数
+ 未知の変数 直接観測できないデータ 楕円で表す   残差
+ 外生変数では説明しきれない効果を１つにまとめたもの    パス係数(回帰係数)
+ 片方向の矢印→で表す  共分散（相関係数)">
+<meta name="twitter:image" content="https://hirokinishimoto.github.io/images/default.png">
+
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "NewsArticle",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id":"https:\/\/hirokinishimoto.github.io\/"
+    },
+    "headline": "SEM-にっしーの備忘録",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https:\/\/hirokinishimoto.github.io\/images\/default.png",
+      "height": 800,
+      "width": 800
+    },
+    "datePublished": "2019-10-14T01:09:04JST",
+    "dateModified": "2019-10-14T01:09:04JST",
+    "author": {
+      "@type": "Person",
+      "name": "にっしーの備忘録"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "にっしーの備忘録",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https:\/\/hirokinishimoto.github.io\/images/logo.png",
+        "width": 600,
+        "height": 60
+      }
+    },
+    "description": "構造方程式モデリング  構造方程式モデリング : Struvtual Equation Modeling (SEM) 共分散構造分析ともいうけど\x26hellip; 構造方程式モデリングと呼ぶほうが良い。  共分散だけでなく、平均を構造化する分析もあるため。   構造方程式モデリングの特徴 特徴1. 変数間の関係を統計的に検証できる。  変数の間の関係を記述して、データとの当てはまりを評価する、統計的な分析方法。  特徴2. 潜在変数を導入した分析ができる。  複数の変数で潜在変数（構成概念）を規定することができる。 構成概念？  とりあえずその存在を仮定することによって、複雑に込み入った現象を比較的単純に理解することを目的に構成する概念。 指導力、抑うつ傾向、ブランドイメージなど\x26hellip;   特徴3. わかりやすいパス図そ使ったビジュアル表現が可能。  変数間の関係をパス図を使ってビジュアル化  矢印は「もと」から「さき」へ向かって影響を表現 長方形や楕円は変数の特徴を表現  関係性がわかりやすい  直感的に変数の関係がわかる！   ↑パス図という\nパス図の書き方のルール  観測変数  既知の変数 直接観測できるデータ 長方形で表す    潜在変数\n 未知の変数 直接観測できないデータ 楕円で表す   残差\n 外生変数では説明しきれない効果を１つにまとめたもの    パス係数(回帰係数)\n 片方向の矢印→で表す  共分散（相関係数)"
+  }
+</script>
+
+
+    <style amp-custom>
+html {
+  font-size: 18px;
+  background-color: rgba(236,239,241,.5);
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+body {
+  color: #333;
+  font-family: 'Roboto Slab','ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro',メイリオ,Meiryo,sans-serif;
+  font-feature-settings : "palt";
+  font-size: inherit;
+  line-height: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5 ,h6 {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1rem;
+  margin: 0;
+}
+
+hr {
+  border: 0;
+  border-top: 1px dashed #cfd8dc;
+  margin: 1rem 0;
+}
+
+p {
+  margin: 0;
+  line-height: 1rem;
+}
+
+a {
+  color: #2196f3;
+  text-decoration: none;
+  transition-duration: .3s;
+}
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+th, td {
+  font-size: .8rem;
+  padding: .5rem;
+}
+
+tr {
+  border-bottom: 1px dashed #ddd;
+}
+
+/* Layouts */
+main,
+aside {
+  display: block;
+}
+
+main { padding: 1rem 0 3rem 0; }
+aside.h { padding: 3rem 0; }
+
+main.f,
+aside.f {
+  background-color: #333;
+  border-top: 2px dashed #fff;
+  border-bottom: 2px dashed #fff;
+}
+
+.l-container {
+  position: relative;
+  max-width: 68rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.l-container.thin {
+  max-width: 44rem;
+}
+
+.l-header {
+  background-color: #fff;
+  box-shadow: 0 0 0 1px rgba(63,63,68,.05), 0 1px 3px rgba(63,63,68,.1), 0 1px 2px rgba(0,0,0,.05);
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.l-header .description {
+  margin-top: .5rem;
+  font-size: .8rem;
+}
+
+.l-footer {
+  background-color: #fff;
+  box-shadow: 0 0 0 1px rgba(63,63,68,.05), 0 1px 3px rgba(63,63,68,.1), 0 1px 2px rgba(0,0,0,.05);
+  font-size: .6rem;
+  font-weight: 700;
+  padding: 1rem 0;
+}
+
+@media (max-width: 768px) {
+  .l-sidebar {
+    margin-top: 4rem;
+  }
+}
+
+.mrow {
+  margin: 0 -1rem;
+  overflow: hidden;
+}
+
+.mcol {
+  box-sizing: border-box;
+  float: left;
+  padding: 0 1rem;
+}
+
+.c6 { width: 50%; }
+.c4 { width: 33.26323833%; }
+.c8 { width: 66.66666%; }
+
+@media (max-width: 768px) {
+  .mcol {
+    width: 100%;
+    float: none;
+  }
+}
+
+.logo a {
+  font-size: 1.4rem;
+  line-height: 1.5rem;
+  font-weight: 700;
+  color: #333;
+}
+
+.articles {
+  margin: -1rem 0;
+  margin-bottom: 1rem;
+}
+
+.articles.sm {
+  margin: -.5rem 0;
+  margin-bottom: 0;
+}
+
+article {
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+article.li {
+  background-color: #fff;
+  box-shadow: 0 0 0 1px rgba(63,63,68,.05), 0 1px 3px rgba(63,63,68,.1), 0 1px 2px rgba(0,0,0,.05);
+  height: 20rem;
+  overflow: hidden;
+  margin: 1rem 0;
+}
+
+article.li > a {
+  display: block;
+  color: #333;
+}
+
+article.li .inner {
+  padding: 1rem;
+}
+
+article.li .thumb {
+  height: 8rem;
+}
+
+article.li .title {
+  color: #333;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  margin-bottom: .5rem;
+}
+
+article.li .summary {
+  font-size: .8rem;
+  height: 6rem;
+  overflow: hidden;
+  margin-top: 1rem;
+}
+
+article.li .summary::after {
+  content: '...';
+}
+
+article.lism {
+  background-color: #fff;
+  box-shadow: 0 0 0 1px rgba(63,63,68,.05), 0 1px 3px rgba(63,63,68,.1), 0 1px 2px rgba(0,0,0,.05);
+  margin: .5rem 0;
+}
+
+article.lism::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+article.lism > a {
+  display: block;
+  color: #333;
+}
+
+article.lism .inner {
+  display: table-cell;
+  vertical-align: middle;
+  height: 5rem;
+  padding: 0 .75rem;
+}
+
+article.lism .thumb {
+  width: 5rem;
+  height: 5rem;
+  float: left;
+}
+
+article.lism .title {
+  font-weight: 700;
+  font-size: .8rem;
+  margin-bottom: .25rem;
+}
+
+article.sn {
+  background-color: #fff;
+  box-shadow: 0 0 0 1px rgba(63,63,68,.05), 0 1px 3px rgba(63,63,68,.1), 0 1px 2px rgba(0,0,0,.05);
+  margin-bottom: 1rem;
+}
+
+article.sn .thumb {
+  height: 20rem;
+}
+
+@media (max-width: 768px) {
+  article.sn .thumb {
+    height: 10rem;
+  }
+}
+
+article.sn > .article-header,
+article.sn > .article-body,
+article.sn .article-footer {
+  padding: 2rem;
+}
+
+article.sn > .article-body {
+  padding: 0 2rem;
+}
+
+@media (max-width: 768px) {
+  article.sn > .article-header,
+  article.sn > .article-body,
+  article.sn .article-footer {
+    padding: 1rem;
+  }
+
+  article.sn > .article-body {
+    padding: 0 1rem;
+  }
+}
+
+article.sn > .article-header .title {
+  font-size: 1.8rem;
+  line-height: 2rem;
+  margin-bottom: .5rem;
+}
+
+@media (max-width: 768px) {
+  article.sn > .article-header .title {
+    font-size: 1.4rem;
+    line-height: 1.5rem;
+  }
+}
+
+article.sn > .article-header .facts {
+  margin-bottom: 1rem;
+}
+
+article.sn > .article-body {
+  margin-bottom: 1.5rem;
+}
+
+article.sn > .article-body h2 {
+  border-bottom: .25rem solid #333;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  margin: 1.5rem 0;
+  padding: .5rem 0;
+}
+
+article.sn > .article-body h3 {
+  border-left: .5rem solid #333;
+  line-height: 1.5rem;
+  margin: 1.5rem 0;
+  padding: .125rem .5rem;
+}
+
+article.sn > .article-body ul,
+article.sn > .article-body ol {
+  margin: 1.5rem 0;
+  padding-left: 1.5rem;
+}
+
+article.sn > .article-body li {
+  padding-bottom: .5rem;
+  line-height: 1.5rem;
+}
+
+article.sn > .article-body li:last-child {
+  padding-bottom: 0;
+}
+article.sn > .article-body p {
+  margin: 1rem 0;
+  line-height: 1.5rem;
+}
+
+article.sn > .article-body strong,
+article.sn > .article-body em {
+  font-style: normal;
+  font-weight: 700;
+}
+
+article.sn > .article-body strong {
+  box-shadow: 0 -.5rem 0 0 #ffc107 inset;
+}
+
+article.sn > .article-body em {
+  color: #8bc34a;
+}
+
+article.sn > .article-body code,
+article.sn > .article-body pre {
+  font-family: Menlo, Consolas, monospace;
+  font-size: .7rem;
+}
+
+article.sn > .article-body pre {
+  background-color: #333;
+  color: #fff;
+  line-height: 1rem;
+  margin: 1.5rem -2rem;
+  overflow: auto;
+}
+
+@media (max-width: 768px) {
+  article.sn > .article-body pre {
+    margin: 1.5rem -1rem;
+  }
+}
+
+article.sn > .article-body pre > code {
+  display: block;
+  padding: 1rem 2rem;
+}
+
+@media (max-width: 768px) {
+  article.sn > .article-body pre > code {
+    padding: 1rem;
+  }
+}
+
+article.sn > .article-body p code {
+  background-color: #eceff1;
+  color: #333;
+  border-radius: 4px;
+  margin: 0 .25rem;
+  padding: .375rem;
+  white-space: nowrap;
+}
+
+article.sn > .article-body blockquote {
+  position: relative;
+  border-left: .25rem solid #333;
+  font-size: .8rem;
+  padding: .125rem 1rem;
+  margin: 1.5rem 0;
+}
+
+@media (max-width: 768px) {
+  article.sn > .article-body blockquote {
+    font-size: 1rem;
+  }
+}
+
+article.sn > .article-body blockquote p {
+  margin: .5rem 0;
+  line-height: 1rem;
+}
+
+article.sn > .article-body figure {
+  margin: 1.5rem 0;
+}
+
+article.sn > .article-body img,
+article.sn > .article-body figure img,
+article.sn > .article-body figure amp-img {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  max-width: 100%;
+}
+
+article.sn > .article-body figcaption {
+  color: #cfd8dc;
+  font-size: .8rem;
+  font-weight: 700;
+  margin-top: .5rem;
+}
+
+.facts li {
+  display: inline;
+  font-size: .8rem;
+  margin-right: 1rem;
+}
+
+.facts i {
+  color: #cfd8dc;
+  margin-right: .5em;
+}
+
+.facts.sm li {
+  font-size: .7rem;
+}
+
+.sections.sidebar {
+  margin: -1rem 0;
+}
+
+.sections.footer {
+  margin: -1rem 0;
+}
+
+section.sidebar {
+  margin: 2rem 0;
+}
+
+section.sidebar > header {
+  font-size: .8rem;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+section.footer {
+  margin: 1rem 0;
+}
+
+section.footer > header {
+  font-size: .8rem;
+  margin: .5rem 0;
+}
+
+section.footer > header::before {
+  content: "- ";
+}
+
+section.footer > header a {
+  font-weight: 700;
+  color: #333;
+  text-decoration: underline;
+}
+
+.terms {
+  margin: -.25rem;
+}
+
+.terms li {
+  display: inline-block;
+}
+
+.terms a {
+  display: block;
+  float: left;
+  background-color: #333;
+  border-radius: 4px;
+  color: #fff;
+  font-size: .7rem;
+  margin: .25rem;
+  padding: 0 .75rem;
+  line-height: 1.75rem;
+}
+
+.paging {
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.paging a {
+  display: inline-block;
+  background-color: #fff;
+  box-shadow: 0 0 0 1px rgba(63,63,68,.05), 0 1px 3px rgba(63,63,68,.1), 0 1px 2px rgba(0,0,0,.05);
+  border-radius: 4px;
+  color: #333;
+  padding: 0 1rem;
+  line-height: 3rem;
+}
+
+.page-title {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.page-title::after {
+  content: '';
+  display: block;
+  border-bottom: .25rem solid #333;
+  width: 3rem;
+  margin: 1.5rem auto;
+}
+
+.page-title > .title {
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+}
+
+/* Parts:breadcrumb */
+.crumb ol {
+  text-overflow: ellipsis;
+  color: #cfd8dc;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.crumb li {
+  display: inline;
+  font-size: .8rem;
+}
+
+.crumb li::after {
+  content: '›';
+  margin: 0 .25rem 0 .5rem;
+}
+
+.crumb li:last-child::after {
+  content: '';
+}
+
+.crumb a {
+  color: #cfd8dc;
+}
+
+.crumb i {
+  margin-right: .5em;
+}
+
+.share {
+  padding: 0;
+}
+
+.share a {
+  display: inline-block;
+  box-shadow: 0 0 0 1px rgba(63,63,68,.05), 0 1px 3px rgba(63,63,68,.1), 0 1px 2px rgba(0,0,0,.05);
+  min-width: 1rem;
+  height: 2rem;
+  border-radius: 4px;
+  color: #333;
+  font-size: .8rem;
+  font-weight: 700;
+  line-height: 2rem;
+  text-align: center;
+  padding: 0 .5rem;
+}
+
+.adj article.lism {
+  margin-bottom: 1rem;
+}
+
+.adj header {
+  font-weight: 700;
+  font-size: .8rem;
+}
+
+.toc {
+  padding: 0 2rem;
+}
+
+@media (max-width: 768px) {
+  .toc {
+    padding: 0 1rem;
+  }
+}
+
+.toc {
+  margin: 1rem 0;
+}
+
+.toc nav>ul {
+  background-color: #eceff1;
+  border-radius: 4px;
+  display: inline-block;
+  font-size: .8rem;
+  padding: .5rem 1rem;
+  word-break: break-all;
+  list-style: none;
+}
+
+.toc ul {
+  padding: 0;
+}
+
+.toc ul ul {
+  padding-left: 1rem;
+}
+
+.toc ul ul ul {
+  padding-left: 1rem;
+}
+
+.toc li {
+  color: #90a4ae;
+}
+
+.toc ul ul>li {
+  font-weight: 700;
+  margin: .5rem 0;
+  list-style-type: decimal;
+}
+
+.toc ul ul ul>li {
+  list-style-type: disc;
+  font-weight: 500;
+}
+
+.author {
+  background-color: #fff;
+  box-shadow: 0 0 0 1px rgba(63,63,68,.05), 0 1px 3px rgba(63,63,68,.1), 0 1px 2px rgba(0,0,0,.05);
+  padding: 1rem;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.author .author-thumb {
+  margin: 0 auto 1rem;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  background-color: #eceff1;
+  background-size: cover;
+  background-position: center;
+}
+
+.author .author-name {
+  margin-bottom: .5rem;
+  font-weight: 700;
+}
+
+.author .author-facts {
+  margin-bottom: 1rem;
+}
+
+.author .author-facts li {
+  display: inline;
+}
+
+.author .author-facts li a {
+  display: inline-block;
+  background-color: #eceff1;
+  width: 1.75rem;
+  height: 1.75rem;
+  line-height: 1.75rem;
+  text-align: center;
+  color: #333;
+  font-size: .8rem;
+  border-radius: 2px;
+}
+
+.author .author-facts li a:hover {
+  color: #fff;
+  background-color: #333;
+}
+
+.author .author-description {
+  text-align: left;
+  font-size: .8rem;
+}
+
+.author .author-description p {
+  margin: .5rem 0;
+}
+
+.thumb {
+  background-image: url(https://hirokinishimoto.github.io/images/default.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ body { font-family: Lato,YuGothic,'Hiragino Kaku Gothic Pro',Meiryo,sans-serif; } 
+ .h-logo { font-family: Lobster, cursive; } 
+.l-container { max-width: 40rem; margin: 0 auto; }
+    </style>
+  </head>
+
+  <body>
+    
+    <amp-analytics type="googleanalytics" id="analytics1">
+      <script type="application/json"> { "vars": { "account": "UA-XXXXXXXX-XX"}, "triggers": { "trackPageview": { "on": "visible", "request": "pageview" } } }
+      </script>
+    </amp-analytics>
+    
+
+    <header class="l-header">
+      <div class="l-container">
+        <div class="logo">
+          <a href="https://hirokinishimoto.github.io/">にっしーの備忘録</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="l-container">
+        
+<article class="sn">
+
+  <div class="thumb thumb-aae85506df328f7204e4b3bb9bbde5a2"></div>
+
+  <header class="article-header">
+    <h1 class="title">SEM</h1>
+
+    <ul class="facts">
+      <li><i class="fas fa-calendar" aria-hidden="true"></i><time datetime="2019-10-14T01:09:04JST">Oct 14, 2019</time></li>
+      
+      <li><i class="fas fa-bookmark" aria-hidden="true"></i><a href="https://hirokinishimoto.github.io/posts/">POSTS</a></li>
+      
+    </ul>
+
+    <aside class="share">
+  <a href="https://b.hatena.ne.jp/add?mode=confirm&url=https%3a%2f%2fhirokinishimoto.github.io%2famp%2fposts%2fsem%2f&title=SEM" title="はてなブックマーク" class="ht" target="_blank" rel="nofollow">B!</a>
+  <a href="https://twitter.com/intent/tweet?url=https%3a%2f%2fhirokinishimoto.github.io%2famp%2fposts%2fsem%2f&text=SEM&tw_p=tweetbutton" title="Twitterでシェア" class="tw" target="_blank" rel="nofollow"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+  <a href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fhirokinishimoto.github.io%2famp%2fposts%2fsem%2f&t=SEM" title="Facebookでシェア" class="fb" target="_blank" rel="nofollow"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+  <a href="https://getpocket.com/edit?url=https%3a%2f%2fhirokinishimoto.github.io%2famp%2fposts%2fsem%2f&title=SEM" title="Pocketに保存" class="pk" target="_blank" rel="nofollow"><i class="fab fa-get-pocket" aria-hidden="true"></i></a>
+  <a href="https://social-plugins.line.me/lineit/share?url=https%3a%2f%2fhirokinishimoto.github.io%2famp%2fposts%2fsem%2f" title="LINEでシェア" class="ln" target="_blank" rel="nofollow"><i class="fab fa-line" aria-hidden="true"></i></a>
+</aside>
+
+  </header>
+
+  
+
+  <div class="article-body">
+
+<h1 id="構造方程式モデリング">構造方程式モデリング</h1>
+
+<ul>
+<li>構造方程式モデリング : Struvtual Equation Modeling (SEM)</li>
+<li>共分散構造分析ともいうけど&hellip;</li>
+<li>構造方程式モデリングと呼ぶほうが良い。
+
+<ul>
+<li>共分散だけでなく、平均を構造化する分析もあるため。</li>
+</ul></li>
+</ul>
+
+<h2 id="構造方程式モデリングの特徴">構造方程式モデリングの特徴</h2>
+
+<h3 id="特徴1-変数間の関係を統計的に検証できる">特徴1. 変数間の関係を統計的に検証できる。</h3>
+
+<ul>
+<li>変数の間の関係を記述して、データとの当てはまりを評価する、統計的な分析方法。</li>
+</ul>
+
+<p><img src="https://image.docbase.io/uploads/8723c8d6-3528-4df8-8be4-4008f3d6cac2.jpeg =500x" alt="IMG_DA534E6922EA-1.jpeg" /></p>
+
+<h3 id="特徴2-潜在変数を導入した分析ができる">特徴2.  潜在変数を導入した分析ができる。</h3>
+
+<ul>
+<li>複数の変数で潜在変数（構成概念）を規定することができる。</li>
+<li>構成概念？
+
+<ul>
+<li>とりあえずその存在を仮定することによって、複雑に込み入った現象を比較的単純に理解することを目的に構成する概念。</li>
+<li>指導力、抑うつ傾向、ブランドイメージなど&hellip;</li>
+</ul></li>
+</ul>
+
+<p><img src="https://image.docbase.io/uploads/3d67b039-becf-4423-a6d4-23d31031ed5e.jpeg =280x" alt="IMG_70177C03B56F-1.jpeg" /></p>
+
+<h3 id="特徴3-わかりやすいパス図そ使ったビジュアル表現が可能">特徴3. わかりやすいパス図そ使ったビジュアル表現が可能。</h3>
+
+<ul>
+<li>変数間の関係をパス図を使ってビジュアル化
+
+<ul>
+<li>矢印は「もと」から「さき」へ向かって影響を表現</li>
+<li>長方形や楕円は変数の特徴を表現</li>
+</ul></li>
+<li>関係性がわかりやすい
+
+<ul>
+<li>直感的に変数の関係がわかる！</li>
+</ul></li>
+</ul>
+
+<p><img src="https://image.docbase.io/uploads/f1f94d31-8733-4acf-a0c1-2c71e82d255f.jpeg =300x" alt="IMG_13E4231997D2-1.jpeg" /></p>
+
+<p>↑<strong>パス図</strong>という</p>
+
+<h4 id="パス図の書き方のルール">パス図の書き方のルール</h4>
+
+<ul>
+<li>観測変数
+
+<ul>
+<li>既知の変数</li>
+<li>直接観測できるデータ</li>
+<li>長方形で表す</li>
+</ul></li>
+</ul>
+
+<p><img src="https://image.docbase.io/uploads/1d53e849-d749-4c3a-abaa-3afa3ff30b23.jpeg =70x" alt="IMG_279BBED150A6-1.jpeg" /></p>
+
+<ul>
+<li><p>潜在変数</p>
+
+<ul>
+<li>未知の変数</li>
+<li>直接観測できないデータ</li>
+<li>楕円で表す</li>
+</ul>
+
+<p><img src="https://image.docbase.io/uploads/f1e0441c-130c-4e0b-b72a-acf396fbd21a.jpeg =60x" alt="IMG_EF225A577966-1.jpeg" /></p></li>
+
+<li><p>残差</p>
+
+<ul>
+<li>外生変数では説明しきれない効果を１つにまとめたもの</li>
+</ul></li>
+</ul>
+
+<p><img src="https://image.docbase.io/uploads/bc5016af-eb00-43e8-b7db-aeb501ab9ecc.jpeg =60x" alt="IMG_68036BFC143B-1.jpeg" /></p>
+
+<ul>
+<li><p>パス係数(回帰係数)</p>
+
+<ul>
+<li>片方向の矢印→で表す</li>
+</ul></li>
+
+<li><p>共分散（相関係数)</p>
+
+<ul>
+<li>両方向の矢印↔で表す</li>
+</ul></li>
+</ul>
+
+<h3 id="特徴4-semを用いるといろいろな分析が可能">特徴4. SEMを用いるといろいろな分析が可能</h3>
+
+<ul>
+<li>伝統的な統計モデルを下位モデルとして含んでいる。</li>
+<li>第2世代の多変量解析モデル</li>
+</ul>
+
+<p><code>回帰分析</code>
+<code>因子分析</code>
+<code>分散分析</code>
+<code>共分散分析</code>
+<code>パス解析</code>
+<code>不完全データ解析</code>
+<code>潜在曲線分析</code>
+<code>時系列分析</code></p>
+
+<p>=&gt; すべてSEMで表現可能</p>
+
+<h3 id="例1-重回帰分析モデルはsemで表現可能">例1) 重回帰分析モデルはSEMで表現可能</h3>
+
+<p><img src="https://image.docbase.io/uploads/5d076d4c-04b9-4563-9a97-83ed52e4739b.jpeg =300x" alt="IMG_3D3ADD012ACD-1.jpeg" /></p>
+
+<h3 id="例2-因子分析モデルはsemで表現可能">例2) 因子分析モデルはSEMで表現可能</h3>
+
+<h4 id="探索的因子分析モデル">探索的因子分析モデル</h4>
+
+<ul>
+<li>事前に明確な仮説を仮定せず、潜在する因子を探すための因子。</li>
+<li>単に因子分析と言った場合、こちらを指すことがほとんど。</li>
+</ul>
+
+<p><img src="https://image.docbase.io/uploads/06631b7a-3e35-47e5-a014-b3c3a6de17de.jpeg =300x" alt="IMG_D34559931989-1.jpeg" /></p>
+
+<h4 id="検証的因子分析モデル">検証的因子分析モデル</h4>
+
+<ul>
+<li>事前に明確な仮説を設定し、観測変数に基づいて仮説と実際のデータがどの程度宛は混ているかを確認する方法。</li>
+<li>仮説上で関連がないと想定される因子と観測変数のパスは０に固定される。</li>
+</ul>
+
+<p><img src="https://image.docbase.io/uploads/6f54784d-6943-4bd4-accf-878ed27f5363.jpeg =300x" alt="IMG_2903D6FC9A8A-1.jpeg" /></p>
+
+<h2 id="構造方程式モデリングの周辺知識">構造方程式モデリングの周辺知識</h2>
+
+<ul>
+<li>主に心理学、社会学の世界で発達</li>
+<li>近年はマーケティングの分野でも&hellip;</li>
+</ul>
+
+<h2 id="どんなデータを使う">どんなデータを使う？</h2>
+
+<p>=&gt; 分散共分散行列</p>
+
+<h2 id="分析の流れ">分析の流れ</h2>
+
+<ol>
+<li>仮設を構築</li>
+<li>モデルで表現
+
+<ul>
+<li>パス図を書いてみる</li>
+</ul></li>
+<li>パラメータ推定
+
+<ul>
+<li>分析用ソフトウェアの出番</li>
+</ul></li>
+<li>適合度評価
+
+<ul>
+<li>データの当てはまりの良さを確認する。</li>
+<li>当てはまりが良いなら結果の解釈を行う。</li>
+<li>当てはまりが悪かったらモデル修正(1.へ)</li>
+</ul></li>
+</ol>
+
+<h1 id="分析結果の解釈について">分析結果の解釈について</h1>
+
+<h3 id="出力のどこを見れば良い">出力のどこを見れば良い？</h3>
+
+<p>=&gt; <strong>適合度</strong>と<strong>パス係数(パス図)</strong></p>
+
+<h2 id="適合度の指標">適合度の指標</h2>
+
+<h3 id="gfi">GFI</h3>
+
+<ul>
+<li>Goodness of Fit Index</li>
+<li>通常０から１までの値をとり，モデルの説明力の目安となる。</li>
+<li>GFIが1に近いほど，説明力のあるモデルといえる</li>
+<li>GFIが高くても「良いモデル」というわけではないので注意</li>
+</ul>
+
+<h3 id="agfi">AGFI</h3>
+
+<ul>
+<li>Adjusted Goodness of Fit Index；修正適合度指標</li>
+<li>値が１に近いほどデータへの当てはまりが良い</li>
+<li>$ GFI \geq AGFI $であり，GFIに比べてAGFIが著しく低下するモデルはあまり好ましくない</li>
+</ul>
+
+<h3 id="cfi">CFI</h3>
+
+<ul>
+<li>当該モデルの$ \chi^2$ 値が，飽和モデル34と独立モデル35の$ \chi^2$ と比較して相対的にどれくらい飽和モデルの$ \chi^2$ 値に近いかを評価する。1に近いほど適合が良く，0.9を超えることが望ましいとされる。</li>
+</ul>
+
+<h3 id="rmsea">RMSEA</h3>
+
+<ul>
+<li>母集団における分散共分散行列とモデルによって復元された分散共分散行列との距離がどれくらい小さいと推定されるか評価する指標</li>
+<li>0に近いほど適合が良いとされ，.05を下回ることが望ましいとされる</li>
+<li>信頼区間も併せて報告することが多い。</li>
+</ul>
+
+<h3 id="aic-赤池情報量規準-bic-ベイズ情報量規準">AIC（赤池情報量規準）, BIC（ベイズ情報量規準）</h3>
+
+<ul>
+<li>複数のモデルを比較する際に用いられる情報量規準 information criterion と呼ばれる指標</li>
+<li>（マイナス方向も含め）値が小さいほど良いモデルであると考える</li>
+<li>モデル単体での適合度は評価できない</li>
+</ul>
+
+<p>などが用いられる。</p>
+
+<h2 id="パス図の見方">パス図の見方</h2>
+
+<h3 id="直接効果と間接効果">直接効果と間接効果</h3>
+
+<p>ある変数が別の変数へ直接的に影響を及ぼすことを「直接効果」，他の変数を経由して影響を及ぼすことを「間接効果」という。</p>
+
+<h3 id="標準化後の係数と標準化前の係数">標準化後の係数と標準化前の係数</h3>
+
+<ul>
+<li>変数の単位に束縛されず、標準得点の尺度で解釈する。</li>
+<li>一般に，レポートや論文を書く際には標準化された値（－1.00～＋1.00）を用いる。</li>
+<li>標準化されない値は，データの得点範囲によって数値が大きく異なるため，モデルを検討する際には分かりづらい場合がある。</li>
+<li>比尺度のデータのように、単位の意味を実感しやすいものについては、標準化前の係数が興味深い解釈をもたらすこともある。</li>
+</ul>
+
+<!--
+
+## 用語など
+
+### 構造方程式
+-->
+
+<h2 id="参考文献">参考文献</h2>
+
+<p>書籍
+- <a href="https://www.amazon.co.jp/%E5%85%B1%E5%88%86%E6%95%A3%E6%A7%8B%E9%80%A0%E5%88%86%E6%9E%90-%E5%85%A5%E9%96%80%E7%B7%A8%E2%80%95%E6%A7%8B%E9%80%A0%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%83%A2%E3%83%87%E3%83%AA%E3%83%B3%E3%82%B0-%E7%B5%B1%E8%A8%88%E3%83%A9%E3%82%A4%E3%83%96%E3%83%A9%E3%83%AA%E3%83%BC-%E8%B1%8A%E7%94%B0-%E7%A7%80%E6%A8%B9/dp/4254126581">豊田秀樹 : 共分散構造分析&lt; 入門編&gt;, 朝倉書店, 1998. </a></p>
+
+<p>Webページ
+- <a href="https://sites.google.com/site/scriptofbioinformatics/r-tong-ji-guan-xi/gong-fen-san-gou-zao-jie-xi-r">共分散構造解析（R）</a>
+- <a href="https://www.jstage.jst.go.jp/article/jbhmk/29/2/29_2_138/_pdf">構造方程式モデリングは、因子分析、分散分析、パス解析のすべてにとって代わるのか？</a>
+- <a href="http://psy.isc.chubu.ac.jp/~oshiolab/teaching_folder/datakaiseki_folder/10_folder/da10_03.html">心理データ解析</a>
+- <a href="https://www.juen.ac.jp/lab/okumura/class/g2/node7.html">モデルの適合度</a>
+- <a href="http://psy.isc.chubu.ac.jp/~oshiolab/teaching_folder/datakaiseki_folder/10_folder/da10_02.html">心理データ解析　第10回(2)</a></p>
+
+<p>SlideShare
+- <a href="https://www.slideshare.net/MasahiroShinohara/100614-4502873">構造方程式モデリング 基本の「き」</a>
+- <a href="https://www.slideshare.net/bob3/tokyo-r7-sem20100724">共分散構造分析</a></p>
+</div>
+
+  <footer class="article-footer">
+
+    <aside class="share">
+  <a href="https://b.hatena.ne.jp/add?mode=confirm&url=https%3a%2f%2fhirokinishimoto.github.io%2famp%2fposts%2fsem%2f&title=SEM" title="はてなブックマーク" class="ht" target="_blank" rel="nofollow">B!</a>
+  <a href="https://twitter.com/intent/tweet?url=https%3a%2f%2fhirokinishimoto.github.io%2famp%2fposts%2fsem%2f&text=SEM&tw_p=tweetbutton" title="Twitterでシェア" class="tw" target="_blank" rel="nofollow"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+  <a href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fhirokinishimoto.github.io%2famp%2fposts%2fsem%2f&t=SEM" title="Facebookでシェア" class="fb" target="_blank" rel="nofollow"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+  <a href="https://getpocket.com/edit?url=https%3a%2f%2fhirokinishimoto.github.io%2famp%2fposts%2fsem%2f&title=SEM" title="Pocketに保存" class="pk" target="_blank" rel="nofollow"><i class="fab fa-get-pocket" aria-hidden="true"></i></a>
+  <a href="https://social-plugins.line.me/lineit/share?url=https%3a%2f%2fhirokinishimoto.github.io%2famp%2fposts%2fsem%2f" title="LINEでシェア" class="ln" target="_blank" rel="nofollow"><i class="fab fa-line" aria-hidden="true"></i></a>
+</aside>
+
+
+    <section class="footer">
+      <div>
+        <nav class="crumb">
+          <ol>
+            <li><a href="https://hirokinishimoto.github.io/"><i class="fas fa-home" aria-hidden="true"></i>TOP</a></li>
+            
+            <li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="https://hirokinishimoto.github.io/posts/" itemprop="url"><span itemprop="title">POSTS</span></a></li>
+            
+            <li class="active">SEM</li>
+          </ol>
+        </nav>
+      </div>
+    </section>
+
+    
+    
+    
+    
+    
+    
+  </footer>
+
+</article>
+
+
+<div class="adj">
+  <div class="mrow">
+    
+    <div class="mcol c6">
+      <header>Previous Article</header>
+      <article class="lism">
+  <a href="https://hirokinishimoto.github.io/amp/posts/r%E3%81%A7sem/">
+    <div class="thumb thumb-e6e9b3222e5c03dea45f762404d3b61c"></div>
+
+    <div class="inner">
+      <div class="title">RでSEM</div>
+
+      <ul class="facts sm">
+        <li><i class="fas fa-calendar" aria-hidden="true"></i><time datetime="14007-10-14T01:07:22JST">Oct 14, 2019</time></li>
+        <li><i class="fas fa-bookmark" aria-hidden="true"></i>POSTS</li>
+        
+      </ul>
+
+    </div>
+  </a>
+</article>
+
+    </div>
+    
+    
+    <div class="mcol c6">
+      <header>Next Article</header>
+      <article class="lism">
+  <a href="https://hirokinishimoto.github.io/amp/posts/c&#43;&#43;%E3%81%AE%E6%A8%99%E6%BA%96%E3%83%87%E3%83%BC%E3%82%BF%E6%A7%8B%E9%80%A0/">
+    <div class="thumb thumb-9413c7705bf431c141c527348c85242d"></div>
+
+    <div class="inner">
+      <div class="title">C&#43;&#43;の標準データ構造</div>
+
+      <ul class="facts sm">
+        <li><i class="fas fa-calendar" aria-hidden="true"></i><time datetime="14007-10-14T22:45:17JST">Oct 14, 2019</time></li>
+        <li><i class="fas fa-bookmark" aria-hidden="true"></i>POSTS</li>
+        
+      </ul>
+
+    </div>
+  </a>
+</article>
+
+    </div>
+    
+  </div>
+</div>
+
+
+      </div>
+    </main>
+
+    <footer class="l-footer">
+      <div class="l-container">
+        <p><span class="h-logo">&copy; にっしーの備忘録</span></p>
+        <aside>
+          <p>Powered by <a href="https://gohugo.io/">Hugo</a>.</p>
+          <p><a href="https://github.com/dim0627/hugo_theme_robust">Robust</a> designed by <a href="http://yet.unresolved.xyz/">Daisuke Tsuji</a>.</p>
+        </aside>
+      </div>
+    </footer>
+
+  </body>
+</html>
+

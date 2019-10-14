@@ -11,33 +11,45 @@
 <link rel="apple-touch-icon" href="https://hirokinishimoto.github.io/images/logo.png">
 
 
-<link rel="amphtml" type="text/html" href="https://hirokinishimoto.github.io/amp/posts/%E7%BE%A4/" title="にっしーの備忘録">
+<link rel="amphtml" type="text/html" href="https://hirokinishimoto.github.io/amp/posts/sem/" title="にっしーの備忘録">
 
 
 
-    <link rel="canonical" href="https://hirokinishimoto.github.io/posts/%E7%BE%A4/">
+    <link rel="canonical" href="https://hirokinishimoto.github.io/posts/sem/">
     
     <link href="https://fonts.googleapis.com/css?family=Lobster%7cLato:400,700" rel="stylesheet">
     
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-    <title>群① - にっしーの備忘録</title>
+    <title>SEM - にっしーの備忘録</title>
     
-<meta name="description" content=" 群とは ">
+<meta name="description" content="構造方程式モデリング  構造方程式モデリング : Struvtual Equation Modeling (SEM) 共分散構造分析ともいうけど&hellip; 構造方程式モデリングと呼ぶほうが良い。  共分散だけでなく、平均を構造化する分析もあるため。   構造方程式モデリングの特徴 特徴1. 変数間の関係を統計的に検証できる。  変数の間の関係を記述して、データとの当てはまりを評価する、統計的な分析方法。  特徴2. 潜在変数を導入した分析ができる。  複数の変数で潜在変数（構成概念）を規定することができる。 構成概念？  とりあえずその存在を仮定することによって、複雑に込み入った現象を比較的単純に理解することを目的に構成する概念。 指導力、抑うつ傾向、ブランドイメージなど&hellip;   特徴3. わかりやすいパス図そ使ったビジュアル表現が可能。  変数間の関係をパス図を使ってビジュアル化  矢印は「もと」から「さき」へ向かって影響を表現 長方形や楕円は変数の特徴を表現  関係性がわかりやすい  直感的に変数の関係がわかる！   ↑パス図という
+パス図の書き方のルール  観測変数  既知の変数 直接観測できるデータ 長方形で表す    潜在変数
+ 未知の変数 直接観測できないデータ 楕円で表す   残差
+ 外生変数では説明しきれない効果を１つにまとめたもの    パス係数(回帰係数)
+ 片方向の矢印→で表す  共分散（相関係数)">
 
-<meta property="og:title" content="群① - にっしーの備忘録">
+<meta property="og:title" content="SEM - にっしーの備忘録">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://hirokinishimoto.github.io/posts/%E7%BE%A4/">
+<meta property="og:url" content="https://hirokinishimoto.github.io/posts/sem/">
 <meta property="og:image" content="https://hirokinishimoto.github.io/images/default.png">
 <meta property="og:site_name" content="にっしーの備忘録">
-<meta property="og:description" content=" 群とは ">
+<meta property="og:description" content="構造方程式モデリング  構造方程式モデリング : Struvtual Equation Modeling (SEM) 共分散構造分析ともいうけど&hellip; 構造方程式モデリングと呼ぶほうが良い。  共分散だけでなく、平均を構造化する分析もあるため。   構造方程式モデリングの特徴 特徴1. 変数間の関係を統計的に検証できる。  変数の間の関係を記述して、データとの当てはまりを評価する、統計的な分析方法。  特徴2. 潜在変数を導入した分析ができる。  複数の変数で潜在変数（構成概念）を規定することができる。 構成概念？  とりあえずその存在を仮定することによって、複雑に込み入った現象を比較的単純に理解することを目的に構成する概念。 指導力、抑うつ傾向、ブランドイメージなど&hellip;   特徴3. わかりやすいパス図そ使ったビジュアル表現が可能。  変数間の関係をパス図を使ってビジュアル化  矢印は「もと」から「さき」へ向かって影響を表現 長方形や楕円は変数の特徴を表現  関係性がわかりやすい  直感的に変数の関係がわかる！   ↑パス図という
+パス図の書き方のルール  観測変数  既知の変数 直接観測できるデータ 長方形で表す    潜在変数
+ 未知の変数 直接観測できないデータ 楕円で表す   残差
+ 外生変数では説明しきれない効果を１つにまとめたもの    パス係数(回帰係数)
+ 片方向の矢印→で表す  共分散（相関係数)">
 <meta property="og:locale" content="ja_JP">
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="にっしーの備忘録">
-<meta name="twitter:url" content="https://hirokinishimoto.github.io/posts/%E7%BE%A4/">
-<meta name="twitter:title" content="群① - にっしーの備忘録">
-<meta name="twitter:description" content=" 群とは ">
+<meta name="twitter:url" content="https://hirokinishimoto.github.io/posts/sem/">
+<meta name="twitter:title" content="SEM - にっしーの備忘録">
+<meta name="twitter:description" content="構造方程式モデリング  構造方程式モデリング : Struvtual Equation Modeling (SEM) 共分散構造分析ともいうけど&hellip; 構造方程式モデリングと呼ぶほうが良い。  共分散だけでなく、平均を構造化する分析もあるため。   構造方程式モデリングの特徴 特徴1. 変数間の関係を統計的に検証できる。  変数の間の関係を記述して、データとの当てはまりを評価する、統計的な分析方法。  特徴2. 潜在変数を導入した分析ができる。  複数の変数で潜在変数（構成概念）を規定することができる。 構成概念？  とりあえずその存在を仮定することによって、複雑に込み入った現象を比較的単純に理解することを目的に構成する概念。 指導力、抑うつ傾向、ブランドイメージなど&hellip;   特徴3. わかりやすいパス図そ使ったビジュアル表現が可能。  変数間の関係をパス図を使ってビジュアル化  矢印は「もと」から「さき」へ向かって影響を表現 長方形や楕円は変数の特徴を表現  関係性がわかりやすい  直感的に変数の関係がわかる！   ↑パス図という
+パス図の書き方のルール  観測変数  既知の変数 直接観測できるデータ 長方形で表す    潜在変数
+ 未知の変数 直接観測できないデータ 楕円で表す   残差
+ 外生変数では説明しきれない効果を１つにまとめたもの    パス係数(回帰係数)
+ 片方向の矢印→で表す  共分散（相関係数)">
 <meta name="twitter:image" content="https://hirokinishimoto.github.io/images/default.png">
 
 
@@ -49,15 +61,15 @@
       "@type": "WebPage",
       "@id":"https:\/\/hirokinishimoto.github.io\/"
     },
-    "headline": "群①-にっしーの備忘録",
+    "headline": "SEM-にっしーの備忘録",
     "image": {
       "@type": "ImageObject",
       "url": "https:\/\/hirokinishimoto.github.io\/images\/default.png",
       "height": 800,
       "width": 800
     },
-    "datePublished": "2019-10-07T14:00:46JST",
-    "dateModified": "2019-10-07T14:00:46JST",
+    "datePublished": "2019-10-14T01:09:04JST",
+    "dateModified": "2019-10-14T01:09:04JST",
     "author": {
       "@type": "Person",
       "name": "にっしーの備忘録"
@@ -72,7 +84,7 @@
         "height": 60
       }
     },
-    "description": " 群とは "
+    "description": "構造方程式モデリング  構造方程式モデリング : Struvtual Equation Modeling (SEM) 共分散構造分析ともいうけど\x26hellip; 構造方程式モデリングと呼ぶほうが良い。  共分散だけでなく、平均を構造化する分析もあるため。   構造方程式モデリングの特徴 特徴1. 変数間の関係を統計的に検証できる。  変数の間の関係を記述して、データとの当てはまりを評価する、統計的な分析方法。  特徴2. 潜在変数を導入した分析ができる。  複数の変数で潜在変数（構成概念）を規定することができる。 構成概念？  とりあえずその存在を仮定することによって、複雑に込み入った現象を比較的単純に理解することを目的に構成する概念。 指導力、抑うつ傾向、ブランドイメージなど\x26hellip;   特徴3. わかりやすいパス図そ使ったビジュアル表現が可能。  変数間の関係をパス図を使ってビジュアル化  矢印は「もと」から「さき」へ向かって影響を表現 長方形や楕円は変数の特徴を表現  関係性がわかりやすい  直感的に変数の関係がわかる！   ↑パス図という\nパス図の書き方のルール  観測変数  既知の変数 直接観測できるデータ 長方形で表す    潜在変数\n 未知の変数 直接観測できないデータ 楕円で表す   残差\n 外生変数では説明しきれない効果を１つにまとめたもの    パス係数(回帰係数)\n 片方向の矢印→で表す  共分散（相関係数)"
   }
 </script>
 
@@ -826,24 +838,24 @@ ga('send', 'pageview');
 
     <article class="sn">
 
-  <div class="thumb thumb-5f1872acb5a425aa01158015841197e1"></div>
+  <div class="thumb thumb-aae85506df328f7204e4b3bb9bbde5a2"></div>
 
   <header class="article-header">
-    <h1 class="title">群①</h1>
+    <h1 class="title">SEM</h1>
 
     <ul class="facts">
-      <li><i class="fas fa-calendar" aria-hidden="true"></i><time datetime="2019-10-07T14:00:46JST">Oct 7, 2019</time></li>
+      <li><i class="fas fa-calendar" aria-hidden="true"></i><time datetime="2019-10-14T01:09:04JST">Oct 14, 2019</time></li>
       
       <li><i class="fas fa-bookmark" aria-hidden="true"></i><a href="https://hirokinishimoto.github.io/posts/">POSTS</a></li>
       
     </ul>
 
     <aside class="share">
-  <a href="https://b.hatena.ne.jp/add?mode=confirm&url=https%3a%2f%2fhirokinishimoto.github.io%2fposts%2f%25E7%25BE%25A4%2f&title=%e7%be%a4%e2%91%a0" title="はてなブックマーク" class="ht" target="_blank" rel="nofollow">B!</a>
-  <a href="https://twitter.com/intent/tweet?url=https%3a%2f%2fhirokinishimoto.github.io%2fposts%2f%25E7%25BE%25A4%2f&text=%e7%be%a4%e2%91%a0&tw_p=tweetbutton" title="Twitterでシェア" class="tw" target="_blank" rel="nofollow"><i class="fab fa-twitter" aria-hidden="true"></i></a>
-  <a href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fhirokinishimoto.github.io%2fposts%2f%25E7%25BE%25A4%2f&t=%e7%be%a4%e2%91%a0" title="Facebookでシェア" class="fb" target="_blank" rel="nofollow"><i class="fab fa-facebook" aria-hidden="true"></i></a>
-  <a href="https://getpocket.com/edit?url=https%3a%2f%2fhirokinishimoto.github.io%2fposts%2f%25E7%25BE%25A4%2f&title=%e7%be%a4%e2%91%a0" title="Pocketに保存" class="pk" target="_blank" rel="nofollow"><i class="fab fa-get-pocket" aria-hidden="true"></i></a>
-  <a href="https://social-plugins.line.me/lineit/share?url=https%3a%2f%2fhirokinishimoto.github.io%2fposts%2f%25E7%25BE%25A4%2f" title="LINEでシェア" class="ln" target="_blank" rel="nofollow"><i class="fab fa-line" aria-hidden="true"></i></a>
+  <a href="https://b.hatena.ne.jp/add?mode=confirm&url=https%3a%2f%2fhirokinishimoto.github.io%2fposts%2fsem%2f&title=SEM" title="はてなブックマーク" class="ht" target="_blank" rel="nofollow">B!</a>
+  <a href="https://twitter.com/intent/tweet?url=https%3a%2f%2fhirokinishimoto.github.io%2fposts%2fsem%2f&text=SEM&tw_p=tweetbutton" title="Twitterでシェア" class="tw" target="_blank" rel="nofollow"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+  <a href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fhirokinishimoto.github.io%2fposts%2fsem%2f&t=SEM" title="Facebookでシェア" class="fb" target="_blank" rel="nofollow"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+  <a href="https://getpocket.com/edit?url=https%3a%2f%2fhirokinishimoto.github.io%2fposts%2fsem%2f&title=SEM" title="Pocketに保存" class="pk" target="_blank" rel="nofollow"><i class="fab fa-get-pocket" aria-hidden="true"></i></a>
+  <a href="https://social-plugins.line.me/lineit/share?url=https%3a%2f%2fhirokinishimoto.github.io%2fposts%2fsem%2f" title="LINEでシェア" class="ln" target="_blank" rel="nofollow"><i class="fab fa-line" aria-hidden="true"></i></a>
 </aside>
 
   </header>
@@ -852,17 +864,282 @@ ga('send', 'pageview');
 
   <div class="article-body">
 
-<h2 id="群とは">群とは</h2>
+<h1 id="構造方程式モデリング">構造方程式モデリング</h1>
+
+<ul>
+<li>構造方程式モデリング : Struvtual Equation Modeling (SEM)</li>
+<li>共分散構造分析ともいうけど&hellip;</li>
+<li>構造方程式モデリングと呼ぶほうが良い。
+
+<ul>
+<li>共分散だけでなく、平均を構造化する分析もあるため。</li>
+</ul></li>
+</ul>
+
+<h2 id="構造方程式モデリングの特徴">構造方程式モデリングの特徴</h2>
+
+<h3 id="特徴1-変数間の関係を統計的に検証できる">特徴1. 変数間の関係を統計的に検証できる。</h3>
+
+<ul>
+<li>変数の間の関係を記述して、データとの当てはまりを評価する、統計的な分析方法。</li>
+</ul>
+
+<p><img src="https://image.docbase.io/uploads/8723c8d6-3528-4df8-8be4-4008f3d6cac2.jpeg =500x" alt="IMG_DA534E6922EA-1.jpeg" /></p>
+
+<h3 id="特徴2-潜在変数を導入した分析ができる">特徴2.  潜在変数を導入した分析ができる。</h3>
+
+<ul>
+<li>複数の変数で潜在変数（構成概念）を規定することができる。</li>
+<li>構成概念？
+
+<ul>
+<li>とりあえずその存在を仮定することによって、複雑に込み入った現象を比較的単純に理解することを目的に構成する概念。</li>
+<li>指導力、抑うつ傾向、ブランドイメージなど&hellip;</li>
+</ul></li>
+</ul>
+
+<p><img src="https://image.docbase.io/uploads/3d67b039-becf-4423-a6d4-23d31031ed5e.jpeg =280x" alt="IMG_70177C03B56F-1.jpeg" /></p>
+
+<h3 id="特徴3-わかりやすいパス図そ使ったビジュアル表現が可能">特徴3. わかりやすいパス図そ使ったビジュアル表現が可能。</h3>
+
+<ul>
+<li>変数間の関係をパス図を使ってビジュアル化
+
+<ul>
+<li>矢印は「もと」から「さき」へ向かって影響を表現</li>
+<li>長方形や楕円は変数の特徴を表現</li>
+</ul></li>
+<li>関係性がわかりやすい
+
+<ul>
+<li>直感的に変数の関係がわかる！</li>
+</ul></li>
+</ul>
+
+<p><img src="https://image.docbase.io/uploads/f1f94d31-8733-4acf-a0c1-2c71e82d255f.jpeg =300x" alt="IMG_13E4231997D2-1.jpeg" /></p>
+
+<p>↑<strong>パス図</strong>という</p>
+
+<h4 id="パス図の書き方のルール">パス図の書き方のルール</h4>
+
+<ul>
+<li>観測変数
+
+<ul>
+<li>既知の変数</li>
+<li>直接観測できるデータ</li>
+<li>長方形で表す</li>
+</ul></li>
+</ul>
+
+<p><img src="https://image.docbase.io/uploads/1d53e849-d749-4c3a-abaa-3afa3ff30b23.jpeg =70x" alt="IMG_279BBED150A6-1.jpeg" /></p>
+
+<ul>
+<li><p>潜在変数</p>
+
+<ul>
+<li>未知の変数</li>
+<li>直接観測できないデータ</li>
+<li>楕円で表す</li>
+</ul>
+
+<p><img src="https://image.docbase.io/uploads/f1e0441c-130c-4e0b-b72a-acf396fbd21a.jpeg =60x" alt="IMG_EF225A577966-1.jpeg" /></p></li>
+
+<li><p>残差</p>
+
+<ul>
+<li>外生変数では説明しきれない効果を１つにまとめたもの</li>
+</ul></li>
+</ul>
+
+<p><img src="https://image.docbase.io/uploads/bc5016af-eb00-43e8-b7db-aeb501ab9ecc.jpeg =60x" alt="IMG_68036BFC143B-1.jpeg" /></p>
+
+<ul>
+<li><p>パス係数(回帰係数)</p>
+
+<ul>
+<li>片方向の矢印→で表す</li>
+</ul></li>
+
+<li><p>共分散（相関係数)</p>
+
+<ul>
+<li>両方向の矢印↔で表す</li>
+</ul></li>
+</ul>
+
+<h3 id="特徴4-semを用いるといろいろな分析が可能">特徴4. SEMを用いるといろいろな分析が可能</h3>
+
+<ul>
+<li>伝統的な統計モデルを下位モデルとして含んでいる。</li>
+<li>第2世代の多変量解析モデル</li>
+</ul>
+
+<p><code>回帰分析</code>
+<code>因子分析</code>
+<code>分散分析</code>
+<code>共分散分析</code>
+<code>パス解析</code>
+<code>不完全データ解析</code>
+<code>潜在曲線分析</code>
+<code>時系列分析</code></p>
+
+<p>=&gt; すべてSEMで表現可能</p>
+
+<h3 id="例1-重回帰分析モデルはsemで表現可能">例1) 重回帰分析モデルはSEMで表現可能</h3>
+
+<p><img src="https://image.docbase.io/uploads/5d076d4c-04b9-4563-9a97-83ed52e4739b.jpeg =300x" alt="IMG_3D3ADD012ACD-1.jpeg" /></p>
+
+<h3 id="例2-因子分析モデルはsemで表現可能">例2) 因子分析モデルはSEMで表現可能</h3>
+
+<h4 id="探索的因子分析モデル">探索的因子分析モデル</h4>
+
+<ul>
+<li>事前に明確な仮説を仮定せず、潜在する因子を探すための因子。</li>
+<li>単に因子分析と言った場合、こちらを指すことがほとんど。</li>
+</ul>
+
+<p><img src="https://image.docbase.io/uploads/06631b7a-3e35-47e5-a014-b3c3a6de17de.jpeg =300x" alt="IMG_D34559931989-1.jpeg" /></p>
+
+<h4 id="検証的因子分析モデル">検証的因子分析モデル</h4>
+
+<ul>
+<li>事前に明確な仮説を設定し、観測変数に基づいて仮説と実際のデータがどの程度宛は混ているかを確認する方法。</li>
+<li>仮説上で関連がないと想定される因子と観測変数のパスは０に固定される。</li>
+</ul>
+
+<p><img src="https://image.docbase.io/uploads/6f54784d-6943-4bd4-accf-878ed27f5363.jpeg =300x" alt="IMG_2903D6FC9A8A-1.jpeg" /></p>
+
+<h2 id="構造方程式モデリングの周辺知識">構造方程式モデリングの周辺知識</h2>
+
+<ul>
+<li>主に心理学、社会学の世界で発達</li>
+<li>近年はマーケティングの分野でも&hellip;</li>
+</ul>
+
+<h2 id="どんなデータを使う">どんなデータを使う？</h2>
+
+<p>=&gt; 分散共分散行列</p>
+
+<h2 id="分析の流れ">分析の流れ</h2>
+
+<ol>
+<li>仮設を構築</li>
+<li>モデルで表現
+
+<ul>
+<li>パス図を書いてみる</li>
+</ul></li>
+<li>パラメータ推定
+
+<ul>
+<li>分析用ソフトウェアの出番</li>
+</ul></li>
+<li>適合度評価
+
+<ul>
+<li>データの当てはまりの良さを確認する。</li>
+<li>当てはまりが良いなら結果の解釈を行う。</li>
+<li>当てはまりが悪かったらモデル修正(1.へ)</li>
+</ul></li>
+</ol>
+
+<h1 id="分析結果の解釈について">分析結果の解釈について</h1>
+
+<h3 id="出力のどこを見れば良い">出力のどこを見れば良い？</h3>
+
+<p>=&gt; <strong>適合度</strong>と<strong>パス係数(パス図)</strong></p>
+
+<h2 id="適合度の指標">適合度の指標</h2>
+
+<h3 id="gfi">GFI</h3>
+
+<ul>
+<li>Goodness of Fit Index</li>
+<li>通常０から１までの値をとり，モデルの説明力の目安となる。</li>
+<li>GFIが1に近いほど，説明力のあるモデルといえる</li>
+<li>GFIが高くても「良いモデル」というわけではないので注意</li>
+</ul>
+
+<h3 id="agfi">AGFI</h3>
+
+<ul>
+<li>Adjusted Goodness of Fit Index；修正適合度指標</li>
+<li>値が１に近いほどデータへの当てはまりが良い</li>
+<li>$ GFI \geq AGFI $であり，GFIに比べてAGFIが著しく低下するモデルはあまり好ましくない</li>
+</ul>
+
+<h3 id="cfi">CFI</h3>
+
+<ul>
+<li>当該モデルの$ \chi^2$ 値が，飽和モデル34と独立モデル35の$ \chi^2$ と比較して相対的にどれくらい飽和モデルの$ \chi^2$ 値に近いかを評価する。1に近いほど適合が良く，0.9を超えることが望ましいとされる。</li>
+</ul>
+
+<h3 id="rmsea">RMSEA</h3>
+
+<ul>
+<li>母集団における分散共分散行列とモデルによって復元された分散共分散行列との距離がどれくらい小さいと推定されるか評価する指標</li>
+<li>0に近いほど適合が良いとされ，.05を下回ることが望ましいとされる</li>
+<li>信頼区間も併せて報告することが多い。</li>
+</ul>
+
+<h3 id="aic-赤池情報量規準-bic-ベイズ情報量規準">AIC（赤池情報量規準）, BIC（ベイズ情報量規準）</h3>
+
+<ul>
+<li>複数のモデルを比較する際に用いられる情報量規準 information criterion と呼ばれる指標</li>
+<li>（マイナス方向も含め）値が小さいほど良いモデルであると考える</li>
+<li>モデル単体での適合度は評価できない</li>
+</ul>
+
+<p>などが用いられる。</p>
+
+<h2 id="パス図の見方">パス図の見方</h2>
+
+<h3 id="直接効果と間接効果">直接効果と間接効果</h3>
+
+<p>ある変数が別の変数へ直接的に影響を及ぼすことを「直接効果」，他の変数を経由して影響を及ぼすことを「間接効果」という。</p>
+
+<h3 id="標準化後の係数と標準化前の係数">標準化後の係数と標準化前の係数</h3>
+
+<ul>
+<li>変数の単位に束縛されず、標準得点の尺度で解釈する。</li>
+<li>一般に，レポートや論文を書く際には標準化された値（－1.00～＋1.00）を用いる。</li>
+<li>標準化されない値は，データの得点範囲によって数値が大きく異なるため，モデルを検討する際には分かりづらい場合がある。</li>
+<li>比尺度のデータのように、単位の意味を実感しやすいものについては、標準化前の係数が興味深い解釈をもたらすこともある。</li>
+</ul>
+
+<!--
+
+## 用語など
+
+### 構造方程式
+-->
+
+<h2 id="参考文献">参考文献</h2>
+
+<p>書籍
+- <a href="https://www.amazon.co.jp/%E5%85%B1%E5%88%86%E6%95%A3%E6%A7%8B%E9%80%A0%E5%88%86%E6%9E%90-%E5%85%A5%E9%96%80%E7%B7%A8%E2%80%95%E6%A7%8B%E9%80%A0%E6%96%B9%E7%A8%8B%E5%BC%8F%E3%83%A2%E3%83%87%E3%83%AA%E3%83%B3%E3%82%B0-%E7%B5%B1%E8%A8%88%E3%83%A9%E3%82%A4%E3%83%96%E3%83%A9%E3%83%AA%E3%83%BC-%E8%B1%8A%E7%94%B0-%E7%A7%80%E6%A8%B9/dp/4254126581">豊田秀樹 : 共分散構造分析&lt; 入門編&gt;, 朝倉書店, 1998. </a></p>
+
+<p>Webページ
+- <a href="https://sites.google.com/site/scriptofbioinformatics/r-tong-ji-guan-xi/gong-fen-san-gou-zao-jie-xi-r">共分散構造解析（R）</a>
+- <a href="https://www.jstage.jst.go.jp/article/jbhmk/29/2/29_2_138/_pdf">構造方程式モデリングは、因子分析、分散分析、パス解析のすべてにとって代わるのか？</a>
+- <a href="http://psy.isc.chubu.ac.jp/~oshiolab/teaching_folder/datakaiseki_folder/10_folder/da10_03.html">心理データ解析</a>
+- <a href="https://www.juen.ac.jp/lab/okumura/class/g2/node7.html">モデルの適合度</a>
+- <a href="http://psy.isc.chubu.ac.jp/~oshiolab/teaching_folder/datakaiseki_folder/10_folder/da10_02.html">心理データ解析　第10回(2)</a></p>
+
+<p>SlideShare
+- <a href="https://www.slideshare.net/MasahiroShinohara/100614-4502873">構造方程式モデリング 基本の「き」</a>
+- <a href="https://www.slideshare.net/bob3/tokyo-r7-sem20100724">共分散構造分析</a></p>
 </div>
 
   <footer class="article-footer">
 
     <aside class="share">
-  <a href="https://b.hatena.ne.jp/add?mode=confirm&url=https%3a%2f%2fhirokinishimoto.github.io%2fposts%2f%25E7%25BE%25A4%2f&title=%e7%be%a4%e2%91%a0" title="はてなブックマーク" class="ht" target="_blank" rel="nofollow">B!</a>
-  <a href="https://twitter.com/intent/tweet?url=https%3a%2f%2fhirokinishimoto.github.io%2fposts%2f%25E7%25BE%25A4%2f&text=%e7%be%a4%e2%91%a0&tw_p=tweetbutton" title="Twitterでシェア" class="tw" target="_blank" rel="nofollow"><i class="fab fa-twitter" aria-hidden="true"></i></a>
-  <a href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fhirokinishimoto.github.io%2fposts%2f%25E7%25BE%25A4%2f&t=%e7%be%a4%e2%91%a0" title="Facebookでシェア" class="fb" target="_blank" rel="nofollow"><i class="fab fa-facebook" aria-hidden="true"></i></a>
-  <a href="https://getpocket.com/edit?url=https%3a%2f%2fhirokinishimoto.github.io%2fposts%2f%25E7%25BE%25A4%2f&title=%e7%be%a4%e2%91%a0" title="Pocketに保存" class="pk" target="_blank" rel="nofollow"><i class="fab fa-get-pocket" aria-hidden="true"></i></a>
-  <a href="https://social-plugins.line.me/lineit/share?url=https%3a%2f%2fhirokinishimoto.github.io%2fposts%2f%25E7%25BE%25A4%2f" title="LINEでシェア" class="ln" target="_blank" rel="nofollow"><i class="fab fa-line" aria-hidden="true"></i></a>
+  <a href="https://b.hatena.ne.jp/add?mode=confirm&url=https%3a%2f%2fhirokinishimoto.github.io%2fposts%2fsem%2f&title=SEM" title="はてなブックマーク" class="ht" target="_blank" rel="nofollow">B!</a>
+  <a href="https://twitter.com/intent/tweet?url=https%3a%2f%2fhirokinishimoto.github.io%2fposts%2fsem%2f&text=SEM&tw_p=tweetbutton" title="Twitterでシェア" class="tw" target="_blank" rel="nofollow"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+  <a href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fhirokinishimoto.github.io%2fposts%2fsem%2f&t=SEM" title="Facebookでシェア" class="fb" target="_blank" rel="nofollow"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+  <a href="https://getpocket.com/edit?url=https%3a%2f%2fhirokinishimoto.github.io%2fposts%2fsem%2f&title=SEM" title="Pocketに保存" class="pk" target="_blank" rel="nofollow"><i class="fab fa-get-pocket" aria-hidden="true"></i></a>
+  <a href="https://social-plugins.line.me/lineit/share?url=https%3a%2f%2fhirokinishimoto.github.io%2fposts%2fsem%2f" title="LINEでシェア" class="ln" target="_blank" rel="nofollow"><i class="fab fa-line" aria-hidden="true"></i></a>
 </aside>
 
 
@@ -874,7 +1151,7 @@ ga('send', 'pageview');
             
             <li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="https://hirokinishimoto.github.io/posts/" itemprop="url"><span itemprop="title">POSTS</span></a></li>
             
-            <li class="active">群①</li>
+            <li class="active">SEM</li>
           </ol>
         </nav>
       </div>
@@ -883,35 +1160,7 @@ ga('send', 'pageview');
     
     
     
-    <section class="footer">
-      <header>
-        <a href="https://hirokinishimoto.github.io/categories/">CATEGORIES</a>
-      </header>
-      <div>
-        <ul class="terms">
-          
-          <li><a href="https://hirokinishimoto.github.io/categories/hugo/">hugo</a></li>
-          
-        </ul>
-      </div>
-    </section>
     
-    
-    
-    <section class="footer">
-      <header>
-        <a href="https://hirokinishimoto.github.io/tags/">TAGS</a>
-      </header>
-      <div>
-        <ul class="terms">
-          
-          <li><a href="https://hirokinishimoto.github.io/tags/hello/">hello</a></li>
-          
-          <li><a href="https://hirokinishimoto.github.io/tags/world/">world</a></li>
-          
-        </ul>
-      </div>
-    </section>
     
     
   </footer>
@@ -925,14 +1174,14 @@ ga('send', 'pageview');
         <div class="mcol c6">
           <header>Previous Article</header>
           <article class="lism">
-  <a href="https://hirokinishimoto.github.io/posts/%E9%87%8D%E5%9B%9E%E5%B8%B0%E3%81%A8%E5%A4%9A%E9%87%8D%E5%85%B1%E7%B7%9A%E6%80%A7/">
-    <div class="thumb thumb-dd54736ee35bc4fd483873c9a481c2d3"></div>
+  <a href="https://hirokinishimoto.github.io/posts/r%E3%81%A7sem/">
+    <div class="thumb thumb-e6e9b3222e5c03dea45f762404d3b61c"></div>
 
     <div class="inner">
-      <div class="title">重回帰と多重共線性</div>
+      <div class="title">RでSEM</div>
 
       <ul class="facts sm">
-        <li><i class="fas fa-calendar" aria-hidden="true"></i><time datetime="5007-10-05T16:12:47JST">Oct 5, 2019</time></li>
+        <li><i class="fas fa-calendar" aria-hidden="true"></i><time datetime="14007-10-14T01:07:22JST">Oct 14, 2019</time></li>
         <li><i class="fas fa-bookmark" aria-hidden="true"></i>POSTS</li>
         
       </ul>
@@ -947,14 +1196,14 @@ ga('send', 'pageview');
         <div class="mcol c6">
           <header>Next Article</header>
           <article class="lism">
-  <a href="https://hirokinishimoto.github.io/posts/r%E3%81%A7sem/">
-    <div class="thumb thumb-e6e9b3222e5c03dea45f762404d3b61c"></div>
+  <a href="https://hirokinishimoto.github.io/posts/c&#43;&#43;%E3%81%AE%E6%A8%99%E6%BA%96%E3%83%87%E3%83%BC%E3%82%BF%E6%A7%8B%E9%80%A0/">
+    <div class="thumb thumb-9413c7705bf431c141c527348c85242d"></div>
 
     <div class="inner">
-      <div class="title">RでSEM</div>
+      <div class="title">C&#43;&#43;の標準データ構造</div>
 
       <ul class="facts sm">
-        <li><i class="fas fa-calendar" aria-hidden="true"></i><time datetime="14007-10-14T01:07:22JST">Oct 14, 2019</time></li>
+        <li><i class="fas fa-calendar" aria-hidden="true"></i><time datetime="14007-10-14T22:45:17JST">Oct 14, 2019</time></li>
         <li><i class="fas fa-bookmark" aria-hidden="true"></i>POSTS</li>
         
       </ul>
