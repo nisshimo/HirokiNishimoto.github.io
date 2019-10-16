@@ -6,10 +6,19 @@
     <description>Recent content on にっしーの備忘録</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 16 Oct 2019 08:43:13 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 16 Oct 2019 16:00:21 +0900</lastBuildDate>
     
 	<atom:link href="https://hirokinishimoto.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Rust入門</title>
+      <link>https://hirokinishimoto.github.io/posts/rust%E5%85%A5%E9%96%80/</link>
+      <pubDate>Wed, 16 Oct 2019 16:00:21 +0900</pubDate>
+      
+      <guid>https://hirokinishimoto.github.io/posts/rust%E5%85%A5%E9%96%80/</guid>
+      <description>Rust Rustチュートリアル</description>
+    </item>
     
     <item>
       <title>Tex記法</title>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Rust on にっしーの備忘録</title>
+    <link>https://hirokinishimoto.github.io/categories/rust/</link>
+    <description>Recent content in Rust on にっしーの備忘録</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 16 Oct 2019 16:00:21 +0900</lastBuildDate>
+    
+	<atom:link href="https://hirokinishimoto.github.io/categories/rust/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Rust入門</title>
+      <link>https://hirokinishimoto.github.io/posts/rust%E5%85%A5%E9%96%80/</link>
+      <pubDate>Wed, 16 Oct 2019 16:00:21 +0900</pubDate>
+      
+      <guid>https://hirokinishimoto.github.io/posts/rust%E5%85%A5%E9%96%80/</guid>
+      <description>Rust Rustチュートリアル</description>
+    </item>
+    
+  </channel>
+</rss>
