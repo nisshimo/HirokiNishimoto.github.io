@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>hello on にっしーの備忘録</title>
-    <link>http://example.com/tags/hello/</link>
+    <link>https://hirokinishimoto.github.io/tags/hello/</link>
     <description>Recent content in hello on にっしーの備忘録</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Mon, 07 Oct 2019 14:00:46 +0900</lastBuildDate>
     
-	<atom:link href="http://example.com/tags/hello/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://hirokinishimoto.github.io/tags/hello/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>群①</title>
-      <link>http://example.com/posts/%E7%BE%A4/</link>
+      <link>https://hirokinishimoto.github.io/posts/%E7%BE%A4/</link>
       <pubDate>Mon, 07 Oct 2019 14:00:46 +0900</pubDate>
       
-      <guid>http://example.com/posts/%E7%BE%A4/</guid>
+      <guid>https://hirokinishimoto.github.io/posts/%E7%BE%A4/</guid>
       <description> 群とは </description>
     </item>
     

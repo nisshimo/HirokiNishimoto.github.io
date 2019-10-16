@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>c&#43;&#43; on にっしーの備忘録</title>
-    <link>http://example.com/categories/c&#43;&#43;/</link>
+    <link>https://hirokinishimoto.github.io/categories/c&#43;&#43;/</link>
     <description>Recent content in c&#43;&#43; on にっしーの備忘録</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Mon, 14 Oct 2019 22:45:17 +0900</lastBuildDate>
     
-	<atom:link href="http://example.com/categories/c++/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://hirokinishimoto.github.io/categories/c++/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>C&#43;&#43;の標準データ構造</title>
-      <link>http://example.com/posts/c&#43;&#43;%E3%81%AE%E6%A8%99%E6%BA%96%E3%83%87%E3%83%BC%E3%82%BF%E6%A7%8B%E9%80%A0/</link>
+      <link>https://hirokinishimoto.github.io/posts/c&#43;&#43;%E3%81%AE%E6%A8%99%E6%BA%96%E3%83%87%E3%83%BC%E3%82%BF%E6%A7%8B%E9%80%A0/</link>
       <pubDate>Mon, 14 Oct 2019 22:45:17 +0900</pubDate>
       
-      <guid>http://example.com/posts/c&#43;&#43;%E3%81%AE%E6%A8%99%E6%BA%96%E3%83%87%E3%83%BC%E3%82%BF%E6%A7%8B%E9%80%A0/</guid>
+      <guid>https://hirokinishimoto.github.io/posts/c&#43;&#43;%E3%81%AE%E6%A8%99%E6%BA%96%E3%83%87%E3%83%BC%E3%82%BF%E6%A7%8B%E9%80%A0/</guid>
       <description>stack LIFOのデータ構造
 メンバ関数  push() : 要素の挿入 top() : 先頭の要素の参照 pop() : 先頭の要素の破棄 size() : 現在の要素数  計算コストは全てO(1)
 練習問題
