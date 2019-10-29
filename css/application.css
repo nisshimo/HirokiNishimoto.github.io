@@ -30,7 +30,7 @@ button{appearance:none;border:none}
 .c-brand{display:inline-block}
 .c-brand 
 a{text-decoration:none;font-size:1.6rem;color:#494949}
-.c-container{max-width:768px;width:100%;margin-left:auto;margin-right:auto;padding-left:10px;padding-right:10px}
+.c-container{max-width:768px;width:100%;margin-left:auto;margin-right:auto;padding-left:5px;padding-right:5px}
 @media screen and (max-width: 768px){.c-container{max-width:768px}}
 @media screen and (max-width: 768px){.c-container{max-width:768px;padding-left:20px;padding-right:20px}}
 @media screen and (max-width: 320px){.c-container{max-width:320px}}

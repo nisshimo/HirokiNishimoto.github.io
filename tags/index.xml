@@ -6,10 +6,19 @@
     <description>Recent content in Tags on にっしーの備忘録</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 16 Oct 2019 16:00:21 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 29 Oct 2019 12:15:01 +0900</lastBuildDate>
     
 	<atom:link href="https://hirokinishimoto.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>統計</title>
+      <link>https://hirokinishimoto.github.io/tags/%E7%B5%B1%E8%A8%88/</link>
+      <pubDate>Tue, 29 Oct 2019 12:15:01 +0900</pubDate>
+      
+      <guid>https://hirokinishimoto.github.io/tags/%E7%B5%B1%E8%A8%88/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>c&#43;&#43;</title>
@@ -26,24 +35,6 @@
       <pubDate>Mon, 14 Oct 2019 22:45:17 +0900</pubDate>
       
       <guid>https://hirokinishimoto.github.io/tags/%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>hello</title>
-      <link>https://hirokinishimoto.github.io/tags/hello/</link>
-      <pubDate>Mon, 07 Oct 2019 14:00:46 +0900</pubDate>
-      
-      <guid>https://hirokinishimoto.github.io/tags/hello/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>world</title>
-      <link>https://hirokinishimoto.github.io/tags/world/</link>
-      <pubDate>Mon, 07 Oct 2019 14:00:46 +0900</pubDate>
-      
-      <guid>https://hirokinishimoto.github.io/tags/world/</guid>
       <description></description>
     </item>
     

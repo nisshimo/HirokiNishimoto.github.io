@@ -6,10 +6,20 @@
     <description>Recent content in Posts on にっしーの備忘録</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 16 Oct 2019 16:00:21 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 29 Oct 2019 12:15:01 +0900</lastBuildDate>
     
 	<atom:link href="https://hirokinishimoto.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>AIC</title>
+      <link>https://hirokinishimoto.github.io/posts/aic/</link>
+      <pubDate>Tue, 29 Oct 2019 12:15:01 +0900</pubDate>
+      
+      <guid>https://hirokinishimoto.github.io/posts/aic/</guid>
+      <description>平均対数尤度: $E(\log{L})$ モデルの最大対数尤度: $\log{L^*}$ モデルの自由度: $k$  としたとき、 $$ E(\log{L}) = \log{L}^* - k$$ の関係が成り立つと緑本に書いてあった。 ポアソン回帰の例でこの関係が本当に成り立つのか実験してみた。
+ライブラリの読み込み import numpy as np import pandas as pd import matplotlib.pyplot as plt import scipy.stats as stats import japanize_matplotlib import seaborn as sns import statsmodels.api as sm 実験 bias1 = [] bias2 = [] n_rep = 100 size = 50 n_newdata = 100 for i in range(n_rep): # データの発生 x = np.random.randint(0,100,size=size) y = np.</description>
+    </item>
     
     <item>
       <title>Rust入門</title>
@@ -18,20 +28,6 @@
       
       <guid>https://hirokinishimoto.github.io/posts/rust%E5%85%A5%E9%96%80/</guid>
       <description>Rust Rustチュートリアル</description>
-    </item>
-    
-    <item>
-      <title>Tex記法</title>
-      <link>https://hirokinishimoto.github.io/posts/tex%E8%A8%98%E6%B3%95/</link>
-      <pubDate>Wed, 16 Oct 2019 08:43:13 +0900</pubDate>
-      
-      <guid>https://hirokinishimoto.github.io/posts/tex%E8%A8%98%E6%B3%95/</guid>
-      <description>$\tfrac{1}{2}$
-public class Main { public static void main(String... args) { System.out.println(&amp;#34;Hello&amp;#34;); } } $\sum_{i=1}^{N}\frac{1}{2}$
-$2^{i+w}$
-$$F(x) = \sum_{n=1}^{N} \frac{1}{N}$$
-$$ \sum_{i=1}^{N} \alpha \log{3}$$
-$$ T = S((1 + \frac{E}{R})^{F} - 1) $$</description>
     </item>
     
     <item>
@@ -51,48 +47,6 @@ priority_queue 挿入されたデータの中で最大の要素の参照が低�
 練習問題
 set 集合を表現するライブラリ
 種類 要素の重複を許さないもの  set : データに順序をつけて管理</description>
-    </item>
-    
-    <item>
-      <title>SEM</title>
-      <link>https://hirokinishimoto.github.io/posts/sem/</link>
-      <pubDate>Mon, 14 Oct 2019 01:09:04 +0900</pubDate>
-      
-      <guid>https://hirokinishimoto.github.io/posts/sem/</guid>
-      <description>構造方程式モデリング  構造方程式モデリング : Struvtual Equation Modeling (SEM) 共分散構造分析ともいうけど&amp;hellip; 構造方程式モデリングと呼ぶほうが良い。  共分散だけでなく、平均を構造化する分析もあるため。   構造方程式モデリングの特徴 特徴1. 変数間の関係を統計的に検証できる。  変数の間の関係を記述して、データとの当てはまりを評価する、統計的な分析方法。  特徴2. 潜在変数を導入した分析ができる。  複数の変数で潜在変数（構成概念）を規定することができる。 構成概念？  とりあえずその存在を仮定することによって、複雑に込み入った現象を比較的単純に理解することを目的に構成する概念。 指導力、抑うつ傾向、ブランドイメージなど&amp;hellip;   特徴3. わかりやすいパス図そ使ったビジュアル表現が可能。  変数間の関係をパス図を使ってビジュアル化  矢印は「もと」から「さき」へ向かって影響を表現 長方形や楕円は変数の特徴を表現  関係性がわかりやすい  直感的に変数の関係がわかる！   ↑パス図という
-パス図の書き方のルール  観測変数  既知の変数 直接観測できるデータ 長方形で表す    潜在変数
- 未知の変数 直接観測できないデータ 楕円で表す   残差
- 外生変数では説明しきれない効果を１つにまとめたもの    パス係数(回帰係数)
- 片方向の矢印→で表す  共分散（相関係数)</description>
-    </item>
-    
-    <item>
-      <title>RでSEM</title>
-      <link>https://hirokinishimoto.github.io/posts/r%E3%81%A7sem/</link>
-      <pubDate>Mon, 14 Oct 2019 01:07:22 +0900</pubDate>
-      
-      <guid>https://hirokinishimoto.github.io/posts/r%E3%81%A7sem/</guid>
-      <description>はじめに 本稿では、トイデータを使って、Rで共分散構造分析を行う方法について解説する。
-状況 例えば、下のようなモデルが下のトイデータに整合するかを共分散構造分析で検証したいとする。
-トイデータ # データの読み込み dat &amp;lt;- matrix(c( + -2.11, -1.12, 1.42, 2.23, 1.53, + 0.06, 1.81, -0.59, -0.75, 10.12, + 2.58, -0.20, -1.92, -0.49, -0.35, + 0.69, -0.66, -0.77, -1.92, 0.38, + -1.05, 0.07, -0.37, -0.89, -1.62, + -2.73, 1.40, 0.18, -0.09, 0.13, + 0.95, 0.84, 1.19, 1.19, 0.10, + 0.93, 1.17, -1.70, 1.46, -0.25, + -0.04, -0.12, -0.34, -0.24, 1.88, + 0.16, 1.03, -0.05, -0.73, 0.</description>
-    </item>
-    
-    <item>
-      <title>群①</title>
-      <link>https://hirokinishimoto.github.io/posts/%E7%BE%A4/</link>
-      <pubDate>Mon, 07 Oct 2019 14:00:46 +0900</pubDate>
-      
-      <guid>https://hirokinishimoto.github.io/posts/%E7%BE%A4/</guid>
-      <description> 群とは </description>
-    </item>
-    
-    <item>
-      <title>重回帰と多重共線性</title>
-      <link>https://hirokinishimoto.github.io/posts/%E9%87%8D%E5%9B%9E%E5%B8%B0%E3%81%A8%E5%A4%9A%E9%87%8D%E5%85%B1%E7%B7%9A%E6%80%A7/</link>
-      <pubDate>Sat, 05 Oct 2019 16:12:47 +0900</pubDate>
-      
-      <guid>https://hirokinishimoto.github.io/posts/%E9%87%8D%E5%9B%9E%E5%B8%B0%E3%81%A8%E5%A4%9A%E9%87%8D%E5%85%B1%E7%B7%9A%E6%80%A7/</guid>
-      <description>はじめに おわりに 参考にした記事 http://ides.hatenablog.com/entry/2018/11/18/213222</description>
     </item>
     
   </channel>
