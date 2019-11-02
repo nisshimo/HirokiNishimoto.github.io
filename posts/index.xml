@@ -6,10 +6,20 @@
     <description>Recent content in Posts on にっしーの備忘録</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 29 Oct 2019 12:15:01 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 02 Nov 2019 21:13:27 +0900</lastBuildDate>
     
 	<atom:link href="https://hirokinishimoto.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>MatplotlibのグラフをRetinaの高解像度で表示する方法</title>
+      <link>https://hirokinishimoto.github.io/posts/matplotlib%E3%81%AE%E3%82%B0%E3%83%A9%E3%83%95%E3%82%92retina%E3%81%AE%E9%AB%98%E8%A7%A3%E5%83%8F%E5%BA%A6%E3%81%A7%E8%A1%A8%E7%A4%BA%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95/</link>
+      <pubDate>Sat, 02 Nov 2019 21:13:27 +0900</pubDate>
+      
+      <guid>https://hirokinishimoto.github.io/posts/matplotlib%E3%81%AE%E3%82%B0%E3%83%A9%E3%83%95%E3%82%92retina%E3%81%AE%E9%AB%98%E8%A7%A3%E5%83%8F%E5%BA%A6%E3%81%A7%E8%A1%A8%E7%A4%BA%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95/</guid>
+      <description>[この記事]()が参考になった。
+%config InlineBackend.figure_format = &amp;#39;retina&amp;#39;</description>
+    </item>
     
     <item>
       <title>AIC</title>

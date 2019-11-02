@@ -6,10 +6,28 @@
     <description>Recent content in Tags on にっしーの備忘録</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 29 Oct 2019 12:15:01 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 02 Nov 2019 21:13:27 +0900</lastBuildDate>
     
 	<atom:link href="https://hirokinishimoto.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>matplotlib</title>
+      <link>https://hirokinishimoto.github.io/tags/matplotlib/</link>
+      <pubDate>Sat, 02 Nov 2019 21:13:27 +0900</pubDate>
+      
+      <guid>https://hirokinishimoto.github.io/tags/matplotlib/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>https://hirokinishimoto.github.io/tags/python/</link>
+      <pubDate>Sat, 02 Nov 2019 21:13:27 +0900</pubDate>
+      
+      <guid>https://hirokinishimoto.github.io/tags/python/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>統計</title>
