@@ -134,20 +134,6 @@ It makes use of a variety of open source projects including:
     
     <item>
       <title></title>
-      <link>https://hirokinishimoto.github.io/posts/binarizedneuralnetwoeks/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://hirokinishimoto.github.io/posts/binarizedneuralnetwoeks/</guid>
-      <description>[論文]Binarized Neural Networks: Training Neural Networks with Weights and Activations Constrained to +1 or −1 論文pdf
-背景  Deep Learningの学習はエネルギー消費の多いGPUを使うことがほとんど。 近年low-powerなデバイス上でDeepLearningの計算を行うための研究も盛んに行われている。  Binarized Neural Networks (BNNs) 著者は重みだけでなく活性も2値化したBinarized Neural Networkを提案した。
-これは、学習時は2値化された重みと活性を使って勾配計算し、2値化された重みと活性を用いて推論するようなNeural Networkのことである。
-重みの2値化 決定的(Deterministic)な方法と、確率的(Stochastic)な方法がある。
- Deterministicな方法: $$ w_{b}=\left{\begin{array}{ll}{+1} &amp;amp; {\mathrm {if}\ w \geq 0} \ {-1} &amp;amp; {\text { otherwise }}\end{array}\right. $$
- Stochasticな方法 $$ w_{b}=\left{\begin{array}{ll}{+1} &amp;amp; {\mathrm { with\ probability }\ p=\sigma(w)} \ {-1} &amp;amp; {\mathrm { with\ probability }\ 1-p}\end{array}\right.</description>
-    </item>
-    
-    <item>
-      <title></title>
       <link>https://hirokinishimoto.github.io/posts/mobilenets/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
