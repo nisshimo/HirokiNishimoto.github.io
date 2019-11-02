@@ -71,6 +71,15 @@ set 集合を表現するライブラリ
     </item>
     
     <item>
+      <title>Hello Wor;d!</title>
+      <link>https://hirokinishimoto.github.io/posts/hello/</link>
+      <pubDate>Wed, 02 Oct 2019 21:35:14 +0900</pubDate>
+      
+      <guid>https://hirokinishimoto.github.io/posts/hello/</guid>
+      <description>このサイトはにっしーの備忘録に使われます.</description>
+    </item>
+    
+    <item>
       <title>Contact</title>
       <link>https://hirokinishimoto.github.io/page/contact/</link>
       <pubDate>Wed, 02 Oct 2019 16:18:19 +0900</pubDate>
