@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+  <title>Hello Wor;d! &middot; にっしーの備忘録 - このサイトはにっしーの備忘録に使われます</title>
+  <meta name="generator" content="Hugo 0.58.0" />
+  
+  <meta name="description" content="このサイトはにっしーの備忘録に使われます"> 
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Hello Wor;d!"/>
+<meta name="twitter:description" content="[論文]BinaryConnect: Training Deep Neural Networks with binary weights during propagations 論文pdf
+背景 近年、計算可能性が新しいアルゴリズム開発のネックになる場面が散見されるようになった。また、実際の応用において、GPUよりもパワーの弱いデバイスにDeepLearningのモデルを載せたいというニーズも出てきた。そこで、DeepLearningの学習、予測の際の計算高速化に関心が集まっている。
+モデルの重みを2値化することで、積和操作を単なる和に置き換える事ができる。乗算器は、Deep Learning の計算において、メモリとパワーを大変多く消費するので、これは利点が大きい。
+著者は、重みの2値化によるDeepLearningの計算高速化の手法の1つとして、BinaryConnect(BC)を提案した。
+BinaryConnect 重みの2値化 決定的(Deterministic)な方法と、確率的(Stochastic)な方法がある。
+Deterministicな方法: $$ w_{b}=\left{\begin{array}{ll}{&#43;1} &amp; {\mathrm {if}\ w \geq 0} \ {-1} &amp; {\text { otherwise }}\end{array}\right. $$
+Stochasticな方法 $$ w_{b}=\left{\begin{array}{ll}{&#43;1} &amp; {\mathrm { with\ probability }\ p=\sigma(w)} \ {-1} &amp; {\mathrm { with\ probability }\ 1-p}\end{array}\right. $$
+$$ \mathrm{where}\ \sigma(x)=\operatorname{clip}\left(\frac{x&#43;1}{2}, 0,1\right)=\max \left(0, \min \left(1, \frac{x&#43;1}{2}\right)\right) $$
+( \sigma(x))はハードシグモイド関数である。ソフトなシグモイド関数を用いなかったのは、計算量を減らすためである。
+学習時  順伝播、逆伝播の際は2値化された重みを用いる。"/>
+
+  <meta property="og:title" content="Hello Wor;d!" />
+<meta property="og:description" content="[論文]BinaryConnect: Training Deep Neural Networks with binary weights during propagations 論文pdf
+背景 近年、計算可能性が新しいアルゴリズム開発のネックになる場面が散見されるようになった。また、実際の応用において、GPUよりもパワーの弱いデバイスにDeepLearningのモデルを載せたいというニーズも出てきた。そこで、DeepLearningの学習、予測の際の計算高速化に関心が集まっている。
+モデルの重みを2値化することで、積和操作を単なる和に置き換える事ができる。乗算器は、Deep Learning の計算において、メモリとパワーを大変多く消費するので、これは利点が大きい。
+著者は、重みの2値化によるDeepLearningの計算高速化の手法の1つとして、BinaryConnect(BC)を提案した。
+BinaryConnect 重みの2値化 決定的(Deterministic)な方法と、確率的(Stochastic)な方法がある。
+Deterministicな方法: $$ w_{b}=\left{\begin{array}{ll}{&#43;1} &amp; {\mathrm {if}\ w \geq 0} \ {-1} &amp; {\text { otherwise }}\end{array}\right. $$
+Stochasticな方法 $$ w_{b}=\left{\begin{array}{ll}{&#43;1} &amp; {\mathrm { with\ probability }\ p=\sigma(w)} \ {-1} &amp; {\mathrm { with\ probability }\ 1-p}\end{array}\right. $$
+$$ \mathrm{where}\ \sigma(x)=\operatorname{clip}\left(\frac{x&#43;1}{2}, 0,1\right)=\max \left(0, \min \left(1, \frac{x&#43;1}{2}\right)\right) $$
+( \sigma(x))はハードシグモイド関数である。ソフトなシグモイド関数を用いなかったのは、計算量を減らすためである。
+学習時  順伝播、逆伝播の際は2値化された重みを用いる。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://hirokinishimoto.github.io/posts/binaryconnect/" />
+<meta property="article:published_time" content="2019-10-02T21:35:14+09:00" />
+<meta property="article:modified_time" content="2019-10-02T21:35:14+09:00" />
+
+
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'Yout Google Analytics ID', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+  <meta itemprop="name" content="Hello Wor;d!">
+<meta itemprop="description" content="[論文]BinaryConnect: Training Deep Neural Networks with binary weights during propagations 論文pdf
+背景 近年、計算可能性が新しいアルゴリズム開発のネックになる場面が散見されるようになった。また、実際の応用において、GPUよりもパワーの弱いデバイスにDeepLearningのモデルを載せたいというニーズも出てきた。そこで、DeepLearningの学習、予測の際の計算高速化に関心が集まっている。
+モデルの重みを2値化することで、積和操作を単なる和に置き換える事ができる。乗算器は、Deep Learning の計算において、メモリとパワーを大変多く消費するので、これは利点が大きい。
+著者は、重みの2値化によるDeepLearningの計算高速化の手法の1つとして、BinaryConnect(BC)を提案した。
+BinaryConnect 重みの2値化 決定的(Deterministic)な方法と、確率的(Stochastic)な方法がある。
+Deterministicな方法: $$ w_{b}=\left{\begin{array}{ll}{&#43;1} &amp; {\mathrm {if}\ w \geq 0} \ {-1} &amp; {\text { otherwise }}\end{array}\right. $$
+Stochasticな方法 $$ w_{b}=\left{\begin{array}{ll}{&#43;1} &amp; {\mathrm { with\ probability }\ p=\sigma(w)} \ {-1} &amp; {\mathrm { with\ probability }\ 1-p}\end{array}\right. $$
+$$ \mathrm{where}\ \sigma(x)=\operatorname{clip}\left(\frac{x&#43;1}{2}, 0,1\right)=\max \left(0, \min \left(1, \frac{x&#43;1}{2}\right)\right) $$
+( \sigma(x))はハードシグモイド関数である。ソフトなシグモイド関数を用いなかったのは、計算量を減らすためである。
+学習時  順伝播、逆伝播の際は2値化された重みを用いる。">
+
+
+<meta itemprop="datePublished" content="2019-10-02T21:35:14&#43;09:00" />
+<meta itemprop="dateModified" content="2019-10-02T21:35:14&#43;09:00" />
+<meta itemprop="wordCount" content="119">
+
+
+
+<meta itemprop="keywords" content="" />
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/5.0.0/sanitize.min.css" rel="stylesheet">
+  <link href="https://hirokinishimoto.github.io/css/application.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://hirokinishimoto.github.io/css/syntax.css">
+</head>
+
+
+<body>
+  <header class="c-global-header">
+  <div class="c-container c-container--medium">
+    <div class="c-global-header__inner">
+      <div class="c-global-header__primary">
+        <h1 class="c-brand">
+          <a href="https://hirokinishimoto.github.io">にっしーの備忘録</a>
+        </h1>
+        <p class="c-description">このサイトはにっしーの備忘録に使われます</p>
+      </div>
+      <div class="c-global-header__utility">
+        <button type="button" class="c-menu">
+          <svg class="icon icon-menu">
+            <use xlink:href="#icon-menu"></use>
+            <symbol id="icon-menu" viewBox="0 0 32 32">
+              <title>menu</title>
+              <path d="M2 6h28v6h-28zM2 14h28v6h-28zM2 22h28v6h-28z"></path>
+            </symbol>
+          </svg>
+        </button>
+      </div>
+      <div class="c-overlay">
+  <div class="c-container">
+    <nav class="c-global-nav">
+      <div class="c-global-nav__closer">
+        <svg class="icon icon-cross">
+          <use xlink:href="#icon-cross"></use>
+          <symbol id="icon-cross" viewBox="0 0 32 32">
+            <title>cross</title>
+            <path d="M31.708 25.708c-0-0-0-0-0-0l-9.708-9.708 9.708-9.708c0-0 0-0 0-0 0.105-0.105 0.18-0.227 0.229-0.357 0.133-0.356 0.057-0.771-0.229-1.057l-4.586-4.586c-0.286-0.286-0.702-0.361-1.057-0.229-0.13 0.048-0.252 0.124-0.357 0.228 0 0-0 0-0 0l-9.708 9.708-9.708-9.708c-0-0-0-0-0-0-0.105-0.104-0.227-0.18-0.357-0.228-0.356-0.133-0.771-0.057-1.057 0.229l-4.586 4.586c-0.286 0.286-0.361 0.702-0.229 1.057 0.049 0.13 0.124 0.252 0.229 0.357 0 0 0 0 0 0l9.708 9.708-9.708 9.708c-0 0-0 0-0 0-0.104 0.105-0.18 0.227-0.229 0.357-0.133 0.355-0.057 0.771 0.229 1.057l4.586 4.586c0.286 0.286 0.702 0.361 1.057 0.229 0.13-0.049 0.252-0.124 0.357-0.229 0-0 0-0 0-0l9.708-9.708 9.708 9.708c0 0 0 0 0 0 0.105 0.105 0.227 0.18 0.357 0.229 0.356 0.133 0.771 0.057 1.057-0.229l4.586-4.586c0.286-0.286 0.362-0.702 0.229-1.057-0.049-0.13-0.124-0.252-0.229-0.357z"></path>
+          </symbol>
+        </svg>
+      </div>
+      
+      <div class="c-global-nav__item">
+        <a class="c-link" href="https://hirokinishimoto.github.io/categories/">
+          Categories
+        </a>
+      </div>
+      
+      <div class="c-global-nav__item">
+        <a class="c-link" href="https://hirokinishimoto.github.io/tags/">
+          Tags
+        </a>
+      </div>
+      
+    </nav>
+  </div>
+</div>
+
+    </div>
+  </div>
+</header>
+
+
+  <main class="c-main-content">
+    
+  <div class="p-single">
+    <div class="c-container">
+      <article class="c-post">
+        <header class="c-post__header">
+          <h1 class="c-post__title">Hello Wor;d!</h1>
+          <div class="c-post__header__meta">
+            <time class="c-pub-time" datetime=" 2019-10-02T21:35:14&#43;09:00 ">
+              2019.10.02
+            </time>
+            
+          </div>
+          
+        </header>
+        <div class="c-post__body">
+          
+
+<h1 id="論文-binaryconnect-training-deep-neural-networks-with-binary-weights-during-propagations">[論文]BinaryConnect: Training Deep Neural Networks with binary weights during propagations</h1>
+
+<p><a href="https://arxiv.org/pdf/1511.00363">論文pdf</a></p>
+
+<h2 id="背景"><strong>背景</strong></h2>
+
+<p>近年、計算可能性が新しいアルゴリズム開発のネックになる場面が散見されるようになった。また、実際の応用において、GPUよりもパワーの弱いデバイスにDeepLearningのモデルを載せたいというニーズも出てきた。そこで、DeepLearningの学習、予測の際の<strong>計算高速化</strong>に関心が集まっている。</p>
+
+<p>モデルの重みを2値化することで、積和操作を単なる和に置き換える事ができる。乗算器は、Deep Learning の計算において、メモリとパワーを大変多く消費するので、これは利点が大きい。</p>
+
+<p>著者は、重みの2値化によるDeepLearningの計算高速化の手法の1つとして、<strong>BinaryConnect(BC)</strong>を提案した。</p>
+
+<h2 id="binaryconnect"><strong>BinaryConnect</strong></h2>
+
+<h4 id="重みの2値化">重みの2値化</h4>
+
+<p>決定的(Deterministic)な方法と、確率的(Stochastic)な方法がある。</p>
+
+<p>Deterministicな方法:
+$$
+ w_{b}=\left{\begin{array}{ll}{+1} &amp; {\mathrm {if}\  w \geq 0} \ {-1} &amp; {\text { otherwise }}\end{array}\right.
+$$</p>
+
+<p>Stochasticな方法
+$$  w_{b}=\left{\begin{array}{ll}{+1} &amp; {\mathrm { with\ probability }\  p=\sigma(w)} \ {-1} &amp; {\mathrm { with\ probability }\ 1-p}\end{array}\right. $$</p>
+
+<p>$$
+    \mathrm{where}\ \sigma(x)=\operatorname{clip}\left(\frac{x+1}{2}, 0,1\right)=\max \left(0, \min \left(1, \frac{x+1}{2}\right)\right)
+$$</p>
+
+<p>( \sigma(x))はハードシグモイド関数である。ソフトなシグモイド関数を用いなかったのは、計算量を減らすためである。</p>
+
+<h2 id="学習時"><strong>学習時</strong></h2>
+
+<ul>
+<li><p>順伝播、逆伝播の際は2値化された重みを用いる。</p></li>
+
+<li><p>勾配が蓄積されて更新される重みは、高精度の実数値のままにしておく。</p></li>
+</ul>
+
+<h4 id="binary-connectとsgdの互換性">Binary ConnectとSGDの互換性</h4>
+
+<p>重みの2値化をノイズとみなすと。noisyで微小なステップで重みが更新され、更新が進むにつれてノイズは相殺される。よってBinarry Connect はSGDにより学習を行うことができる事がわかる。うまく更新が行われるためには、更新される重みは高精度実数である必要がある。</p>
+
+<p><img src="https://i.gyazo.com/c07dd5ca7ae7df8468164fee57b86a0e.png" width=90%></p>
+
+<h2 id="予測時"><strong>予測時</strong></h2>
+
+<p>次の3通りの方法のうち、どの方法で予測を行うのがが合理的な方法だろうか?</p>
+
+<ol>
+<li><p>2値化された重み( w_b )を用いて予測する。</p></li>
+
+<li><p>高精度実数の重み(w)を用いて予測する。</p></li>
+
+<li><p>アンサンブル法で予測する。</p></li>
+</ol>
+
+<p>Det.では、2値化された重み ( w_b ) を用いて予測する。
+こうすることで、予測の際の乗算を取り除くことができる。</p>
+
+<p>Stoc.では、高精度実数の重み ( w ) を用いて予測する。</p>
+
+<p>これは、学習時にノイズを加え、予測時はノイズを除くというDropoutの考え方に通じるものがある。</p>
+
+<h2 id="結果"><strong>結果</strong></h2>
+
+<p>Binary Connect を用いることで、学習時の乗算を1/3に減らし、学習時間が約3倍短くなった。
+特にDeterministicなBCでは、予測時の乗算がすべて取り除かれて、必要なメモリが16倍以上少なくなった。</p>
+
+<p>また、DropOut同様、BinaryConnectは正則化として作用し、汎化性能向上に寄与することもわかった。</p>
+
+<p>重みの離散化は、重みへのノイズ付与とみなせる。重みにノイズを加えることが正則化として作用し、モデルの汎化性能を向上させる。</p>
+
+<p>これは、伝播計算の際に半数の重みを0にするDrop Connectと似ている。</p>
+
+<p><img src="https://i.gyazo.com/0c4500225ff67f29448595259fa94d70.png" width=60%></p>
+
+<h2 id="類似研究との比較">類似研究との比較</h2>
+
+<p>重みを2値化したDeep Neural Networkに関する他の研究と比較して、本研究は以下の特徴がある。</p>
+
+<ul>
+<li>既存研究では、重みの更新にExpectation Back Propagetion (EBP) を用いていたが、本研究ではBAck Propagation (BP)を行った。</li>
+<li>CNNの学習に成功した。</li>
+</ul>
+
+<h2 id="今後">今後</h2>
+
+<ul>
+<li>他のモデルやデータセットで性能を試してみる</li>
+<li>重みの更新の計算を必要なくして、学習時の掛け算を完全に除去したい</li>
+</ul>
+
+        </div>
+
+        <footer class="c-post__footer">
+          <aside class="c-share">
+  <h2 class="c-share__title">Share</h2>
+  <div class="c-share__list">
+    <a class="c-share__list__item c-link" href="http://twitter.com/intent/tweet?text=Hello%20Wor%3bd%21%20%7C%20%e3%81%ab%e3%81%a3%e3%81%97%e3%83%bc%e3%81%ae%e5%82%99%e5%bf%98%e9%8c%b2%20https%3a%2f%2fhirokinishimoto.github.io%2fposts%2fbinaryconnect%2f" target="_blank">
+      <svg class="icon icon-twitter">
+        <use xlink:href="#icon-twitter"></use>
+        <symbol id="icon-twitter" viewBox="0 0 32 32">
+          <title>twitter</title>
+          <path d="M32 7.075c-1.175 0.525-2.444 0.875-3.769 1.031 1.356-0.813 2.394-2.1 2.887-3.631-1.269 0.75-2.675 1.3-4.169 1.594-1.2-1.275-2.906-2.069-4.794-2.069-3.625 0-6.563 2.938-6.563 6.563 0 0.512 0.056 1.012 0.169 1.494-5.456-0.275-10.294-2.888-13.531-6.862-0.563 0.969-0.887 2.1-0.887 3.3 0 2.275 1.156 4.287 2.919 5.463-1.075-0.031-2.087-0.331-2.975-0.819 0 0.025 0 0.056 0 0.081 0 3.181 2.263 5.838 5.269 6.437-0.55 0.15-1.131 0.231-1.731 0.231-0.425 0-0.831-0.044-1.237-0.119 0.838 2.606 3.263 4.506 6.131 4.563-2.25 1.762-5.075 2.813-8.156 2.813-0.531 0-1.050-0.031-1.569-0.094 2.913 1.869 6.362 2.95 10.069 2.95 12.075 0 18.681-10.006 18.681-18.681 0-0.287-0.006-0.569-0.019-0.85 1.281-0.919 2.394-2.075 3.275-3.394z"></path>
+        </symbol>
+      </svg>
+    </a>
+
+    <a class="c-share__list__item c-link" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fhirokinishimoto.github.io%2fposts%2fbinaryconnect%2f" target="_blank">
+      <svg class="icon icon-facebook">
+        <use xlink:href="#icon-facebook"></use>
+        <symbol id="icon-facebook" viewBox="0 0 32 32">
+          <title>facebook</title>
+          <path d="M19 6h5v-6h-5c-3.86 0-7 3.14-7 7v3h-4v6h4v16h6v-16h5l1-6h-6v-3c0-0.542 0.458-1 1-1z"></path>
+        </symbol>
+      </svg>
+    </a>
+
+    <a class="c-share__list__item" href="http://getpocket.com/edit?url=https%3a%2f%2fhirokinishimoto.github.io%2fposts%2fbinaryconnect%2f" target="_blank">
+      <svg class="icon icon-get-pocket">
+        <use xlink:href="#icon-get-pocket"></use>
+        <symbol id="icon-get-pocket" viewBox="0 0 27 28">
+          <title>get-pocket</title>
+          <path d="M24.453 2c1.359 0 2.422 1.094 2.422 2.438v8.109c0 7.484-5.984 13.453-13.422 13.453-7.469 0-13.453-5.969-13.453-13.453v-8.109c0-1.328 1.109-2.438 2.438-2.438h22.016zM13.453 18.625c0.469 0 0.938-0.187 1.281-0.516l6.312-6.062c0.359-0.344 0.578-0.828 0.578-1.328 0-1.016-0.828-1.844-1.844-1.844-0.484 0-0.938 0.187-1.281 0.516l-5.047 4.844-5.047-4.844c-0.344-0.328-0.797-0.516-1.266-0.516-1.016 0-1.844 0.828-1.844 1.844 0 0.5 0.203 0.984 0.562 1.328l6.328 6.062c0.328 0.328 0.797 0.516 1.266 0.516z"></path>
+        </symbol>
+      </svg>
+    </a>
+  </div>
+</aside>
+
+
+          <div class="c-pager">
+  <ul class="c-pager__list">
+    
+    <li class="c-pager__list__item c-pager__list__item--prev">
+      <a class="c-link" href="https://hirokinishimoto.github.io/posts/hello/" data-toggle="tooltip" data-placement="top" title="Hello Wor;d!">&larr; Previous Post</a>
+    </li>
+     
+    <li class="c-pager__list__item c-pager__list__item--next">
+      <a class="c-link" href="https://hirokinishimoto.github.io/posts/r%E3%81%A7sem/" data-toggle="tooltip" data-placement="top" title="RでSEM">Next Post &rarr;</a>
+    </li>
+    
+  </ul>
+</div>
+
+
+          
+
+
+        </footer>
+        <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "NewsArticle",
+  "mainEntityOfPage": {
+    "@type": "NewsArticle",
+    "@id": "https:\/\/hirokinishimoto.github.io\/posts\/binaryconnect\/",
+    "headline": "\x3ch1 id=\x22論文-binaryconnect-training-deep-neural-networks-with-binary-weights-during-propagations\x22\x3e[論文]BinaryConn",
+    "author": "Hiroki Nishimoto",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Hiroki Nishimoto",
+      "logo": "https:\/\/hirokinishimoto.github.io\/image\/logo.png",
+    },
+    "image": "https:\/\/hirokinishimoto.github.io",
+    "datePublished": "2019-10-02"
+  },
+  "headline": "\x3ch1 id=\x22論文-binaryconnect-training-deep-neural-networks-with-binary-weights-during-propagations\x22\x3e[論文]BinaryConn",
+  "alternativeHeadline": "にっしーの備忘録",
+  "datePublished": "2019-10-02",
+  "dateModified": "2019-10-02",
+  "url": "https:\/\/hirokinishimoto.github.io\/posts\/binaryconnect\/",
+  "wordCount": "119",
+  "author": {
+    "@type": "Person",
+    "name": "Hiroki Nishimoto"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Hiroki Nishimoto"
+  },
+  "image": "",
+  
+  
+  "description": ""
+}
+</script>
+
+      </article>
+    </div>
+  </div>
+
+  </main>
+
+  <footer class="c-global-footer">
+  <div class="c-container c-container--medium">
+    <nav class="c-footer-nav">
+      
+    </nav>
+    <p class="c-copy"><small></small></p>
+  </div>
+
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+    });
+</script>
+</footer>
+
+
+  <script src="https://hirokinishimoto.github.io/js/application.js"></script>
+</body>
+</html>

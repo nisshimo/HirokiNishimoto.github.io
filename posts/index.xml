@@ -6,10 +6,24 @@
     <description>Recent content in Posts on にっしーの備忘録</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 02 Nov 2019 21:13:27 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 02 Nov 2019 21:41:41 +0900</lastBuildDate>
     
 	<atom:link href="https://hirokinishimoto.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>BNN</title>
+      <link>https://hirokinishimoto.github.io/posts/bnn/</link>
+      <pubDate>Sat, 02 Nov 2019 21:41:41 +0900</pubDate>
+      
+      <guid>https://hirokinishimoto.github.io/posts/bnn/</guid>
+      <description>[論文]Binarized Neural Networks: Training Neural Networks with Weights and Activations Constrained to +1 or −1 論文pdf
+背景  Deep Learningの学習はエネルギー消費の多いGPUを使うことがほとんど。 近年low-powerなデバイス上でDeepLearningの計算を行うための研究も盛んに行われている。  Binarized Neural Networks (BNNs) 著者は重みだけでなく活性も2値化したBinarized Neural Networkを提案した。
+これは、学習時は2値化された重みと活性を使って勾配計算し、2値化された重みと活性を用いて推論するようなNeural Networkのことである。
+重みの2値化 決定的(Deterministic)な方法と、確率的(Stochastic)な方法がある。
+ Deterministicな方法: $$ w_{b}=\left{\begin{array}{ll}{+1} &amp;amp; {\mathrm {if}\ w \geq 0} \ {-1} &amp;amp; {\text { otherwise }}\end{array}\right. $$
+ Stochasticな方法 $$ w_{b}=\left{\begin{array}{ll}{+1} &amp;amp; {\mathrm { with\ probability }\ p=\sigma(w)} \ {-1} &amp;amp; {\mathrm { with\ probability }\ 1-p}\end{array}\right.</description>
+    </item>
     
     <item>
       <title>MatplotlibのグラフをRetinaの高解像度で表示する方法</title>
@@ -72,11 +86,77 @@ set 集合を表現するライブラリ
     
     <item>
       <title>Hello Wor;d!</title>
+      <link>https://hirokinishimoto.github.io/posts/binaryconnect/</link>
+      <pubDate>Wed, 02 Oct 2019 21:35:14 +0900</pubDate>
+      
+      <guid>https://hirokinishimoto.github.io/posts/binaryconnect/</guid>
+      <description>[論文]BinaryConnect: Training Deep Neural Networks with binary weights during propagations 論文pdf
+背景 近年、計算可能性が新しいアルゴリズム開発のネックになる場面が散見されるようになった。また、実際の応用において、GPUよりもパワーの弱いデバイスにDeepLearningのモデルを載せたいというニーズも出てきた。そこで、DeepLearningの学習、予測の際の計算高速化に関心が集まっている。
+モデルの重みを2値化することで、積和操作を単なる和に置き換える事ができる。乗算器は、Deep Learning の計算において、メモリとパワーを大変多く消費するので、これは利点が大きい。
+著者は、重みの2値化によるDeepLearningの計算高速化の手法の1つとして、BinaryConnect(BC)を提案した。
+BinaryConnect 重みの2値化 決定的(Deterministic)な方法と、確率的(Stochastic)な方法がある。
+Deterministicな方法: $$ w_{b}=\left{\begin{array}{ll}{+1} &amp;amp; {\mathrm {if}\ w \geq 0} \ {-1} &amp;amp; {\text { otherwise }}\end{array}\right. $$
+Stochasticな方法 $$ w_{b}=\left{\begin{array}{ll}{+1} &amp;amp; {\mathrm { with\ probability }\ p=\sigma(w)} \ {-1} &amp;amp; {\mathrm { with\ probability }\ 1-p}\end{array}\right. $$
+$$ \mathrm{where}\ \sigma(x)=\operatorname{clip}\left(\frac{x+1}{2}, 0,1\right)=\max \left(0, \min \left(1, \frac{x+1}{2}\right)\right) $$
+( \sigma(x))はハードシグモイド関数である。ソフトなシグモイド関数を用いなかったのは、計算量を減らすためである。
+学習時  順伝播、逆伝播の際は2値化された重みを用いる。</description>
+    </item>
+    
+    <item>
+      <title>Hello Wor;d!</title>
       <link>https://hirokinishimoto.github.io/posts/hello/</link>
       <pubDate>Wed, 02 Oct 2019 21:35:14 +0900</pubDate>
       
       <guid>https://hirokinishimoto.github.io/posts/hello/</guid>
       <description>このサイトはにっしーの備忘録に使われます.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://hirokinishimoto.github.io/posts/binarizedneuralnetwoeks/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://hirokinishimoto.github.io/posts/binarizedneuralnetwoeks/</guid>
+      <description>[論文]Binarized Neural Networks: Training Neural Networks with Weights and Activations Constrained to +1 or −1 論文pdf
+背景  Deep Learningの学習はエネルギー消費の多いGPUを使うことがほとんど。 近年low-powerなデバイス上でDeepLearningの計算を行うための研究も盛んに行われている。  Binarized Neural Networks (BNNs) 著者は重みだけでなく活性も2値化したBinarized Neural Networkを提案した。
+これは、学習時は2値化された重みと活性を使って勾配計算し、2値化された重みと活性を用いて推論するようなNeural Networkのことである。
+重みの2値化 決定的(Deterministic)な方法と、確率的(Stochastic)な方法がある。
+ Deterministicな方法: $$ w_{b}=\left{\begin{array}{ll}{+1} &amp;amp; {\mathrm {if}\ w \geq 0} \ {-1} &amp;amp; {\text { otherwise }}\end{array}\right. $$
+ Stochasticな方法 $$ w_{b}=\left{\begin{array}{ll}{+1} &amp;amp; {\mathrm { with\ probability }\ p=\sigma(w)} \ {-1} &amp;amp; {\mathrm { with\ probability }\ 1-p}\end{array}\right.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://hirokinishimoto.github.io/posts/mobilenets/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://hirokinishimoto.github.io/posts/mobilenets/</guid>
+      <description>[論文]MobileNets: Efficient Convolutional Neural Networks for Mobile Vision Applications 論文pdf
+Mobilenetの特徴  軽い 早い 精度が良い  Depthwise Separable Convolution Mobile Netの軽量化のための工夫。
+ わかりやすい動画
+https://www.youtube.com/watch?v=T7o3xvJLuHk&amp;amp;feature=youtu.be
+ MobileNetの全体の構造 1層目だけFull Convolution層。 2層目以降はdepthwise separable convolutionの繰り返し。
+ 積-和演算の数を減らせる 残りの積-和計算を効率的に実装できる。  パラメータの75%、計算時間の95%を1x1畳込み層が占めている。
+1x1畳込み層は、線形代数の数値計算が最適化されたアルゴリズムの１つであるgeneral matrix multiply (GEMM) functionでdirectに実装可能。(???)
+Hyper-parameters  width multiplier
+ 論文では( \alpha )という記号で表されている。 ( 0 \leq \alpha \leq 1 ) の範囲で制御可能 (\alpha)が小さくなるとinput channel, output channelが(\alpha)倍小さくなる。 計算コストは大体(\alpha^2)に accuracyとのトレードオフがある  resolution multiplier
+ 論文では( \rho )という記号で表されている。 ( 0 \leq \rho \leq 1 ) の範囲で制御可能 (\rho)が小さくなるとfeature mapの大きさが(\rho)倍小さくなる。 計算コストは(\rho^2)倍小さくなる。 (\rho)を変化させてもパラメータ数は変化しない。 accuracyとのトレードオフがある   ハイパーパラメータを導入すると、Depthwise Separable Convolution の計算にかかるコストは</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://hirokinishimoto.github.io/posts/squeezenet/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://hirokinishimoto.github.io/posts/squeezenet/</guid>
+      <description>[論文]SQUEEZENET: ALEXNET-LEVEL ACCURACY WITH 50X FEWER PARAMETERS AND &amp;lt;0.5MB MODEL SIZE 論文pdf
+背景 小さなCNNアーキテクチャの利点  より効率的な分散学習 新しいモデルをclientにexportする際のoverheadを減らせる  より頻繁なモデルの更新も可能に  FPGAなど、メモリが限られたハードウェア上により柔軟にDeployできる  本論文のContribution  従来研究は高精度なモデルを目指したものが多い 本論文はCNNの設計空間を探索して、性能が他に劣らずかつ小さなSqueezeNetを発見、提案  ImageNetに対して、Alex-Netと同等の正答率 Alex-Netよりも50倍少ないパラメータ数 モデル圧縮により、SqueezeNetを0.5MBまで圧縮した  Alex-Netより510倍小さい    CNN設計空間の探索  探索を自動化しなかった → 設計空間の形に対するintuitionを得たい  CNNアーキテクチャの構成要素  microarchitecture &amp;gt; layer, moduleの構造
+ macroarchitecture &amp;gt; 入力から出力まで全体の構造
+&amp;gt; microarchitectureの接続の仕方
+ solver &amp;gt; 論文では具体的な指定なし
+&amp;gt; 実装ではAdagradが使われがち
+ hyperpalameters
+  CNN設計空間の探索の方針 1. 3x3Filterを1x1Filterに置き換える 2. 3x3Fileterへのinput channelの数を減らす 3.</description>
     </item>
     
   </channel>
