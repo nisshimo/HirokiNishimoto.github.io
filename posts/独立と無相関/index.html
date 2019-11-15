@@ -12,27 +12,53 @@
   <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="独立と無相関"/>
 <meta name="twitter:description" content="独立と無相関は似て非なる概念である。
-僕自身混同しがちなので整理した。
+僕自身これらの概念を混同してしまうことが多いので整理してみた。
 確率変数の分散 $X$, $Y$は確率変数とする。
 $X$の期待値を$\mu = E(X)$と表記する。
 $X$の分散$V(X)$は下式で定義される。
 $$V(X) = E{(E(X)-\mu)^2}$$
 無相関の定義 確率変数$X$,$Y$の相関係数を、
-$$ \rho_{XY} = COV(X,Y)/\sqrt{V(X)}\sqrt{V(Y)} $$
+$$ \rho_{XY} = \frac{COV(X,Y)}{\sqrt{V(X)}{\sqrt{V(Y)}}} $$
 と定義する。
-$$ \frac{1}{2} $$"/>
+確率変数$X$,$Y$が無相関(uncorrelated)であることの定義は$\rho_{XY}=0$、つまり$COV(X,Y)=0$であることである。
+独立の定義 同時確率分布において、あらゆる$x$,$y$について条件
+$$f(x,Y) = g(x)h(y)$$
+が成り立つなら、X, Yは互いに独立(independent)であるという。 独立のときは、上式を$g(x), h(y)$で割れば
+$$g(x|y) \equiv g(x), h(y|x) \equiv h(y)$$
+が得られ、Xの出方はYによらず、Yの出方はXによらないことがわかる。
+独立と無相関、どちらが強い概念か 独立よりも無相関のほうが強い。 無双感は平均的な性質であって、確率分布から
+$$ \rho_{XY} = \frac{COV(X,Y)}{\sqrt{V(X)}{\sqrt{V(Y)}}} $$
+により決まる量$\rho_{XY}$によるが、独立性は基礎の確率分布そのものによる仮定だからである。
+独立ならば無相関である. $X$, $Y$が独立ならば、
+$$E(XY) = E(X)E(Y)$$ が成立する。
+よって、
+$$COV(X,Y) = E(XY) -E(X)E(Y) = 0$$ したがって$\rho=0$となる。
+逆は一般に成り立たない。"/>
 
   <meta property="og:title" content="独立と無相関" />
 <meta property="og:description" content="独立と無相関は似て非なる概念である。
-僕自身混同しがちなので整理した。
+僕自身これらの概念を混同してしまうことが多いので整理してみた。
 確率変数の分散 $X$, $Y$は確率変数とする。
 $X$の期待値を$\mu = E(X)$と表記する。
 $X$の分散$V(X)$は下式で定義される。
 $$V(X) = E{(E(X)-\mu)^2}$$
 無相関の定義 確率変数$X$,$Y$の相関係数を、
-$$ \rho_{XY} = COV(X,Y)/\sqrt{V(X)}\sqrt{V(Y)} $$
+$$ \rho_{XY} = \frac{COV(X,Y)}{\sqrt{V(X)}{\sqrt{V(Y)}}} $$
 と定義する。
-$$ \frac{1}{2} $$" />
+確率変数$X$,$Y$が無相関(uncorrelated)であることの定義は$\rho_{XY}=0$、つまり$COV(X,Y)=0$であることである。
+独立の定義 同時確率分布において、あらゆる$x$,$y$について条件
+$$f(x,Y) = g(x)h(y)$$
+が成り立つなら、X, Yは互いに独立(independent)であるという。 独立のときは、上式を$g(x), h(y)$で割れば
+$$g(x|y) \equiv g(x), h(y|x) \equiv h(y)$$
+が得られ、Xの出方はYによらず、Yの出方はXによらないことがわかる。
+独立と無相関、どちらが強い概念か 独立よりも無相関のほうが強い。 無双感は平均的な性質であって、確率分布から
+$$ \rho_{XY} = \frac{COV(X,Y)}{\sqrt{V(X)}{\sqrt{V(Y)}}} $$
+により決まる量$\rho_{XY}$によるが、独立性は基礎の確率分布そのものによる仮定だからである。
+独立ならば無相関である. $X$, $Y$が独立ならば、
+$$E(XY) = E(X)E(Y)$$ が成立する。
+よって、
+$$COV(X,Y) = E(XY) -E(X)E(Y) = 0$$ したがって$\rho=0$となる。
+逆は一般に成り立たない。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://hirokinishimoto.github.io/posts/%E7%8B%AC%E7%AB%8B%E3%81%A8%E7%84%A1%E7%9B%B8%E9%96%A2/" />
 <meta property="article:published_time" content="2019-11-15T13:49:41+09:00" />
@@ -55,20 +81,33 @@ if (!doNotTrack) {
 
   <meta itemprop="name" content="独立と無相関">
 <meta itemprop="description" content="独立と無相関は似て非なる概念である。
-僕自身混同しがちなので整理した。
+僕自身これらの概念を混同してしまうことが多いので整理してみた。
 確率変数の分散 $X$, $Y$は確率変数とする。
 $X$の期待値を$\mu = E(X)$と表記する。
 $X$の分散$V(X)$は下式で定義される。
 $$V(X) = E{(E(X)-\mu)^2}$$
 無相関の定義 確率変数$X$,$Y$の相関係数を、
-$$ \rho_{XY} = COV(X,Y)/\sqrt{V(X)}\sqrt{V(Y)} $$
+$$ \rho_{XY} = \frac{COV(X,Y)}{\sqrt{V(X)}{\sqrt{V(Y)}}} $$
 と定義する。
-$$ \frac{1}{2} $$">
+確率変数$X$,$Y$が無相関(uncorrelated)であることの定義は$\rho_{XY}=0$、つまり$COV(X,Y)=0$であることである。
+独立の定義 同時確率分布において、あらゆる$x$,$y$について条件
+$$f(x,Y) = g(x)h(y)$$
+が成り立つなら、X, Yは互いに独立(independent)であるという。 独立のときは、上式を$g(x), h(y)$で割れば
+$$g(x|y) \equiv g(x), h(y|x) \equiv h(y)$$
+が得られ、Xの出方はYによらず、Yの出方はXによらないことがわかる。
+独立と無相関、どちらが強い概念か 独立よりも無相関のほうが強い。 無双感は平均的な性質であって、確率分布から
+$$ \rho_{XY} = \frac{COV(X,Y)}{\sqrt{V(X)}{\sqrt{V(Y)}}} $$
+により決まる量$\rho_{XY}$によるが、独立性は基礎の確率分布そのものによる仮定だからである。
+独立ならば無相関である. $X$, $Y$が独立ならば、
+$$E(XY) = E(X)E(Y)$$ が成立する。
+よって、
+$$COV(X,Y) = E(XY) -E(X)E(Y) = 0$$ したがって$\rho=0$となる。
+逆は一般に成り立たない。">
 
 
 <meta itemprop="datePublished" content="2019-11-15T13:49:41&#43;09:00" />
 <meta itemprop="dateModified" content="2019-11-15T13:49:41&#43;09:00" />
-<meta itemprop="wordCount" content="23">
+<meta itemprop="wordCount" content="62">
 
 
 
@@ -160,7 +199,7 @@ $$ \frac{1}{2} $$">
 
 <p>独立と無相関は似て非なる概念である。</p>
 
-<p>僕自身混同しがちなので整理した。</p>
+<p>僕自身これらの概念を混同してしまうことが多いので整理してみた。</p>
 
 <h2 id="確率変数の分散">確率変数の分散</h2>
 
@@ -176,13 +215,47 @@ $$ \frac{1}{2} $$">
 
 <p>確率変数$X$,$Y$の相関係数を、</p>
 
-<p>$$ \rho_{XY} = COV(X,Y)/\sqrt{V(X)}\sqrt{V(Y)} $$</p>
+<p>$$ \rho_{XY} = \frac{COV(X,Y)}{\sqrt{V(X)}{\sqrt{V(Y)}}} $$</p>
 
 <p>と定義する。</p>
 
-<p>$$
-\frac{1}{2}
-$$</p>
+<p>確率変数$X$,$Y$が無相関(uncorrelated)であることの定義は$\rho_{XY}=0$、つまり$COV(X,Y)=0$であることである。</p>
+
+<h2 id="独立の定義">独立の定義</h2>
+
+<p>同時確率分布において、あらゆる$x$,$y$について条件</p>
+
+<p>$$f(x,Y) = g(x)h(y)$$</p>
+
+<p>が成り立つなら、X, Yは互いに独立(independent)であるという。
+独立のときは、上式を$g(x), h(y)$で割れば</p>
+
+<p>$$g(x|y) \equiv g(x), h(y|x) \equiv h(y)$$</p>
+
+<p>が得られ、Xの出方はYによらず、Yの出方はXによらないことがわかる。</p>
+
+<h2 id="独立と無相関-どちらが強い概念か">独立と無相関、どちらが強い概念か</h2>
+
+<p>独立よりも無相関のほうが強い。
+無双感は平均的な性質であって、確率分布から</p>
+
+<p>$$ \rho_{XY} = \frac{COV(X,Y)}{\sqrt{V(X)}{\sqrt{V(Y)}}} $$</p>
+
+<p>により決まる量$\rho_{XY}$によるが、独立性は基礎の確率分布そのものによる仮定だからである。</p>
+
+<h3 id="独立ならば無相関である">独立ならば無相関である.</h3>
+
+<p>$X$, $Y$が独立ならば、</p>
+
+<p>$$E(XY) = E(X)E(Y)$$
+が成立する。</p>
+
+<p>よって、</p>
+
+<p>$$COV(X,Y) = E(XY) -E(X)E(Y) = 0$$
+したがって$\rho=0$となる。</p>
+
+<p>逆は一般に成り立たない。</p>
 
         </div>
 
@@ -230,6 +303,10 @@ $$</p>
       <a class="c-link" href="https://hirokinishimoto.github.io/posts/bnn/" data-toggle="tooltip" data-placement="top" title="[論文]Binarized Neural Networks: Training Neural Networks with Weights and Activations Constrained to &#43;1 or −1">&larr; Previous Post</a>
     </li>
      
+    <li class="c-pager__list__item c-pager__list__item--next">
+      <a class="c-link" href="https://hirokinishimoto.github.io/posts/mobilenets/" data-toggle="tooltip" data-placement="top" title="[論文]MobileNets: Efficient Convolutional Neural Networks for Mobile Vision Applications">Next Post &rarr;</a>
+    </li>
+    
   </ul>
 </div>
 
@@ -267,7 +344,7 @@ $$</p>
   "mainEntityOfPage": {
     "@type": "NewsArticle",
     "@id": "https:\/\/hirokinishimoto.github.io\/posts\/%E7%8B%AC%E7%AB%8B%E3%81%A8%E7%84%A1%E7%9B%B8%E9%96%A2\/",
-    "headline": "\x3cp\x3e独立と無相関は似て非なる概念である。\x3c\/p\x3e\x3cp\x3e僕自身混同しがちなので整理した。\x3c\/p\x3e\x3ch2 id=\x22確率変数の分散\x22\x3e確率変数の分散\x3c\/h2\x3e\x3cp\x3e$X$, $Y$は確率変数とする。\x3c\/p\x3e\x3cp\x3e$X$の期待",
+    "headline": "\x3cp\x3e独立と無相関は似て非なる概念である。\x3c\/p\x3e\x3cp\x3e僕自身これらの概念を混同してしまうことが多いので整理してみた。\x3c\/p\x3e\x3ch2 id=\x22確率変数の分散\x22\x3e確率変数の分散\x3c\/h2\x3e\x3cp\x3e$X$, $Y$は確率変数とす",
     "author": "Hiroki Nishimoto",
     "publisher": {
       "@type": "Organization",
@@ -277,12 +354,12 @@ $$</p>
     "image": "https:\/\/hirokinishimoto.github.io",
     "datePublished": "2019-11-15"
   },
-  "headline": "\x3cp\x3e独立と無相関は似て非なる概念である。\x3c\/p\x3e\x3cp\x3e僕自身混同しがちなので整理した。\x3c\/p\x3e\x3ch2 id=\x22確率変数の分散\x22\x3e確率変数の分散\x3c\/h2\x3e\x3cp\x3e$X$, $Y$は確率変数とする。\x3c\/p\x3e\x3cp\x3e$X$の期待",
+  "headline": "\x3cp\x3e独立と無相関は似て非なる概念である。\x3c\/p\x3e\x3cp\x3e僕自身これらの概念を混同してしまうことが多いので整理してみた。\x3c\/p\x3e\x3ch2 id=\x22確率変数の分散\x22\x3e確率変数の分散\x3c\/h2\x3e\x3cp\x3e$X$, $Y$は確率変数とす",
   "alternativeHeadline": "にっしーの備忘録",
   "datePublished": "2019-11-15",
   "dateModified": "2019-11-15",
   "url": "https:\/\/hirokinishimoto.github.io\/posts\/%E7%8B%AC%E7%AB%8B%E3%81%A8%E7%84%A1%E7%9B%B8%E9%96%A2\/",
-  "wordCount": "23",
+  "wordCount": "62",
   "author": {
     "@type": "Person",
     "name": "Hiroki Nishimoto"

@@ -2,13 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>論文 on にっしーの備忘録</title>
-    <link>https://hirokinishimoto.github.io/tags/%E8%AB%96%E6%96%87/</link>
+    <link>https://hirokinishimoto.github.io/categories/%E8%AB%96%E6%96%87/</link>
     <description>Recent content in 論文 on にっしーの備忘録</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Fri, 15 Nov 2019 14:57:51 +0900</lastBuildDate>
     
-	<atom:link href="https://hirokinishimoto.github.io/tags/%E8%AB%96%E6%96%87/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://hirokinishimoto.github.io/categories/%E8%AB%96%E6%96%87/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -66,21 +66,6 @@ https://www.youtube.com/watch?v=T7o3xvJLuHk&amp;amp;feature=youtu.be
 Hyper-parameters  width multiplier
  論文では( \alpha )という記号で表されている。 ( 0 \leq \alpha \leq 1 ) の範囲で制御可能 (\alpha)が小さくなるとinput channel, output channelが(\alpha)倍小さくなる。 計算コストは大体(\alpha^2)に accuracyとのトレードオフがある  resolution multiplier
  論文では( \rho )という記号で表されている。 ( 0 \leq \rho \leq 1 ) の範囲で制御可能 (\rho)が小さくなるとfeature mapの大きさが(\rho)倍小さくなる。 計算コストは(\rho^2)倍小さくなる。 (\rho)を変化させてもパラメータ数は変化しない。 accuracyとのトレードオフがある   ハイパーパラメータを導入すると、Depthwise Separable Convolution の計算にかかるコストは</description>
-    </item>
-    
-    <item>
-      <title>[論文]Binarized Neural Networks: Training Neural Networks with Weights and Activations Constrained to &#43;1 or −1</title>
-      <link>https://hirokinishimoto.github.io/posts/bnn/</link>
-      <pubDate>Sat, 02 Nov 2019 21:41:41 +0900</pubDate>
-      
-      <guid>https://hirokinishimoto.github.io/posts/bnn/</guid>
-      <description>論文pdf
-背景  Deep Learningの学習はエネルギー消費の多いGPUを使うことがほとんど。 近年low-powerなデバイス上でDeepLearningの計算を行うための研究も盛んに行われている。  Binarized Neural Networks (BNNs) 著者は重みだけでなく活性も2値化したBinarized Neural Networkを提案した。
-これは、学習時は2値化された重みと活性を使って勾配計算し、2値化された重みと活性を用いて推論するようなNeural Networkのことである。
-重みの2値化 決定的(Deterministic)な方法と、確率的(Stochastic)な方法がある。
- Deterministicな方法: $$ w_{b}=\left{\begin{array}{ll}{+1} &amp;amp; {\mathrm {if}\ w \geq 0} \ {-1} &amp;amp; {\text { otherwise }}\end{array}\right. $$
- Stochasticな方法 $$ w_{b}=\left{\begin{array}{ll}{+1} &amp;amp; {\mathrm { with\ probability }\ p=\sigma(w)} \ {-1} &amp;amp; {\mathrm { with\ probability }\ 1-p}\end{array}\right. $$
-  $$ \mathrm{where}\ \sigma(x)=\operatorname{clip}\left(\frac{x+1}{2}, 0,1\right)=\max \left(0, \min \left(1, \frac{x+1}{2}\right)\right) $$ ( \sigma(x))はハードシグモイド関数である。 Stochasticな2値化は乱数発生器を必要とするので実装がやや困難である。 この論文においては、活性化に対してはいくつかの実験で学習時にStochastiな2値化を行うが、それ以外は専らDeterministicな2値化を行う。</description>
     </item>
     
   </channel>
