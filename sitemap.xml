@@ -3,6 +3,27 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://hirokinishimoto.github.io/posts/mac%E7%95%AAgooglechrome%E3%81%A7%E3%83%95%E3%83%AB%E3%83%AA%E3%83%AD%E3%83%BC%E3%83%89/</loc>
+    <lastmod>2019-11-15T16:54:40+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://hirokinishimoto.github.io/posts/</loc>
+    <lastmod>2019-11-15T16:54:40+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://hirokinishimoto.github.io/</loc>
+    <lastmod>2019-11-15T16:54:40+09:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://hirokinishimoto.github.io/posts/squeezenet/</loc>
     <lastmod>2019-11-15T14:57:51+09:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -17,21 +38,7 @@
   </url>
   
   <url>
-    <loc>https://hirokinishimoto.github.io/posts/</loc>
-    <lastmod>2019-11-15T14:57:51+09:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://hirokinishimoto.github.io/tags/</loc>
-    <lastmod>2019-11-15T14:57:51+09:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://hirokinishimoto.github.io/</loc>
     <lastmod>2019-11-15T14:57:51+09:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
