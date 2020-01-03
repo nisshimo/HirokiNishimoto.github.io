@@ -6,10 +6,26 @@
     <description>Recent content on にっしーの備忘録</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 15 Nov 2019 16:54:40 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 03 Jan 2020 11:45:01 +0900</lastBuildDate>
     
 	<atom:link href="https://hirokinishimoto.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>生態学のノート</title>
+      <link>https://hirokinishimoto.github.io/posts/%E7%94%9F%E6%85%8B%E5%AD%A6%E3%81%AE%E3%83%8E%E3%83%BC%E3%83%88/</link>
+      <pubDate>Fri, 03 Jan 2020 11:45:01 +0900</pubDate>
+      
+      <guid>https://hirokinishimoto.github.io/posts/%E7%94%9F%E6%85%8B%E5%AD%A6%E3%81%AE%E3%83%8E%E3%83%BC%E3%83%88/</guid>
+      <description>生態学とはどんな学問か? 生態学とは, 生物の生活の法則を, その環境との関係で解き明かす科学である.
+生物界の共通性と多様性 共通性  自己境界性 自己複製性 自己維持性  多様性 進化から見た生態 進化とは何か? 最もミクロな時間スケールでの「生物の進化」の定義は
+集団内での遺伝子頻度の系図の変化  これはすごく地味な変化だが、この地味なが時々刻々積み重なることで、やがて栄子盛衰の大きな変遷をもたらす.
+突然変異と修復機構 DNAの突然変異の要因  内的要因: 複製エラー, 酸素ラジカル 外的要因: 放射線, 化学物質など/  修復機構がはたらけばDNAは正常に戻るが、そうでないと突然変異となり、生物の進化、個体の分化につながる.
+生態学の2つの問い  How 至近要因: 遺伝的基盤、生理 Why 究極要因: 自然選択(適応度)  多くの進化生態学の研究ではこの2つの問いで研究していくことが重要. Whyに答えるのが自然選択(適応度)
+自然選択 自然選択の基本原理 以下の３つの条件が揃えば、左様は自律的に進む - 個体間に変異あり - その変異は遺伝する - 変異に応じて繁殖・生存に有利不利
+自然選択の3つのかかり方  安定的選択 方向性選択 分断化選択、多様化選択  自然選択の事例  ダーウィンフィンチの嘴の多様性 サンザシミバエの系統分化 オオシモフリエダシャクの工業暗化 殺虫剤抵抗性の増進 タンガニーカ湖のカワスズメ科の鱗食い魚 マイマイの巻き型 ヒマラヤを超えて渡るインドガン キリンの首の進化  現代進化生物学の2つの理論的支柱 進化の主な要因は何か？
+総合説(自然選択説) 突然変異 ＋ 方向性選択(適用度の高い変異体を増やす作用) =&amp;gt; 適応進化</description>
+    </item>
     
     <item>
       <title>Mac版Google Chromeでフルリロード</title>
