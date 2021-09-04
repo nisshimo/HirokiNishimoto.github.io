@@ -1,16 +1,12 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>c&#43;&#43; on にっしーの備忘録</title>
+    <title>c&#43;&#43; on 情報系学生が日本の地域問題をまとめてみた</title>
     <link>https://hirokinishimoto.github.io/tags/c&#43;&#43;/</link>
-    <description>Recent content in c&#43;&#43; on にっしーの備忘録</description>
+    <description>Recent content in c&#43;&#43; on 情報系学生が日本の地域問題をまとめてみた</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 14 Oct 2019 22:45:17 +0900</lastBuildDate>
-    
-	<atom:link href="https://hirokinishimoto.github.io/tags/c++/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 14 Oct 2019 22:45:17 +0900</lastBuildDate><atom:link href="https://hirokinishimoto.github.io/tags/c++/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>C&#43;&#43;の標準データ構造</title>
       <link>https://hirokinishimoto.github.io/posts/c&#43;&#43;%E3%81%AE%E6%A8%99%E6%BA%96%E3%83%87%E3%83%BC%E3%82%BF%E6%A7%8B%E9%80%A0/</link>
@@ -19,15 +15,15 @@
       <guid>https://hirokinishimoto.github.io/posts/c&#43;&#43;%E3%81%AE%E6%A8%99%E6%BA%96%E3%83%87%E3%83%BC%E3%82%BF%E6%A7%8B%E9%80%A0/</guid>
       <description>stack LIFOのデータ構造
 メンバ関数  push() : 要素の挿入 top() : 先頭の要素の参照 pop() : 先頭の要素の破棄 size() : 現在の要素数  計算コストは全てO(1)
-練習問題
+[練習問題](http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_3_ A&amp;amp;lang=jp)
 queue FIFOのデータ構造
 メンバ関数  push() : 要素の挿入 front() : 先頭の要素の参照 pop() : 先頭の要素の破棄 size() : 現在の要素数  計算コストは全てO(1)
-練習問題
+[練習問題](ttp://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_3_ B&amp;amp;lang=jp)
 priority_queue 挿入されたデータの中で最大の要素の参照が低数時間でできる。 実装には2分ヒープなど
 メンバ関数  push() : 要素の挿入 top() : 先頭の要素の参照 pop() : 先頭の要素の破棄 size() : 現在の要素数  計算コストはtop() : O(1), push(), pop() : O(logN)
-練習問題
+[練習問題](http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_9_ C&amp;amp;lang=jp)
 set 集合を表現するライブラリ
-種類 要素の重複を許さないもの  set : データに順序をつけて管理</description>
+種類 要素の重複を許さないもの   set : データに順序をつけて管理</description>
     </item>
     
   </channel>

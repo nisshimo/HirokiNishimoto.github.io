@@ -1,16 +1,12 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>論文 on にっしーの備忘録</title>
+    <title>論文 on 情報系学生が日本の地域問題をまとめてみた</title>
     <link>https://hirokinishimoto.github.io/tags/%E8%AB%96%E6%96%87/</link>
-    <description>Recent content in 論文 on にっしーの備忘録</description>
+    <description>Recent content in 論文 on 情報系学生が日本の地域問題をまとめてみた</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 15 Nov 2019 14:57:51 +0900</lastBuildDate>
-    
-	<atom:link href="https://hirokinishimoto.github.io/tags/%E8%AB%96%E6%96%87/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Fri, 15 Nov 2019 14:57:51 +0900</lastBuildDate><atom:link href="https://hirokinishimoto.github.io/tags/%E8%AB%96%E6%96%87/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>[論文]SQUEEZENET: ALEXNET-LEVEL ACCURACY WITH 50X FEWER PARAMETERS AND &lt;0.5MB MODEL SIZE</title>
       <link>https://hirokinishimoto.github.io/posts/squeezenet/</link>
@@ -18,16 +14,12 @@
       
       <guid>https://hirokinishimoto.github.io/posts/squeezenet/</guid>
       <description>論文pdf
-背景 小さなCNNアーキテクチャの利点  より効率的な分散学習 新しいモデルをclientにexportする際のoverheadを減らせる  より頻繁なモデルの更新も可能に  FPGAなど、メモリが限られたハードウェア上により柔軟にDeployできる  本論文のContribution  従来研究は高精度なモデルを目指したものが多い 本論文はCNNの設計空間を探索して、性能が他に劣らずかつ小さなSqueezeNetを発見、提案  ImageNetに対して、Alex-Netと同等の正答率 Alex-Netよりも50倍少ないパラメータ数 モデル圧縮により、SqueezeNetを0.5MBまで圧縮した  Alex-Netより510倍小さい    CNN設計空間の探索  探索を自動化しなかった → 設計空間の形に対するintuitionを得たい  CNNアーキテクチャの構成要素  microarchitecture &amp;gt; layer, moduleの構造
- macroarchitecture &amp;gt; 入力から出力まで全体の構造
-&amp;gt; microarchitectureの接続の仕方
- solver &amp;gt; 論文では具体的な指定なし
-&amp;gt; 実装ではAdagradが使われがち
- hyperpalameters
-  CNN設計空間の探索の方針 1. 3x3Filterを1x1Filterに置き換える 2. 3x3Fileterへのinput channelの数を減らす 3. ネットワークの最後の方でDownsampleする 方針1.と2.は、accuracyを下げないようにしつつパラメータを減らす意図がある。
-方針3.はパラメータが限られた中でaccuracyを最大化を狙うもの。
-出力層に近づくまでストライドsを小さな値に保つ。K.HeとH.Sunの研究成果を取り入れた形
-SqueezeNetのアーキテクチャ Fire Module  Squeeze comvolution layer</description>
+背景 小さなCNNアーキテクチャの利点  より効率的な分散学習 新しいモデルをclientにexportする際のoverheadを減らせる  より頻繁なモデルの更新も可能に   FPGAなど、メモリが限られたハードウェア上により柔軟にDeployできる  本論文のContribution  従来研究は高精度なモデルを目指したものが多い 本論文はCNNの設計空間を探索して、性能が他に劣らずかつ小さなSqueezeNetを発見、提案  ImageNetに対して、Alex-Netと同等の正答率 Alex-Netよりも50倍少ないパラメータ数 モデル圧縮により、SqueezeNetを0.5MBまで圧縮した  Alex-Netより510倍小さい      CNN設計空間の探索  探索を自動化しなかった → 設計空間の形に対するintuitionを得たい  CNNアーキテクチャの構成要素  microarchitecture   layer, moduleの構造
+  macroarchitecture   入力から出力まで全体の構造microarchitectureの接続の仕方
+  solver   論文では具体的な指定なし実装ではAdagradが使われがち
+  hyperpalameters  CNN設計空間の探索の方針 1. 3x3Filterを1x1Filterに置き換える 2. 3x3Fileterへのinput channelの数を減らす 3. ネットワークの最後の方でDownsampleする 方針1.と2.は、accuracyを下げないようにしつつパラメータを減らす意図がある。
+方針3.はパラメータが限られた中でaccuracyを最大化を狙うもの。出力層に近づくまでストライドsを小さな値に保つ。K.HeとH.Sunの研究成果を取り入れた形
+SqueezeNetのアーキテクチャ Fire Module   Squeeze comvolution layer</description>
     </item>
     
     <item>
@@ -39,14 +31,14 @@ SqueezeNetのアーキテクチャ Fire Module  Squeeze comvolution layer</descr
       <description>論文pdf
 背景 近年、計算可能性が新しいアルゴリズム開発のネックになる場面が散見されるようになった。また、実際の応用において、GPUよりもパワーの弱いデバイスにDeepLearningのモデルを載せたいというニーズも出てきた。そこで、DeepLearningの学習、予測の際の計算高速化に関心が集まっている。
 モデルの重みを2値化することで、積和操作を単なる和に置き換える事ができる。乗算器は、Deep Learning の計算において、メモリとパワーを大変多く消費するので、これは利点が大きい。
-著者は、重みの2値化によるDeepLearningの計算高速化の手法の1つとして、BinaryConnect(BC)を提案した。
+著者は、重みの2値化によるDeepLearningの計算高速化の手法の1つとして、**BinaryConnect(BC)**を提案した。
 BinaryConnect 重みの2値化 決定的(Deterministic)な方法と、確率的(Stochastic)な方法がある。
 Deterministicな方法: $$ w_{b}=\left{\begin{array}{ll}{+1} &amp;amp; {\mathrm {if}\ w \geq 0} \ {-1} &amp;amp; {\text { otherwise }}\end{array}\right. $$
 Stochasticな方法 $$ w_{b}=\left{\begin{array}{ll}{+1} &amp;amp; {\mathrm { with\ probability }\ p=\sigma(w)} \ {-1} &amp;amp; {\mathrm { with\ probability }\ 1-p}\end{array}\right. $$
 $$ \mathrm{where}\ \sigma(x)=\operatorname{clip}\left(\frac{x+1}{2}, 0,1\right)=\max \left(0, \min \left(1, \frac{x+1}{2}\right)\right) $$
 ( \sigma(x))はハードシグモイド関数である。ソフトなシグモイド関数を用いなかったのは、計算量を減らすためである。
-学習時  順伝播、逆伝播の際は2値化された重みを用いる。
- 勾配が蓄積されて更新される重みは、高精度の実数値のままにしておく。
+学習時   順伝播、逆伝播の際は2値化された重みを用いる。
+  勾配が蓄積されて更新される重みは、高精度の実数値のままにしておく。
   Binary ConnectとSGDの互換性 重みの2値化をノイズとみなすと。noisyで微小なステップで重みが更新され、更新が進むにつれてノイズは相殺される。よってBinarry Connect はSGDにより学習を行うことができる事がわかる。うまく更新が行われるためには、更新される重みは高精度実数である必要がある。</description>
     </item>
     
@@ -58,14 +50,13 @@ $$ \mathrm{where}\ \sigma(x)=\operatorname{clip}\left(\frac{x+1}{2}, 0,1\right)=
       <guid>https://hirokinishimoto.github.io/posts/mobilenets/</guid>
       <description>論文pdf
 Mobilenetの特徴  軽い 早い 精度が良い  Depthwise Separable Convolution Mobile Netの軽量化のための工夫。
- わかりやすい動画
-https://www.youtube.com/watch?v=T7o3xvJLuHk&amp;amp;feature=youtu.be
+ わかりやすい動画https://www.youtube.com/watch?v=T7o3xvJLuHk&amp;amp;feature=youtu.be
  MobileNetの全体の構造 1層目だけFull Convolution層。 2層目以降はdepthwise separable convolutionの繰り返し。
  積-和演算の数を減らせる 残りの積-和計算を効率的に実装できる。  パラメータの75%、計算時間の95%を1x1畳込み層が占めている。
 1x1畳込み層は、線形代数の数値計算が最適化されたアルゴリズムの１つであるgeneral matrix multiply (GEMM) functionでdirectに実装可能。(???)
-Hyper-parameters  width multiplier
- 論文では( \alpha )という記号で表されている。 ( 0 \leq \alpha \leq 1 ) の範囲で制御可能 (\alpha)が小さくなるとinput channel, output channelが(\alpha)倍小さくなる。 計算コストは大体(\alpha^2)に accuracyとのトレードオフがある  resolution multiplier
- 論文では( \rho )という記号で表されている。 ( 0 \leq \rho \leq 1 ) の範囲で制御可能 (\rho)が小さくなるとfeature mapの大きさが(\rho)倍小さくなる。 計算コストは(\rho^2)倍小さくなる。 (\rho)を変化させてもパラメータ数は変化しない。 accuracyとのトレードオフがある   ハイパーパラメータを導入すると、Depthwise Separable Convolution の計算にかかるコストは</description>
+Hyper-parameters   width multiplier
+ 論文では( \alpha )という記号で表されている。 ( 0 \leq \alpha \leq 1 ) の範囲で制御可能 (\alpha)が小さくなるとinput channel, output channelが(\alpha)倍小さくなる。 計算コストは大体(\alpha^2)に accuracyとのトレードオフがある    resolution multiplier
+ 論文では( \rho )という記号で表されている。 ( 0 \leq \rho \leq 1 ) の範囲で制御可能 (\rho)が小さくなるとfeature mapの大きさが(\rho)倍小さくなる。 計算コストは(\rho^2)倍小さくなる。 (\rho)を変化させてもパラメータ数は変化しない。 accuracyとのトレードオフがある    ハイパーパラメータを導入すると、Depthwise Separable Convolution の計算にかかるコストは</description>
     </item>
     
     <item>
@@ -78,8 +69,8 @@ Hyper-parameters  width multiplier
 背景  Deep Learningの学習はエネルギー消費の多いGPUを使うことがほとんど。 近年low-powerなデバイス上でDeepLearningの計算を行うための研究も盛んに行われている。  Binarized Neural Networks (BNNs) 著者は重みだけでなく活性も2値化したBinarized Neural Networkを提案した。
 これは、学習時は2値化された重みと活性を使って勾配計算し、2値化された重みと活性を用いて推論するようなNeural Networkのことである。
 重みの2値化 決定的(Deterministic)な方法と、確率的(Stochastic)な方法がある。
- Deterministicな方法: $$ w_{b}=\left{\begin{array}{ll}{+1} &amp;amp; {\mathrm {if}\ w \geq 0} \ {-1} &amp;amp; {\text { otherwise }}\end{array}\right. $$
- Stochasticな方法 $$ w_{b}=\left{\begin{array}{ll}{+1} &amp;amp; {\mathrm { with\ probability }\ p=\sigma(w)} \ {-1} &amp;amp; {\mathrm { with\ probability }\ 1-p}\end{array}\right. $$
+  Deterministicな方法: $$ w_{b}=\left{\begin{array}{ll}{+1} &amp;amp; {\mathrm {if}\ w \geq 0} \ {-1} &amp;amp; {\text { otherwise }}\end{array}\right. $$
+  Stochasticな方法 $$ w_{b}=\left{\begin{array}{ll}{+1} &amp;amp; {\mathrm { with\ probability }\ p=\sigma(w)} \ {-1} &amp;amp; {\mathrm { with\ probability }\ 1-p}\end{array}\right. $$
   $$ \mathrm{where}\ \sigma(x)=\operatorname{clip}\left(\frac{x+1}{2}, 0,1\right)=\max \left(0, \min \left(1, \frac{x+1}{2}\right)\right) $$ ( \sigma(x))はハードシグモイド関数である。 Stochasticな2値化は乱数発生器を必要とするので実装がやや困難である。 この論文においては、活性化に対してはいくつかの実験で学習時にStochastiな2値化を行うが、それ以外は専らDeterministicな2値化を行う。</description>
     </item>
     

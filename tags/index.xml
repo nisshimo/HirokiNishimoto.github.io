@@ -1,16 +1,12 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on にっしーの備忘録</title>
+    <title>Tags on 情報系学生が日本の地域問題をまとめてみた</title>
     <link>https://hirokinishimoto.github.io/tags/</link>
-    <description>Recent content in Tags on にっしーの備忘録</description>
+    <description>Recent content in Tags on 情報系学生が日本の地域問題をまとめてみた</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 03 Jan 2020 11:45:01 +0900</lastBuildDate>
-    
-	<atom:link href="https://hirokinishimoto.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Fri, 03 Jan 2020 11:45:01 +0900</lastBuildDate><atom:link href="https://hirokinishimoto.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>生態学</title>
       <link>https://hirokinishimoto.github.io/tags/%E7%94%9F%E6%85%8B%E5%AD%A6/</link>

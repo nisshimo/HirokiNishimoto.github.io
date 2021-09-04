@@ -5,8 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
-  <title>[論文]Binarized Neural Networks: Training Neural Networks with Weights and Activations Constrained to &#43;1 or −1 &middot; にっしーの備忘録 - このサイトはにっしーの備忘録に使われます</title>
-  <meta name="generator" content="Hugo 0.58.0" />
+  <title>[論文]Binarized Neural Networks: Training Neural Networks with Weights and Activations Constrained to &#43;1 or −1 &middot; 情報系学生が日本の地域問題をまとめてみた - このサイトはにっしーの備忘録に使われます</title>
+  <meta name="generator" content="Hugo 0.82.1" />
   
   <meta name="description" content="このサイトはにっしーの備忘録に使われます"> 
   <meta name="twitter:card" content="summary"/>
@@ -15,8 +15,8 @@
 背景  Deep Learningの学習はエネルギー消費の多いGPUを使うことがほとんど。 近年low-powerなデバイス上でDeepLearningの計算を行うための研究も盛んに行われている。  Binarized Neural Networks (BNNs) 著者は重みだけでなく活性も2値化したBinarized Neural Networkを提案した。
 これは、学習時は2値化された重みと活性を使って勾配計算し、2値化された重みと活性を用いて推論するようなNeural Networkのことである。
 重みの2値化 決定的(Deterministic)な方法と、確率的(Stochastic)な方法がある。
- Deterministicな方法: $$ w_{b}=\left{\begin{array}{ll}{&#43;1} &amp; {\mathrm {if}\ w \geq 0} \ {-1} &amp; {\text { otherwise }}\end{array}\right. $$
- Stochasticな方法 $$ w_{b}=\left{\begin{array}{ll}{&#43;1} &amp; {\mathrm { with\ probability }\ p=\sigma(w)} \ {-1} &amp; {\mathrm { with\ probability }\ 1-p}\end{array}\right. $$
+  Deterministicな方法: $$ w_{b}=\left{\begin{array}{ll}{&#43;1} &amp; {\mathrm {if}\ w \geq 0} \ {-1} &amp; {\text { otherwise }}\end{array}\right. $$
+  Stochasticな方法 $$ w_{b}=\left{\begin{array}{ll}{&#43;1} &amp; {\mathrm { with\ probability }\ p=\sigma(w)} \ {-1} &amp; {\mathrm { with\ probability }\ 1-p}\end{array}\right. $$
   $$ \mathrm{where}\ \sigma(x)=\operatorname{clip}\left(\frac{x&#43;1}{2}, 0,1\right)=\max \left(0, \min \left(1, \frac{x&#43;1}{2}\right)\right) $$ ( \sigma(x))はハードシグモイド関数である。 Stochasticな2値化は乱数発生器を必要とするので実装がやや困難である。 この論文においては、活性化に対してはいくつかの実験で学習時にStochastiな2値化を行うが、それ以外は専らDeterministicな2値化を行う。"/>
 
   <meta property="og:title" content="[論文]Binarized Neural Networks: Training Neural Networks with Weights and Activations Constrained to &#43;1 or −1" />
@@ -24,47 +24,28 @@
 背景  Deep Learningの学習はエネルギー消費の多いGPUを使うことがほとんど。 近年low-powerなデバイス上でDeepLearningの計算を行うための研究も盛んに行われている。  Binarized Neural Networks (BNNs) 著者は重みだけでなく活性も2値化したBinarized Neural Networkを提案した。
 これは、学習時は2値化された重みと活性を使って勾配計算し、2値化された重みと活性を用いて推論するようなNeural Networkのことである。
 重みの2値化 決定的(Deterministic)な方法と、確率的(Stochastic)な方法がある。
- Deterministicな方法: $$ w_{b}=\left{\begin{array}{ll}{&#43;1} &amp; {\mathrm {if}\ w \geq 0} \ {-1} &amp; {\text { otherwise }}\end{array}\right. $$
- Stochasticな方法 $$ w_{b}=\left{\begin{array}{ll}{&#43;1} &amp; {\mathrm { with\ probability }\ p=\sigma(w)} \ {-1} &amp; {\mathrm { with\ probability }\ 1-p}\end{array}\right. $$
+  Deterministicな方法: $$ w_{b}=\left{\begin{array}{ll}{&#43;1} &amp; {\mathrm {if}\ w \geq 0} \ {-1} &amp; {\text { otherwise }}\end{array}\right. $$
+  Stochasticな方法 $$ w_{b}=\left{\begin{array}{ll}{&#43;1} &amp; {\mathrm { with\ probability }\ p=\sigma(w)} \ {-1} &amp; {\mathrm { with\ probability }\ 1-p}\end{array}\right. $$
   $$ \mathrm{where}\ \sigma(x)=\operatorname{clip}\left(\frac{x&#43;1}{2}, 0,1\right)=\max \left(0, \min \left(1, \frac{x&#43;1}{2}\right)\right) $$ ( \sigma(x))はハードシグモイド関数である。 Stochasticな2値化は乱数発生器を必要とするので実装がやや困難である。 この論文においては、活性化に対してはいくつかの実験で学習時にStochastiな2値化を行うが、それ以外は専らDeterministicな2値化を行う。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://hirokinishimoto.github.io/posts/bnn/" />
-<meta property="article:published_time" content="2019-11-02T21:41:41+09:00" />
-<meta property="article:modified_time" content="2019-11-02T21:41:41+09:00" />
+<meta property="og:url" content="https://hirokinishimoto.github.io/posts/bnn/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2019-11-02T21:41:41&#43;09:00" />
+<meta property="article:modified_time" content="2019-11-02T21:41:41&#43;09:00" />
+
 
 
   
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'Yout Google Analytics ID', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-
   <meta itemprop="name" content="[論文]Binarized Neural Networks: Training Neural Networks with Weights and Activations Constrained to &#43;1 or −1">
 <meta itemprop="description" content="論文pdf
 背景  Deep Learningの学習はエネルギー消費の多いGPUを使うことがほとんど。 近年low-powerなデバイス上でDeepLearningの計算を行うための研究も盛んに行われている。  Binarized Neural Networks (BNNs) 著者は重みだけでなく活性も2値化したBinarized Neural Networkを提案した。
 これは、学習時は2値化された重みと活性を使って勾配計算し、2値化された重みと活性を用いて推論するようなNeural Networkのことである。
 重みの2値化 決定的(Deterministic)な方法と、確率的(Stochastic)な方法がある。
- Deterministicな方法: $$ w_{b}=\left{\begin{array}{ll}{&#43;1} &amp; {\mathrm {if}\ w \geq 0} \ {-1} &amp; {\text { otherwise }}\end{array}\right. $$
- Stochasticな方法 $$ w_{b}=\left{\begin{array}{ll}{&#43;1} &amp; {\mathrm { with\ probability }\ p=\sigma(w)} \ {-1} &amp; {\mathrm { with\ probability }\ 1-p}\end{array}\right. $$
-  $$ \mathrm{where}\ \sigma(x)=\operatorname{clip}\left(\frac{x&#43;1}{2}, 0,1\right)=\max \left(0, \min \left(1, \frac{x&#43;1}{2}\right)\right) $$ ( \sigma(x))はハードシグモイド関数である。 Stochasticな2値化は乱数発生器を必要とするので実装がやや困難である。 この論文においては、活性化に対してはいくつかの実験で学習時にStochastiな2値化を行うが、それ以外は専らDeterministicな2値化を行う。">
-
-
-<meta itemprop="datePublished" content="2019-11-02T21:41:41&#43;09:00" />
+  Deterministicな方法: $$ w_{b}=\left{\begin{array}{ll}{&#43;1} &amp; {\mathrm {if}\ w \geq 0} \ {-1} &amp; {\text { otherwise }}\end{array}\right. $$
+  Stochasticな方法 $$ w_{b}=\left{\begin{array}{ll}{&#43;1} &amp; {\mathrm { with\ probability }\ p=\sigma(w)} \ {-1} &amp; {\mathrm { with\ probability }\ 1-p}\end{array}\right. $$
+  $$ \mathrm{where}\ \sigma(x)=\operatorname{clip}\left(\frac{x&#43;1}{2}, 0,1\right)=\max \left(0, \min \left(1, \frac{x&#43;1}{2}\right)\right) $$ ( \sigma(x))はハードシグモイド関数である。 Stochasticな2値化は乱数発生器を必要とするので実装がやや困難である。 この論文においては、活性化に対してはいくつかの実験で学習時にStochastiな2値化を行うが、それ以外は専らDeterministicな2値化を行う。"><meta itemprop="datePublished" content="2019-11-02T21:41:41&#43;09:00" />
 <meta itemprop="dateModified" content="2019-11-02T21:41:41&#43;09:00" />
-<meta itemprop="wordCount" content="251">
-
-
-
+<meta itemprop="wordCount" content="234">
 <meta itemprop="keywords" content="論文," />
-
   <link href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/5.0.0/sanitize.min.css" rel="stylesheet">
   <link href="https://hirokinishimoto.github.io/css/application.css" rel="stylesheet">
 </head>
@@ -76,7 +57,7 @@ if (!doNotTrack) {
     <div class="c-global-header__inner">
       <div class="c-global-header__primary">
         <h1 class="c-brand">
-          <a href="https://hirokinishimoto.github.io">にっしーの備忘録</a>
+          <a href="https://hirokinishimoto.github.io">情報系学生が日本の地域問題をまとめてみた</a>
         </h1>
         <p class="c-description">このサイトはにっしーの備忘録に使われます</p>
       </div>
@@ -147,225 +128,179 @@ if (!doNotTrack) {
           
         </header>
         <div class="c-post__body">
-          
-
-<p><a href="https://arxiv.org/pdf/1602.02830.pdf">論文pdf</a></p>
-
+          <p><a href="https://arxiv.org/pdf/1602.02830.pdf">論文pdf</a></p>
 <h2 id="背景"><strong>背景</strong></h2>
-
 <ul>
 <li>Deep Learningの学習はエネルギー消費の多いGPUを使うことがほとんど。</li>
 <li>近年low-powerなデバイス上でDeepLearningの計算を行うための研究も盛んに行われている。</li>
 </ul>
-
 <h2 id="binarized-neural-networks-bnns"><strong>Binarized Neural Networks (BNNs)</strong></h2>
-
 <p>著者は重みだけでなく活性も2値化したBinarized Neural Networkを提案した。</p>
-
 <p>これは、学習時は2値化された重みと活性を使って勾配計算し、2値化された重みと活性を用いて推論するようなNeural Networkのことである。</p>
-
 <h4 id="重みの2値化">重みの2値化</h4>
-
 <p>決定的(Deterministic)な方法と、確率的(Stochastic)な方法がある。</p>
-
 <ul>
-<li><p>Deterministicな方法:
+<li>
+<p>Deterministicな方法:
 $$
 w_{b}=\left{\begin{array}{ll}{+1} &amp; {\mathrm {if}\  w \geq 0} \ {-1} &amp; {\text { otherwise }}\end{array}\right.
-$$</p></li>
-
-<li><p>Stochasticな方法
-$$  w_{b}=\left{\begin{array}{ll}{+1} &amp; {\mathrm { with\ probability }\  p=\sigma(w)} \ {-1} &amp; {\mathrm { with\ probability }\ 1-p}\end{array}\right. $$</p></li>
+$$</p>
+</li>
+<li>
+<p>Stochasticな方法
+$$  w_{b}=\left{\begin{array}{ll}{+1} &amp; {\mathrm { with\ probability }\  p=\sigma(w)} \ {-1} &amp; {\mathrm { with\ probability }\ 1-p}\end{array}\right. $$</p>
+</li>
 </ul>
-
 <p>$$
-    \mathrm{where}\ \sigma(x)=\operatorname{clip}\left(\frac{x+1}{2}, 0,1\right)=\max \left(0, \min \left(1, \frac{x+1}{2}\right)\right)
+\mathrm{where}\ \sigma(x)=\operatorname{clip}\left(\frac{x+1}{2}, 0,1\right)=\max \left(0, \min \left(1, \frac{x+1}{2}\right)\right)
 $$
 ( \sigma(x))はハードシグモイド関数である。 Stochasticな2値化は乱数発生器を必要とするので実装がやや困難である。 この論文においては、活性化に対してはいくつかの実験で学習時にStochastiな2値化を行うが、それ以外は専らDeterministicな2値化を行う。</p>
-
-<p><img src="https://i.gyazo.com/029f65043be6d3c480d6f40f274175bd.png" width=70%></p>
-
+<!-- raw HTML omitted -->
 <h3 id="学習時"><strong>学習時</strong></h3>
-
-<p><img src="https://i.gyazo.com/1225fdbe06d64a973cd89791e2968230.png" width=60%></p>
-
+<!-- raw HTML omitted -->
 <h4 id="勾配の計算と蓄積">勾配の計算と蓄積</h4>
-
 <ul>
-<li>誤差関数の勾配を計算する際は2値化された重みと活性を用いるが、<strong>勾配が蓄積され更新される重みは、高精度の実数値のままにしておく。</strong>SGDによりうまく重みの更新が行われるためには、更新される重みは高精度実数である必要があるからである。</li>
+<li>誤差関数の勾配を計算する際は2値化された重みと活性を用いるが、**勾配が蓄積され更新される重みは、高精度の実数値のままにしておく。**SGDによりうまく重みの更新が行われるためには、更新される重みは高精度実数である必要があるからである。</li>
 <li>重みと活性の2値化をノイズ付加とみなすことができる。DropOut, DropConnectの研究からわかるように、勾配計算の際に重みや活性にノイズを加えることは汎化性能向上に繋がり、正則化として機能する。特にBNNsは、勾配計算の際に、ランダムに活性の半分を0にするのではなく、活性と重みの両方を2値化するという点で、DropOutの変種と見ることができる。</li>
 </ul>
-
 <p>実数の重み(W)の更新の際、(Update()) (ADAM or Shift Based AdaMax) の結果を( Clip() ) 関数で(-1 \sim 1)に押し込めている。</p>
-
 <h4 id="batch-normalizationについて">Batch Normalizationについて</h4>
-
 <p>Batch Normalizationは学習を早め、重みのスケールの影響を減らすが、都度標準偏差を計算して割る必要があり、掛け算の操作がたくさん必要になる。</p>
-
 <p>代わりに、shift-based batch normalization(SBN)というテクニックを使った。</p>
-
 <p>掛ける数/割る数をそれより小さい整数のうちでもっとも2の冪小数に近い数で近似して、(\ll\gg)(both left and right binary shift)することで、掛け算の操作を回避しつつ、通常のBatch Normalizationと同様の性能を実現した。</p>
-
-<p><img src="https://gyazo.com/79f1a995e18ac431e6a263e9e2fec8f5/thumb/1000" width=60%></p>
-
-<h4 id="重み-mathbf-w-とバッチ正規化のパラメータ-theta-のupdateについて">重み(\mathbf{w})とバッチ正規化のパラメータ(\theta)のUpdateについて</h4>
-
+<!-- raw HTML omitted -->
+<h4 id="重みmathbfwとバッチ正規化のパラメータthetaのupdateについて">重み(\mathbf{w})とバッチ正規化のパラメータ(\theta)のUpdateについて</h4>
 <p>ADAMも重みのスケールの影響を減らしてくれるが、多くの掛け算の操作を必要とする。</p>
-
 <p>Algorithm4で述べられているようなshift-based AdaMaxという方法を用いることで、掛け算の操作を減らしつつ、ADAMと同様の性能を実現した。</p>
-
-<p><img src="https://i.gyazo.com/14e74b3c6c668c920a9facc83037cb2f.png" width=60%></p>
-
+<!-- raw HTML omitted -->
 <h4 id="sign関数の微分が0になる問題">sign関数の微分が0になる問題</h4>
-
-<p>$$ q=sign&reg; $$</p>
-
+<p>$$ q=sign(r) $$</p>
 <p>において、( \frac{\partial C}{\partial q} ) の推定値(g_q)が既知のとき、</p>
-
 <p>( \frac{\partial C}{\partial r} ) の推定値(g_r)を以下の式によって推定する。</p>
-
-<p>$$ g_r = g<em>q1</em>{|r|\leq1}$$</p>
-
+<p>$$ g_r = g_q1_{|r|\leq1}$$</p>
 <p>このような推定では、(|r|)が小さいは、勾配情報がそのまま保存される。(straight-through estimator) 大きいときは勾配は0となるが、このようにしないと、モデルのパフォーマンスは悪化する。</p>
-
 <p>$$1_{|r|\leq1}$$</p>
-
 <p>は、</p>
-
 <p>$$Htanh(x) = Clip(x, -1, 1) = max(-1, min(1, x))$$</p>
-
 <p>の導関数でもある。つまり、上の推定は、勾配計算の都合上(sign(x))を(Htanh(x))とみなしていると解釈することができる。</p>
-
 <h3 id="予測時"><strong>予測時</strong></h3>
-
-<p><img src="https://i.gyazo.com/aba893f8d41c38d1a4534ec5c7821066.png" width=60%></p>
-
+<!-- raw HTML omitted -->
 <h4 id="1層目の処理">1層目の処理</h4>
-
 <p>1層目の入力だけbinaryではないが、著者によると大きな問題ではない。</p>
-
 <p>というのも、連続量をm bitの不動点として扱うことができ、</p>
-
 <p>$$ s = x \cdot w^{b} $$</p>
-
 <p>$$ s = \sum_{n=1}^{8} 2^{n-1} (x^n \cdot w^b) $$</p>
-
 <p>により１層目の重みと入力の積が計算可能だからである。</p>
-
 <h4 id="xnordotproduct">XnorDotProduct</h4>
-
 <h5 id="xnor-table">XNOR Table</h5>
-
 <table>
 <thead>
 <tr>
-<th align="center">x</th>
-<th align="center">y</th>
-<th align="center">z</th>
+<th style="text-align:center">x</th>
+<th style="text-align:center">y</th>
+<th style="text-align:center">z</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
-<td align="center">-1</td>
-<td align="center">-1</td>
-<td align="center">1</td>
+<td style="text-align:center">-1</td>
+<td style="text-align:center">-1</td>
+<td style="text-align:center">1</td>
 </tr>
-
 <tr>
-<td align="center">-1</td>
-<td align="center">1</td>
-<td align="center">-1</td>
+<td style="text-align:center">-1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">-1</td>
 </tr>
-
 <tr>
-<td align="center">1</td>
-<td align="center">-1</td>
-<td align="center">-1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">-1</td>
+<td style="text-align:center">-1</td>
 </tr>
-
 <tr>
-<td align="center">1</td>
-<td align="center">1</td>
-<td align="center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
 </tr>
 </tbody>
 </table>
-
 <p>( x \times y = z )の関係にあることがわかる。</p>
-
 <p>内積計算は掛け算して足すという操作に相当する。掛け算の部分をbit毎にXNORゲートで計算するような内積計算を本論文ではXNORDotProductと読んでいる。</p>
-
 <h2 id="結果"><strong>結果</strong></h2>
-
 <h4 id="実験の条件を整理">実験の条件を整理</h4>
-
-<p>|  | Torch7 | Theano |
-|-|:-:|:-:|
-| Activations | Stochastically binarized | Determinasitically binarized |
-| Batch Normalization | shift-based BN | vanilla BN |
-| Learning rule | shift-based AdaMax | ADAM |</p>
-
+<table>
+<thead>
+<tr>
+<th></th>
+<th style="text-align:center">Torch7</th>
+<th style="text-align:center">Theano</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Activations</td>
+<td style="text-align:center">Stochastically binarized</td>
+<td style="text-align:center">Determinasitically binarized</td>
+</tr>
+<tr>
+<td>Batch Normalization</td>
+<td style="text-align:center">shift-based BN</td>
+<td style="text-align:center">vanilla BN</td>
+</tr>
+<tr>
+<td>Learning rule</td>
+<td style="text-align:center">shift-based AdaMax</td>
+<td style="text-align:center">ADAM</td>
+</tr>
+</tbody>
+</table>
 <h4 id="モデルの汎化性能">モデルの汎化性能</h4>
-
 <ul>
 <li>Binary Connect よりも性能は落ちる。</li>
 <li>Committee Machines’ Array (Baldassi et al., 2015)は畳み込み層を持つモデル対応していない。</li>
 <li>学習、推論が低電力で行えることと汎化性能のトレードオフがある。</li>
 </ul>
-
-<p><img src="https://i.gyazo.com/188c50361866890ed983f02b27eaefa9.png" width=80%></p>
-
+<!-- raw HTML omitted -->
 <h4 id="学習曲線">学習曲線</h4>
-
 <ul>
 <li>学習にかかる時間はBNNｓの方が遅くなっている</li>
 <li>shift-basedのBNNの方がそうでないBNNsよりも学習が遅い。
-
 <ul>
 <li>アーキテクチャの問題?</li>
-</ul></li>
+</ul>
+</li>
 <li>最終的には通常のDNNsに近い値に収束する。</li>
 </ul>
-
-<p><img src="https://i.gyazo.com/6567749593eef92535ba9774c960102e.png" width=55%></p>
-
+<!-- raw HTML omitted -->
 <h4 id="電力効率">電力効率</h4>
-
 <p>-　BNNsは特に、train時の順伝播計算と、推論時のエネルギー効率が大変良く、メモリサイズとアクセスを減らすことができる。</p>
-
 <ul>
-<li><p>活性の２値化は、特に畳み込み層を持つモデルで計算を効率化できる。</p>
-
+<li>
+<p>活性の２値化は、特に畳み込み層を持つモデルで計算を効率化できる。</p>
 <ul>
 <li>重みの自由度よりもユニットの方がずっと多いため。</li>
-</ul></li>
-
-<li><p>下の表から、積-和計算やメモリアクセスを減らすことの恩恵の大きさがわかる。</p>
-
+</ul>
+</li>
+<li>
+<p>下の表から、積-和計算やメモリアクセスを減らすことの恩恵の大きさがわかる。</p>
 <ul>
 <li>通常のDNNsでは32bitの実数の積を求め総和をとっていたが、それがBNNsでは1bitでできる。</li>
-</ul></li>
 </ul>
-
-<p><img src="https://i.gyazo.com/ce54f2cf4b8426e2df6167c5be9f03d0.png" width=65%></p>
-
+</li>
+</ul>
+<!-- raw HTML omitted -->
 <h4 id="bnnsに最適化したgpuと通常のgpuの比較">BNNsに最適化したGPUと通常のGPUの比較</h4>
-
 <ul>
 <li>MLP(BNNs)によるMNISTの推論が、性能を保ったままふつうのKernelよりも7倍高速化できた。</li>
 </ul>
-
-<p><img src="https://i.gyazo.com/4f204ece2b7b07701255090374c2580c.png" width=65%></p>
-
+<!-- raw HTML omitted -->
 <h2 id="結論と展望"><strong>結論と展望</strong></h2>
-
 <ul>
 <li>Trainの逆伝播、パラメータ更新のところで最適化の余地がある。
-
 <ul>
 <li>特に、パラメータ更新を実数で持たなければならない点がボトルネック。</li>
-</ul></li>
+</ul>
+</li>
 <li>他のbentchmarkの結果を増やす。</li>
 </ul>
 
@@ -375,7 +310,7 @@ $$
           <aside class="c-share">
   <h2 class="c-share__title">Share</h2>
   <div class="c-share__list">
-    <a class="c-share__list__item c-link" href="http://twitter.com/intent/tweet?text=%5b%e8%ab%96%e6%96%87%5dBinarized%20Neural%20Networks%3a%20Training%20Neural%20Networks%20with%20Weights%20and%20Activations%20Constrained%20to%20%2b1%20or%20%e2%88%921%20%7C%20%e3%81%ab%e3%81%a3%e3%81%97%e3%83%bc%e3%81%ae%e5%82%99%e5%bf%98%e9%8c%b2%20https%3a%2f%2fhirokinishimoto.github.io%2fposts%2fbnn%2f" target="_blank">
+    <a class="c-share__list__item c-link" href="http://twitter.com/intent/tweet?text=%5b%e8%ab%96%e6%96%87%5dBinarized%20Neural%20Networks%3a%20Training%20Neural%20Networks%20with%20Weights%20and%20Activations%20Constrained%20to%20%2b1%20or%20%e2%88%921%20%7C%20%e6%83%85%e5%a0%b1%e7%b3%bb%e5%ad%a6%e7%94%9f%e3%81%8c%e6%97%a5%e6%9c%ac%e3%81%ae%e5%9c%b0%e5%9f%9f%e5%95%8f%e9%a1%8c%e3%82%92%e3%81%be%e3%81%a8%e3%82%81%e3%81%a6%e3%81%bf%e3%81%9f%20https%3a%2f%2fhirokinishimoto.github.io%2fposts%2fbnn%2f" target="_blank">
       <svg class="icon icon-twitter">
         <use xlink:href="#icon-twitter"></use>
         <symbol id="icon-twitter" viewBox="0 0 32 32">
@@ -434,7 +369,7 @@ $$
   "mainEntityOfPage": {
     "@type": "NewsArticle",
     "@id": "https:\/\/hirokinishimoto.github.io\/posts\/bnn\/",
-    "headline": "\x3cp\x3e\x3ca href=\x22https:\/\/arxiv.org\/pdf\/1602.02830.pdf\x22\x3e論文pdf\x3c\/a\x3e\x3c\/p\x3e\x3ch2 id=\x22背景\x22\x3e\x3cstrong\x3e背景\x3c\/strong\x3e\x3c\/h2\x3e\x3cul\x3e\x3cli\x3eDee",
+    "headline": "\u003cp\u003e\u003ca href=\u0022https:\/\/arxiv.org\/pdf\/1602.02830.pdf\u0022\u003e論文pdf\u003c\/a\u003e\u003c\/p\u003e\u003ch2 id=\u0022背景\u0022\u003e\u003cstrong\u003e背景\u003c\/strong\u003e\u003c\/h2\u003e\u003cul\u003e\u003cli\u003eDee",
     "author": "Hiroki Nishimoto",
     "publisher": {
       "@type": "Organization",
@@ -444,12 +379,12 @@ $$
     "image": "https:\/\/hirokinishimoto.github.io",
     "datePublished": "2019-11-02"
   },
-  "headline": "\x3cp\x3e\x3ca href=\x22https:\/\/arxiv.org\/pdf\/1602.02830.pdf\x22\x3e論文pdf\x3c\/a\x3e\x3c\/p\x3e\x3ch2 id=\x22背景\x22\x3e\x3cstrong\x3e背景\x3c\/strong\x3e\x3c\/h2\x3e\x3cul\x3e\x3cli\x3eDee",
-  "alternativeHeadline": "にっしーの備忘録",
+  "headline": "\u003cp\u003e\u003ca href=\u0022https:\/\/arxiv.org\/pdf\/1602.02830.pdf\u0022\u003e論文pdf\u003c\/a\u003e\u003c\/p\u003e\u003ch2 id=\u0022背景\u0022\u003e\u003cstrong\u003e背景\u003c\/strong\u003e\u003c\/h2\u003e\u003cul\u003e\u003cli\u003eDee",
+  "alternativeHeadline": "情報系学生が日本の地域問題をまとめてみた",
   "datePublished": "2019-11-02",
   "dateModified": "2019-11-02",
   "url": "https:\/\/hirokinishimoto.github.io\/posts\/bnn\/",
-  "wordCount": "251",
+  "wordCount": "234",
   "author": {
     "@type": "Person",
     "name": "Hiroki Nishimoto"

@@ -5,78 +5,47 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
-  <title>[論文]SQUEEZENET: ALEXNET-LEVEL ACCURACY WITH 50X FEWER PARAMETERS AND &lt;0.5MB MODEL SIZE &middot; にっしーの備忘録 - このサイトはにっしーの備忘録に使われます</title>
-  <meta name="generator" content="Hugo 0.58.0" />
+  <title>[論文]SQUEEZENET: ALEXNET-LEVEL ACCURACY WITH 50X FEWER PARAMETERS AND &lt;0.5MB MODEL SIZE &middot; 情報系学生が日本の地域問題をまとめてみた - このサイトはにっしーの備忘録に使われます</title>
+  <meta name="generator" content="Hugo 0.82.1" />
   
   <meta name="description" content="このサイトはにっしーの備忘録に使われます"> 
   <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="[論文]SQUEEZENET: ALEXNET-LEVEL ACCURACY WITH 50X FEWER PARAMETERS AND &lt;0.5MB MODEL SIZE"/>
 <meta name="twitter:description" content="論文pdf
-背景 小さなCNNアーキテクチャの利点  より効率的な分散学習 新しいモデルをclientにexportする際のoverheadを減らせる  より頻繁なモデルの更新も可能に  FPGAなど、メモリが限られたハードウェア上により柔軟にDeployできる  本論文のContribution  従来研究は高精度なモデルを目指したものが多い 本論文はCNNの設計空間を探索して、性能が他に劣らずかつ小さなSqueezeNetを発見、提案  ImageNetに対して、Alex-Netと同等の正答率 Alex-Netよりも50倍少ないパラメータ数 モデル圧縮により、SqueezeNetを0.5MBまで圧縮した  Alex-Netより510倍小さい    CNN設計空間の探索  探索を自動化しなかった → 設計空間の形に対するintuitionを得たい  CNNアーキテクチャの構成要素  microarchitecture &gt; layer, moduleの構造
- macroarchitecture &gt; 入力から出力まで全体の構造
-&gt; microarchitectureの接続の仕方
- solver &gt; 論文では具体的な指定なし
-&gt; 実装ではAdagradが使われがち
- hyperpalameters
-  CNN設計空間の探索の方針 1. 3x3Filterを1x1Filterに置き換える 2. 3x3Fileterへのinput channelの数を減らす 3. ネットワークの最後の方でDownsampleする 方針1.と2.は、accuracyを下げないようにしつつパラメータを減らす意図がある。
-方針3.はパラメータが限られた中でaccuracyを最大化を狙うもの。
-出力層に近づくまでストライドsを小さな値に保つ。K.HeとH.Sunの研究成果を取り入れた形
-SqueezeNetのアーキテクチャ Fire Module  Squeeze comvolution layer"/>
+背景 小さなCNNアーキテクチャの利点  より効率的な分散学習 新しいモデルをclientにexportする際のoverheadを減らせる  より頻繁なモデルの更新も可能に   FPGAなど、メモリが限られたハードウェア上により柔軟にDeployできる  本論文のContribution  従来研究は高精度なモデルを目指したものが多い 本論文はCNNの設計空間を探索して、性能が他に劣らずかつ小さなSqueezeNetを発見、提案  ImageNetに対して、Alex-Netと同等の正答率 Alex-Netよりも50倍少ないパラメータ数 モデル圧縮により、SqueezeNetを0.5MBまで圧縮した  Alex-Netより510倍小さい      CNN設計空間の探索  探索を自動化しなかった → 設計空間の形に対するintuitionを得たい  CNNアーキテクチャの構成要素  microarchitecture   layer, moduleの構造
+  macroarchitecture   入力から出力まで全体の構造microarchitectureの接続の仕方
+  solver   論文では具体的な指定なし実装ではAdagradが使われがち
+  hyperpalameters  CNN設計空間の探索の方針 1. 3x3Filterを1x1Filterに置き換える 2. 3x3Fileterへのinput channelの数を減らす 3. ネットワークの最後の方でDownsampleする 方針1.と2.は、accuracyを下げないようにしつつパラメータを減らす意図がある。
+方針3.はパラメータが限られた中でaccuracyを最大化を狙うもの。出力層に近づくまでストライドsを小さな値に保つ。K.HeとH.Sunの研究成果を取り入れた形
+SqueezeNetのアーキテクチャ Fire Module   Squeeze comvolution layer"/>
 
   <meta property="og:title" content="[論文]SQUEEZENET: ALEXNET-LEVEL ACCURACY WITH 50X FEWER PARAMETERS AND &lt;0.5MB MODEL SIZE" />
 <meta property="og:description" content="論文pdf
-背景 小さなCNNアーキテクチャの利点  より効率的な分散学習 新しいモデルをclientにexportする際のoverheadを減らせる  より頻繁なモデルの更新も可能に  FPGAなど、メモリが限られたハードウェア上により柔軟にDeployできる  本論文のContribution  従来研究は高精度なモデルを目指したものが多い 本論文はCNNの設計空間を探索して、性能が他に劣らずかつ小さなSqueezeNetを発見、提案  ImageNetに対して、Alex-Netと同等の正答率 Alex-Netよりも50倍少ないパラメータ数 モデル圧縮により、SqueezeNetを0.5MBまで圧縮した  Alex-Netより510倍小さい    CNN設計空間の探索  探索を自動化しなかった → 設計空間の形に対するintuitionを得たい  CNNアーキテクチャの構成要素  microarchitecture &gt; layer, moduleの構造
- macroarchitecture &gt; 入力から出力まで全体の構造
-&gt; microarchitectureの接続の仕方
- solver &gt; 論文では具体的な指定なし
-&gt; 実装ではAdagradが使われがち
- hyperpalameters
-  CNN設計空間の探索の方針 1. 3x3Filterを1x1Filterに置き換える 2. 3x3Fileterへのinput channelの数を減らす 3. ネットワークの最後の方でDownsampleする 方針1.と2.は、accuracyを下げないようにしつつパラメータを減らす意図がある。
-方針3.はパラメータが限られた中でaccuracyを最大化を狙うもの。
-出力層に近づくまでストライドsを小さな値に保つ。K.HeとH.Sunの研究成果を取り入れた形
-SqueezeNetのアーキテクチャ Fire Module  Squeeze comvolution layer" />
+背景 小さなCNNアーキテクチャの利点  より効率的な分散学習 新しいモデルをclientにexportする際のoverheadを減らせる  より頻繁なモデルの更新も可能に   FPGAなど、メモリが限られたハードウェア上により柔軟にDeployできる  本論文のContribution  従来研究は高精度なモデルを目指したものが多い 本論文はCNNの設計空間を探索して、性能が他に劣らずかつ小さなSqueezeNetを発見、提案  ImageNetに対して、Alex-Netと同等の正答率 Alex-Netよりも50倍少ないパラメータ数 モデル圧縮により、SqueezeNetを0.5MBまで圧縮した  Alex-Netより510倍小さい      CNN設計空間の探索  探索を自動化しなかった → 設計空間の形に対するintuitionを得たい  CNNアーキテクチャの構成要素  microarchitecture   layer, moduleの構造
+  macroarchitecture   入力から出力まで全体の構造microarchitectureの接続の仕方
+  solver   論文では具体的な指定なし実装ではAdagradが使われがち
+  hyperpalameters  CNN設計空間の探索の方針 1. 3x3Filterを1x1Filterに置き換える 2. 3x3Fileterへのinput channelの数を減らす 3. ネットワークの最後の方でDownsampleする 方針1.と2.は、accuracyを下げないようにしつつパラメータを減らす意図がある。
+方針3.はパラメータが限られた中でaccuracyを最大化を狙うもの。出力層に近づくまでストライドsを小さな値に保つ。K.HeとH.Sunの研究成果を取り入れた形
+SqueezeNetのアーキテクチャ Fire Module   Squeeze comvolution layer" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://hirokinishimoto.github.io/posts/squeezenet/" />
-<meta property="article:published_time" content="2019-11-15T14:57:51+09:00" />
-<meta property="article:modified_time" content="2019-11-15T14:57:51+09:00" />
+<meta property="og:url" content="https://hirokinishimoto.github.io/posts/squeezenet/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2019-11-15T14:57:51&#43;09:00" />
+<meta property="article:modified_time" content="2019-11-15T14:57:51&#43;09:00" />
+
 
 
   
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	ga('create', 'Yout Google Analytics ID', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-
   <meta itemprop="name" content="[論文]SQUEEZENET: ALEXNET-LEVEL ACCURACY WITH 50X FEWER PARAMETERS AND &lt;0.5MB MODEL SIZE">
 <meta itemprop="description" content="論文pdf
-背景 小さなCNNアーキテクチャの利点  より効率的な分散学習 新しいモデルをclientにexportする際のoverheadを減らせる  より頻繁なモデルの更新も可能に  FPGAなど、メモリが限られたハードウェア上により柔軟にDeployできる  本論文のContribution  従来研究は高精度なモデルを目指したものが多い 本論文はCNNの設計空間を探索して、性能が他に劣らずかつ小さなSqueezeNetを発見、提案  ImageNetに対して、Alex-Netと同等の正答率 Alex-Netよりも50倍少ないパラメータ数 モデル圧縮により、SqueezeNetを0.5MBまで圧縮した  Alex-Netより510倍小さい    CNN設計空間の探索  探索を自動化しなかった → 設計空間の形に対するintuitionを得たい  CNNアーキテクチャの構成要素  microarchitecture &gt; layer, moduleの構造
- macroarchitecture &gt; 入力から出力まで全体の構造
-&gt; microarchitectureの接続の仕方
- solver &gt; 論文では具体的な指定なし
-&gt; 実装ではAdagradが使われがち
- hyperpalameters
-  CNN設計空間の探索の方針 1. 3x3Filterを1x1Filterに置き換える 2. 3x3Fileterへのinput channelの数を減らす 3. ネットワークの最後の方でDownsampleする 方針1.と2.は、accuracyを下げないようにしつつパラメータを減らす意図がある。
-方針3.はパラメータが限られた中でaccuracyを最大化を狙うもの。
-出力層に近づくまでストライドsを小さな値に保つ。K.HeとH.Sunの研究成果を取り入れた形
-SqueezeNetのアーキテクチャ Fire Module  Squeeze comvolution layer">
-
-
-<meta itemprop="datePublished" content="2019-11-15T14:57:51&#43;09:00" />
+背景 小さなCNNアーキテクチャの利点  より効率的な分散学習 新しいモデルをclientにexportする際のoverheadを減らせる  より頻繁なモデルの更新も可能に   FPGAなど、メモリが限られたハードウェア上により柔軟にDeployできる  本論文のContribution  従来研究は高精度なモデルを目指したものが多い 本論文はCNNの設計空間を探索して、性能が他に劣らずかつ小さなSqueezeNetを発見、提案  ImageNetに対して、Alex-Netと同等の正答率 Alex-Netよりも50倍少ないパラメータ数 モデル圧縮により、SqueezeNetを0.5MBまで圧縮した  Alex-Netより510倍小さい      CNN設計空間の探索  探索を自動化しなかった → 設計空間の形に対するintuitionを得たい  CNNアーキテクチャの構成要素  microarchitecture   layer, moduleの構造
+  macroarchitecture   入力から出力まで全体の構造microarchitectureの接続の仕方
+  solver   論文では具体的な指定なし実装ではAdagradが使われがち
+  hyperpalameters  CNN設計空間の探索の方針 1. 3x3Filterを1x1Filterに置き換える 2. 3x3Fileterへのinput channelの数を減らす 3. ネットワークの最後の方でDownsampleする 方針1.と2.は、accuracyを下げないようにしつつパラメータを減らす意図がある。
+方針3.はパラメータが限られた中でaccuracyを最大化を狙うもの。出力層に近づくまでストライドsを小さな値に保つ。K.HeとH.Sunの研究成果を取り入れた形
+SqueezeNetのアーキテクチャ Fire Module   Squeeze comvolution layer"><meta itemprop="datePublished" content="2019-11-15T14:57:51&#43;09:00" />
 <meta itemprop="dateModified" content="2019-11-15T14:57:51&#43;09:00" />
-<meta itemprop="wordCount" content="148">
-
-
-
+<meta itemprop="wordCount" content="139">
 <meta itemprop="keywords" content="論文," />
-
   <link href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/5.0.0/sanitize.min.css" rel="stylesheet">
   <link href="https://hirokinishimoto.github.io/css/application.css" rel="stylesheet">
 </head>
@@ -88,7 +57,7 @@ SqueezeNetのアーキテクチャ Fire Module  Squeeze comvolution layer">
     <div class="c-global-header__inner">
       <div class="c-global-header__primary">
         <h1 class="c-brand">
-          <a href="https://hirokinishimoto.github.io">にっしーの備忘録</a>
+          <a href="https://hirokinishimoto.github.io">情報系学生が日本の地域問題をまとめてみた</a>
         </h1>
         <p class="c-description">このサイトはにっしーの備忘録に使われます</p>
       </div>
@@ -159,183 +128,156 @@ SqueezeNetのアーキテクチャ Fire Module  Squeeze comvolution layer">
           
         </header>
         <div class="c-post__body">
-          
-
-<p><a href="https://arxiv.org/pdf/1602.07360.pdf">論文pdf</a></p>
-
+          <p><a href="https://arxiv.org/pdf/1602.07360.pdf">論文pdf</a></p>
 <h2 id="背景">背景</h2>
-
 <h3 id="小さなcnnアーキテクチャの利点">小さなCNNアーキテクチャの利点</h3>
-
 <ol>
 <li>より効率的な分散学習</li>
 <li>新しいモデルをclientにexportする際のoverheadを減らせる
-
 <ul>
 <li>より頻繁なモデルの更新も可能に</li>
-</ul></li>
+</ul>
+</li>
 <li>FPGAなど、メモリが限られたハードウェア上により柔軟にDeployできる</li>
 </ol>
-
 <h2 id="本論文のcontribution">本論文のContribution</h2>
-
 <ul>
 <li>従来研究は高精度なモデルを目指したものが多い</li>
 <li>本論文はCNNの設計空間を探索して、性能が他に劣らずかつ小さなSqueezeNetを発見、提案
-
 <ul>
 <li>ImageNetに対して、Alex-Netと同等の正答率</li>
 <li>Alex-Netよりも<strong>50倍</strong>少ないパラメータ数</li>
 <li>モデル圧縮により、SqueezeNetを<strong>0.5MB</strong>まで圧縮した
-
 <ul>
 <li>Alex-Netより<strong>510倍</strong>小さい</li>
-</ul></li>
-</ul></li>
 </ul>
-
+</li>
+</ul>
+</li>
+</ul>
 <h2 id="cnn設計空間の探索">CNN設計空間の探索</h2>
-
 <ul>
 <li>探索を自動化しなかった
 → 設計空間の形に対するintuitionを得たい</li>
 </ul>
-
 <h3 id="cnnアーキテクチャの構成要素">CNNアーキテクチャの構成要素</h3>
-
 <ul>
-<li><p>microarchitecture
-&gt; layer, moduleの構造</p></li>
-
-<li><p>macroarchitecture
-&gt; 入力から出力まで全体の構造<br>
-&gt; microarchitectureの接続の仕方</p></li>
-
-<li><p>solver
-&gt; 論文では具体的な指定なし<br>
-&gt; 実装ではAdagradが使われがち</p></li>
-
-<li><p>hyperpalameters</p></li>
+<li>microarchitecture</li>
 </ul>
-
+<blockquote>
+<p>layer, moduleの構造</p>
+</blockquote>
+<ul>
+<li>macroarchitecture</li>
+</ul>
+<blockquote>
+<p>入力から出力まで全体の構造<!-- raw HTML omitted -->
+microarchitectureの接続の仕方</p>
+</blockquote>
+<ul>
+<li>solver</li>
+</ul>
+<blockquote>
+<p>論文では具体的な指定なし<!-- raw HTML omitted -->
+実装ではAdagradが使われがち</p>
+</blockquote>
+<ul>
+<li>hyperpalameters</li>
+</ul>
 <h3 id="cnn設計空間の探索の方針">CNN設計空間の探索の方針</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-md" data-lang="md"><span style="color:#66d9ef">1.</span> 3x3Filterを1x1Filterに置き換える
 <span style="color:#66d9ef">2.</span> 3x3Fileterへのinput channelの数を減らす
-3. ネットワークの最後の方でDownsampleする</code></pre></div>
-<p>方針1.と2.は、accuracyを下げないようにしつつパラメータを減らす意図がある。</p>
-
-<p>方針3.はパラメータが限られた中でaccuracyを最大化を狙うもの。<br>
+<span style="color:#66d9ef">3.</span> ネットワークの最後の方でDownsampleする
+</code></pre></div><p>方針1.と2.は、accuracyを下げないようにしつつパラメータを減らす意図がある。</p>
+<p>方針3.はパラメータが限られた中でaccuracyを最大化を狙うもの。<!-- raw HTML omitted -->
 出力層に近づくまでストライドsを小さな値に保つ。K.HeとH.Sunの研究成果を取り入れた形</p>
-
 <h3 id="squeezenetのアーキテクチャ">SqueezeNetのアーキテクチャ</h3>
-
 <h4 id="fire-module">Fire Module</h4>
-
 <ul>
-<li><p>Squeeze comvolution layer</p></li>
-
-<li><p>expand layer</p></li>
+<li>
+<p>Squeeze comvolution layer</p>
+</li>
+<li>
+<p>expand layer</p>
+</li>
 </ul>
-
-<p><img src="https://i.gyazo.com/af98e73bd9c0831cc32e6aa6fcaf9d28.png" width=90%></p>
-
+<!-- raw HTML omitted -->
 <p>!!! 3つのハイパーパラメータ
-    (s_{1x1}) : Squeeze Layerのフィルター数(すべて1x1)</p>
-
+(s_{1x1}) : Squeeze Layerのフィルター数(すべて1x1)</p>
 <pre><code>\(e_{1x1}\) : Expand Layerの1x1フィルターの数
 
 \(e_{3x3}\) : Expand Layerの3x3フィルターの数
 </code></pre>
-
 <h4 id="squeezenetの全体像">SqueezeNetの全体像</h4>
-
-<p><img src="https://i.gyazo.com/7a90ea0d1c49340c266e2672fd6d5ca4.png" width=90%></p>
-
+<!-- raw HTML omitted -->
 <h3 id="squeezenetの性能評価">SqueezeNetの性能評価</h3>
-
 <h4 id="alexnetを比較対象とした理由">AlexNetを比較対象とした理由</h4>
-
 <p>モデル圧縮の方法は他の研究成果を取り入れている。
-    それらの研究はImageNetを学習したAlexNetを圧縮することを目的としており、本論文もAlexNetをSqueezeNetの比較対象とした。</p>
-
-<!-- <img src="https://gyazo.com/4884c89b4af9178fdb11873b784c5f8e.png" width=90%>     -->
-
-<p><img src="https://gyazo.com/da61a5419673c393d6fbf13ad226a0b1.png" width=90%></p>
-
+それらの研究はImageNetを学習したAlexNetを圧縮することを目的としており、本論文もAlexNetをSqueezeNetの比較対象とした。</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 <ul>
 <li>AlexNetと比較して50倍小さなモデルサイズを達成</li>
 <li>しかもTop-1、Top5のImageNetの正答率においてAlexNetと同等or上回っている</li>
 <li>圧縮率を見ると、DeepCompressionはSqueezeNetのような、畳み込み層ばかりの既にcompactなarchitectureにも効果的であることもわかる</li>
 </ul>
-
 <h4 id="deep-compressionとは">Deep Compressionとは？</h4>
-
 <p>本論文で詳しい言及はなし。
 <a href="https://taku-buntu.hateblo.jp/entry/2019/01/16/113434">この記事</a>を参考にした。</p>
-
-<p><img src="https://cdn-ak.f.st-hatena.com/images/fotolife/t/taku-buntu/20190115/20190115114429.png" width=90%></p>
-
+<!-- raw HTML omitted -->
 <p>下の3つのパイプラインステージから成る。</p>
-
 <ol>
 <li>枝刈り（学習フェーズで必要な（重要な）接続だけを学習 ）</li>
 <li>量子化（あと重み共有）</li>
 <li>ハフマン符号（バイアスの偏りを有効に利用するため）</li>
 </ol>
-
 <h3 id="cnn-microarchitecture-設計空間の探索">CNN MICROARCHITECTURE 設計空間の探索</h3>
-
 <p>探索の見通しを良くするため、hyperparameterよりも高次の、metaparameterをいくつか導入する。</p>
-
 <p>(Squeeze Ratio(SR)) : squeeze layerとexpand layerのフィルター数の比</p>
-
 <p>(pct_{3x3}): expand filterのfilterの総数に対する、3x3filterの数の割合</p>
-
-<p><img src="https://gyazo.com/c5636e79b14e8f5f9b52a2634f7a973e.png" width=90%></p>
-
-<p>左の実験では、(pct<em>{3x3} = 0.5)、右の実験では、(SR = 0.5 ) として、それぞれ(pct</em>{3x3})、(SR)の値を変化させた。</p>
-
+<!-- raw HTML omitted -->
+<p>左の実験では、(pct_{3x3} = 0.5)、右の実験では、(SR = 0.5 ) として、それぞれ(pct_{3x3})、(SR)の値を変化させた。</p>
 <p>論文では、(SR=0.125) , (pct_{3x3} = 0.5)としたものをSqueezeNetとして提案している。</p>
-
 <h3 id="cnn-macroarchitecture-設計空間の探索">CNN MACROARCHITECTURE 設計空間の探索</h3>
-
 <h4 id="bypassを張るというアイデア">Bypassを張るというアイデア</h4>
-
 <ul>
-<li>ResNetから着想</li>
-<li>ResNet同様、正則化として作用(詳しい言及なし)</li>
-
-<li><p>モデルの表現能力を高めることにも寄与する(直感的に)</p></li>
-
-<li><p>Simple bypass approach</p>
-
+<li>
+<p>ResNetから着想</p>
+</li>
+<li>
+<p>ResNet同様、正則化として作用(詳しい言及なし)</p>
+</li>
+<li>
+<p>モデルの表現能力を高めることにも寄与する(直感的に)</p>
+</li>
+<li>
+<p>Simple bypass approach</p>
 <ul>
 <li>3, 5, 7, 9番目のFireModuleを飛ばす形でバイパスを繋ぐ (cf. Figure.2)</li>
 <li><strong>Input channel数とOutput channel数が同じでなければならないという制約がある</strong></li>
 <li>限られた場所にしかバイパスを張れない</li>
-</ul></li>
-
-<li><p>Complex bypass approach</p>
-
+</ul>
+</li>
+<li>
+<p>Complex bypass approach</p>
 <ul>
-<li>Simple bypass approachでバイパスが張れない箇所に、1x1畳込み層を持つ&rdquo;complex bypass&rdquo;を張る
-
+<li>Simple bypass approachでバイパスが張れない箇所に、1x1畳込み層を持つ&quot;complex bypass&quot;を張る
 <ul>
 <li>1x1畳込み層のフィルター数をoutput channelの数に合わせる</li>
-</ul></li>
-<li>追加のパラメータが生じる点に注意</li>
-</ul></li>
 </ul>
-
-<p><img src="https://gyazo.com/29884ca19251a23e560ed37cb533e762.png" width=90%></p>
-
+</li>
+<li>追加のパラメータが生じる点に注意</li>
+</ul>
+</li>
+</ul>
+<!-- raw HTML omitted -->
 <ul>
 <li>Simple bypass approach のほうがComplex bypass approachを上回っている
-
 <ul>
 <li>この点に関する考察は特になかった</li>
 <li>設計空間の形に対する直感を得ることが目的なので、こうしたらこうなった程度の議論で良しとしたのかも</li>
-</ul></li>
+</ul>
+</li>
 </ul>
 
         </div>
@@ -344,7 +286,7 @@ SqueezeNetのアーキテクチャ Fire Module  Squeeze comvolution layer">
           <aside class="c-share">
   <h2 class="c-share__title">Share</h2>
   <div class="c-share__list">
-    <a class="c-share__list__item c-link" href="http://twitter.com/intent/tweet?text=%5b%e8%ab%96%e6%96%87%5dSQUEEZENET%3a%20ALEXNET-LEVEL%20ACCURACY%20WITH%2050X%20FEWER%20PARAMETERS%20AND%20%3c0.5MB%20MODEL%20SIZE%20%7C%20%e3%81%ab%e3%81%a3%e3%81%97%e3%83%bc%e3%81%ae%e5%82%99%e5%bf%98%e9%8c%b2%20https%3a%2f%2fhirokinishimoto.github.io%2fposts%2fsqueezenet%2f" target="_blank">
+    <a class="c-share__list__item c-link" href="http://twitter.com/intent/tweet?text=%5b%e8%ab%96%e6%96%87%5dSQUEEZENET%3a%20ALEXNET-LEVEL%20ACCURACY%20WITH%2050X%20FEWER%20PARAMETERS%20AND%20%3c0.5MB%20MODEL%20SIZE%20%7C%20%e6%83%85%e5%a0%b1%e7%b3%bb%e5%ad%a6%e7%94%9f%e3%81%8c%e6%97%a5%e6%9c%ac%e3%81%ae%e5%9c%b0%e5%9f%9f%e5%95%8f%e9%a1%8c%e3%82%92%e3%81%be%e3%81%a8%e3%82%81%e3%81%a6%e3%81%bf%e3%81%9f%20https%3a%2f%2fhirokinishimoto.github.io%2fposts%2fsqueezenet%2f" target="_blank">
       <svg class="icon icon-twitter">
         <use xlink:href="#icon-twitter"></use>
         <symbol id="icon-twitter" viewBox="0 0 32 32">
@@ -455,7 +397,7 @@ SqueezeNetのアーキテクチャ Fire Module  Squeeze comvolution layer">
   "mainEntityOfPage": {
     "@type": "NewsArticle",
     "@id": "https:\/\/hirokinishimoto.github.io\/posts\/squeezenet\/",
-    "headline": "\x3cp\x3e\x3ca href=\x22https:\/\/arxiv.org\/pdf\/1602.07360.pdf\x22\x3e論文pdf\x3c\/a\x3e\x3c\/p\x3e\x3ch2 id=\x22背景\x22\x3e背景\x3c\/h2\x3e\x3ch3 id=\x22小さなcnnアーキテクチャの利点\x22\x3e小さ",
+    "headline": "\u003cp\u003e\u003ca href=\u0022https:\/\/arxiv.org\/pdf\/1602.07360.pdf\u0022\u003e論文pdf\u003c\/a\u003e\u003c\/p\u003e\u003ch2 id=\u0022背景\u0022\u003e背景\u003c\/h2\u003e\u003ch3 id=\u0022小さなcnnアーキテクチャの利点\u0022\u003e小さ",
     "author": "Hiroki Nishimoto",
     "publisher": {
       "@type": "Organization",
@@ -465,12 +407,12 @@ SqueezeNetのアーキテクチャ Fire Module  Squeeze comvolution layer">
     "image": "https:\/\/hirokinishimoto.github.io",
     "datePublished": "2019-11-15"
   },
-  "headline": "\x3cp\x3e\x3ca href=\x22https:\/\/arxiv.org\/pdf\/1602.07360.pdf\x22\x3e論文pdf\x3c\/a\x3e\x3c\/p\x3e\x3ch2 id=\x22背景\x22\x3e背景\x3c\/h2\x3e\x3ch3 id=\x22小さなcnnアーキテクチャの利点\x22\x3e小さ",
-  "alternativeHeadline": "にっしーの備忘録",
+  "headline": "\u003cp\u003e\u003ca href=\u0022https:\/\/arxiv.org\/pdf\/1602.07360.pdf\u0022\u003e論文pdf\u003c\/a\u003e\u003c\/p\u003e\u003ch2 id=\u0022背景\u0022\u003e背景\u003c\/h2\u003e\u003ch3 id=\u0022小さなcnnアーキテクチャの利点\u0022\u003e小さ",
+  "alternativeHeadline": "情報系学生が日本の地域問題をまとめてみた",
   "datePublished": "2019-11-15",
   "dateModified": "2019-11-15",
   "url": "https:\/\/hirokinishimoto.github.io\/posts\/squeezenet\/",
-  "wordCount": "148",
+  "wordCount": "139",
   "author": {
     "@type": "Person",
     "name": "Hiroki Nishimoto"

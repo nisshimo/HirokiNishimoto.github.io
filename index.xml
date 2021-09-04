@@ -1,28 +1,24 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>にっしーの備忘録</title>
+    <title>情報系学生が日本の地域問題をまとめてみた</title>
     <link>https://hirokinishimoto.github.io/</link>
-    <description>Recent content on にっしーの備忘録</description>
+    <description>Recent content on 情報系学生が日本の地域問題をまとめてみた</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 03 Jan 2020 11:45:01 +0900</lastBuildDate>
-    
-	<atom:link href="https://hirokinishimoto.github.io/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Fri, 03 Jan 2020 11:45:01 +0900</lastBuildDate><atom:link href="https://hirokinishimoto.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>生態学のノート</title>
       <link>https://hirokinishimoto.github.io/posts/%E7%94%9F%E6%85%8B%E5%AD%A6%E3%81%AE%E3%83%8E%E3%83%BC%E3%83%88/</link>
       <pubDate>Fri, 03 Jan 2020 11:45:01 +0900</pubDate>
       
       <guid>https://hirokinishimoto.github.io/posts/%E7%94%9F%E6%85%8B%E5%AD%A6%E3%81%AE%E3%83%8E%E3%83%BC%E3%83%88/</guid>
-      <description>生態学とはどんな学問か? 生態学とは, 生物の生活の法則を, その環境との関係で解き明かす科学である.  生物界の共通性と多様性 共通性  自己境界性 自己複製性 自己維持性  多様性の階層  生態系多様性 種多様性 遺伝的多様性  進化から見た生態 進化とは何か? 最もミクロな時間スケールでの「生物の進化」の定義は
-集団内での遺伝子頻度の系図の変化  これはすごく地味な変化だが、この地味なが時々刻々積み重なることで、やがて栄子盛衰の大きな変遷をもたらす.
+      <description>生態学とはどんな学問か? 生態学とは, 生物の生活の法則を, その環境との関係で解き明かす科学である. 生物界の共通性と多様性 共通性  自己境界性 自己複製性 自己維持性  多様性の階層  生態系多様性 種多様性 遺伝的多様性  進化から見た生態 進化とは何か? 最もミクロな時間スケールでの「生物の進化」の定義は
+集団内での遺伝子頻度の系図の変化 これはすごく地味な変化だが、この地味なが時々刻々積み重なることで、やがて栄子盛衰の大きな変遷をもたらす.
 突然変異と修復機構 DNAの突然変異の要因  内的要因: 複製エラー, 酸素ラジカル 外的要因: 放射線, 化学物質など/  修復機構がはたらけばDNAは正常に戻るが、そうでないと突然変異となり、生物の進化、個体の分化につながる.
 生態学の2つの問い  How 至近要因: 遺伝的基盤、生理 Why 究極要因: 自然選択(適応度)  多くの進化生態学の研究ではこの2つの問いで研究していくことが重要. Whyに答えるのが自然選択(適応度)
-自然選択 自然選択の基本原理 以下の３つの条件が揃えば、左様は自律的に進む - 個体間に変異あり - その変異は遺伝する - 変異に応じて繁殖・生存に有利不利
-自然選択の3つのかかり方  安定的選択 方向性選択 分断化選択、多様化選択  自然選択の事例  ダーウィンフィンチの嘴の多様性 サンザシミバエの系統分化 オオシモフリエダシャクの工業暗化 殺虫剤抵抗性の増進 タンガニーカ湖のカワスズメ科の鱗食い魚 マイマイの巻き型 ヒマラヤを超えて渡るインドガン キリンの首の進化  現代進化生物学の2つの理論的支柱 進化の主な要因は何か？</description>
+自然選択 自然選択の基本原理 以下の３つの条件が揃えば、左様は自律的に進む
+ 個体間に変異あり その変異は遺伝する 変異に応じて繁殖・生存に有利不利  自然選択の3つのかかり方  安定的選択 方向性選択 分断化選択、多様化選択  自然選択の事例  ダーウィンフィンチの嘴の多様性 サンザシミバエの系統分化 オオシモフリエダシャクの工業暗化 殺虫剤抵抗性の増進 タンガニーカ湖のカワスズメ科の鱗食い魚 マイマイの巻き型 ヒマラヤを超えて渡るインドガン キリンの首の進化  現代進化生物学の2つの理論的支柱 進化の主な要因は何か？</description>
     </item>
     
     <item>
@@ -32,7 +28,7 @@
       
       <guid>https://hirokinishimoto.github.io/posts/mac%E7%95%AAgooglechrome%E3%81%A7%E3%83%95%E3%83%AB%E3%83%AA%E3%83%AD%E3%83%BC%E3%83%89/</guid>
       <description>ショートカットは
-command + shift + r  参考記事</description>
+command + shift + r 参考記事</description>
     </item>
     
     <item>
@@ -42,16 +38,12 @@ command + shift + r  参考記事</description>
       
       <guid>https://hirokinishimoto.github.io/posts/squeezenet/</guid>
       <description>論文pdf
-背景 小さなCNNアーキテクチャの利点  より効率的な分散学習 新しいモデルをclientにexportする際のoverheadを減らせる  より頻繁なモデルの更新も可能に  FPGAなど、メモリが限られたハードウェア上により柔軟にDeployできる  本論文のContribution  従来研究は高精度なモデルを目指したものが多い 本論文はCNNの設計空間を探索して、性能が他に劣らずかつ小さなSqueezeNetを発見、提案  ImageNetに対して、Alex-Netと同等の正答率 Alex-Netよりも50倍少ないパラメータ数 モデル圧縮により、SqueezeNetを0.5MBまで圧縮した  Alex-Netより510倍小さい    CNN設計空間の探索  探索を自動化しなかった → 設計空間の形に対するintuitionを得たい  CNNアーキテクチャの構成要素  microarchitecture &amp;gt; layer, moduleの構造
- macroarchitecture &amp;gt; 入力から出力まで全体の構造
-&amp;gt; microarchitectureの接続の仕方
- solver &amp;gt; 論文では具体的な指定なし
-&amp;gt; 実装ではAdagradが使われがち
- hyperpalameters
-  CNN設計空間の探索の方針 1. 3x3Filterを1x1Filterに置き換える 2. 3x3Fileterへのinput channelの数を減らす 3. ネットワークの最後の方でDownsampleする 方針1.と2.は、accuracyを下げないようにしつつパラメータを減らす意図がある。
-方針3.はパラメータが限られた中でaccuracyを最大化を狙うもの。
-出力層に近づくまでストライドsを小さな値に保つ。K.HeとH.Sunの研究成果を取り入れた形
-SqueezeNetのアーキテクチャ Fire Module  Squeeze comvolution layer</description>
+背景 小さなCNNアーキテクチャの利点  より効率的な分散学習 新しいモデルをclientにexportする際のoverheadを減らせる  より頻繁なモデルの更新も可能に   FPGAなど、メモリが限られたハードウェア上により柔軟にDeployできる  本論文のContribution  従来研究は高精度なモデルを目指したものが多い 本論文はCNNの設計空間を探索して、性能が他に劣らずかつ小さなSqueezeNetを発見、提案  ImageNetに対して、Alex-Netと同等の正答率 Alex-Netよりも50倍少ないパラメータ数 モデル圧縮により、SqueezeNetを0.5MBまで圧縮した  Alex-Netより510倍小さい      CNN設計空間の探索  探索を自動化しなかった → 設計空間の形に対するintuitionを得たい  CNNアーキテクチャの構成要素  microarchitecture   layer, moduleの構造
+  macroarchitecture   入力から出力まで全体の構造microarchitectureの接続の仕方
+  solver   論文では具体的な指定なし実装ではAdagradが使われがち
+  hyperpalameters  CNN設計空間の探索の方針 1. 3x3Filterを1x1Filterに置き換える 2. 3x3Fileterへのinput channelの数を減らす 3. ネットワークの最後の方でDownsampleする 方針1.と2.は、accuracyを下げないようにしつつパラメータを減らす意図がある。
+方針3.はパラメータが限られた中でaccuracyを最大化を狙うもの。出力層に近づくまでストライドsを小さな値に保つ。K.HeとH.Sunの研究成果を取り入れた形
+SqueezeNetのアーキテクチャ Fire Module   Squeeze comvolution layer</description>
     </item>
     
     <item>
@@ -63,14 +55,14 @@ SqueezeNetのアーキテクチャ Fire Module  Squeeze comvolution layer</descr
       <description>論文pdf
 背景 近年、計算可能性が新しいアルゴリズム開発のネックになる場面が散見されるようになった。また、実際の応用において、GPUよりもパワーの弱いデバイスにDeepLearningのモデルを載せたいというニーズも出てきた。そこで、DeepLearningの学習、予測の際の計算高速化に関心が集まっている。
 モデルの重みを2値化することで、積和操作を単なる和に置き換える事ができる。乗算器は、Deep Learning の計算において、メモリとパワーを大変多く消費するので、これは利点が大きい。
-著者は、重みの2値化によるDeepLearningの計算高速化の手法の1つとして、BinaryConnect(BC)を提案した。
+著者は、重みの2値化によるDeepLearningの計算高速化の手法の1つとして、**BinaryConnect(BC)**を提案した。
 BinaryConnect 重みの2値化 決定的(Deterministic)な方法と、確率的(Stochastic)な方法がある。
 Deterministicな方法: $$ w_{b}=\left{\begin{array}{ll}{+1} &amp;amp; {\mathrm {if}\ w \geq 0} \ {-1} &amp;amp; {\text { otherwise }}\end{array}\right. $$
 Stochasticな方法 $$ w_{b}=\left{\begin{array}{ll}{+1} &amp;amp; {\mathrm { with\ probability }\ p=\sigma(w)} \ {-1} &amp;amp; {\mathrm { with\ probability }\ 1-p}\end{array}\right. $$
 $$ \mathrm{where}\ \sigma(x)=\operatorname{clip}\left(\frac{x+1}{2}, 0,1\right)=\max \left(0, \min \left(1, \frac{x+1}{2}\right)\right) $$
 ( \sigma(x))はハードシグモイド関数である。ソフトなシグモイド関数を用いなかったのは、計算量を減らすためである。
-学習時  順伝播、逆伝播の際は2値化された重みを用いる。
- 勾配が蓄積されて更新される重みは、高精度の実数値のままにしておく。
+学習時   順伝播、逆伝播の際は2値化された重みを用いる。
+  勾配が蓄積されて更新される重みは、高精度の実数値のままにしておく。
   Binary ConnectとSGDの互換性 重みの2値化をノイズとみなすと。noisyで微小なステップで重みが更新され、更新が進むにつれてノイズは相殺される。よってBinarry Connect はSGDにより学習を行うことができる事がわかる。うまく更新が行われるためには、更新される重みは高精度実数である必要がある。</description>
     </item>
     
@@ -82,14 +74,13 @@ $$ \mathrm{where}\ \sigma(x)=\operatorname{clip}\left(\frac{x+1}{2}, 0,1\right)=
       <guid>https://hirokinishimoto.github.io/posts/mobilenets/</guid>
       <description>論文pdf
 Mobilenetの特徴  軽い 早い 精度が良い  Depthwise Separable Convolution Mobile Netの軽量化のための工夫。
- わかりやすい動画
-https://www.youtube.com/watch?v=T7o3xvJLuHk&amp;amp;feature=youtu.be
+ わかりやすい動画https://www.youtube.com/watch?v=T7o3xvJLuHk&amp;amp;feature=youtu.be
  MobileNetの全体の構造 1層目だけFull Convolution層。 2層目以降はdepthwise separable convolutionの繰り返し。
  積-和演算の数を減らせる 残りの積-和計算を効率的に実装できる。  パラメータの75%、計算時間の95%を1x1畳込み層が占めている。
 1x1畳込み層は、線形代数の数値計算が最適化されたアルゴリズムの１つであるgeneral matrix multiply (GEMM) functionでdirectに実装可能。(???)
-Hyper-parameters  width multiplier
- 論文では( \alpha )という記号で表されている。 ( 0 \leq \alpha \leq 1 ) の範囲で制御可能 (\alpha)が小さくなるとinput channel, output channelが(\alpha)倍小さくなる。 計算コストは大体(\alpha^2)に accuracyとのトレードオフがある  resolution multiplier
- 論文では( \rho )という記号で表されている。 ( 0 \leq \rho \leq 1 ) の範囲で制御可能 (\rho)が小さくなるとfeature mapの大きさが(\rho)倍小さくなる。 計算コストは(\rho^2)倍小さくなる。 (\rho)を変化させてもパラメータ数は変化しない。 accuracyとのトレードオフがある   ハイパーパラメータを導入すると、Depthwise Separable Convolution の計算にかかるコストは</description>
+Hyper-parameters   width multiplier
+ 論文では( \alpha )という記号で表されている。 ( 0 \leq \alpha \leq 1 ) の範囲で制御可能 (\alpha)が小さくなるとinput channel, output channelが(\alpha)倍小さくなる。 計算コストは大体(\alpha^2)に accuracyとのトレードオフがある    resolution multiplier
+ 論文では( \rho )という記号で表されている。 ( 0 \leq \rho \leq 1 ) の範囲で制御可能 (\rho)が小さくなるとfeature mapの大きさが(\rho)倍小さくなる。 計算コストは(\rho^2)倍小さくなる。 (\rho)を変化させてもパラメータ数は変化しない。 accuracyとのトレードオフがある    ハイパーパラメータを導入すると、Depthwise Separable Convolution の計算にかかるコストは</description>
     </item>
     
     <item>
@@ -133,8 +124,8 @@ $$COV(X,Y) = E(XY) -E(X)E(Y) = 0$$ したがって$\rho=0$となる。
 背景  Deep Learningの学習はエネルギー消費の多いGPUを使うことがほとんど。 近年low-powerなデバイス上でDeepLearningの計算を行うための研究も盛んに行われている。  Binarized Neural Networks (BNNs) 著者は重みだけでなく活性も2値化したBinarized Neural Networkを提案した。
 これは、学習時は2値化された重みと活性を使って勾配計算し、2値化された重みと活性を用いて推論するようなNeural Networkのことである。
 重みの2値化 決定的(Deterministic)な方法と、確率的(Stochastic)な方法がある。
- Deterministicな方法: $$ w_{b}=\left{\begin{array}{ll}{+1} &amp;amp; {\mathrm {if}\ w \geq 0} \ {-1} &amp;amp; {\text { otherwise }}\end{array}\right. $$
- Stochasticな方法 $$ w_{b}=\left{\begin{array}{ll}{+1} &amp;amp; {\mathrm { with\ probability }\ p=\sigma(w)} \ {-1} &amp;amp; {\mathrm { with\ probability }\ 1-p}\end{array}\right. $$
+  Deterministicな方法: $$ w_{b}=\left{\begin{array}{ll}{+1} &amp;amp; {\mathrm {if}\ w \geq 0} \ {-1} &amp;amp; {\text { otherwise }}\end{array}\right. $$
+  Stochasticな方法 $$ w_{b}=\left{\begin{array}{ll}{+1} &amp;amp; {\mathrm { with\ probability }\ p=\sigma(w)} \ {-1} &amp;amp; {\mathrm { with\ probability }\ 1-p}\end{array}\right. $$
   $$ \mathrm{where}\ \sigma(x)=\operatorname{clip}\left(\frac{x+1}{2}, 0,1\right)=\max \left(0, \min \left(1, \frac{x+1}{2}\right)\right) $$ ( \sigma(x))はハードシグモイド関数である。 Stochasticな2値化は乱数発生器を必要とするので実装がやや困難である。 この論文においては、活性化に対してはいくつかの実験で学習時にStochastiな2値化を行うが、それ以外は専らDeterministicな2値化を行う。</description>
     </item>
     
@@ -145,7 +136,7 @@ $$COV(X,Y) = E(XY) -E(X)E(Y) = 0$$ したがって$\rho=0$となる。
       
       <guid>https://hirokinishimoto.github.io/posts/matplotlib%E3%81%AE%E3%82%B0%E3%83%A9%E3%83%95%E3%82%92retina%E3%81%AE%E9%AB%98%E8%A7%A3%E5%83%8F%E5%BA%A6%E3%81%A7%E8%A1%A8%E7%A4%BA%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95/</guid>
       <description>この記事が参考になった。
-%config InlineBackend.figure_format = &amp;#39;retina&amp;#39;</description>
+%config InlineBackend.figure_format = &amp;#39;retina&amp;#39; </description>
     </item>
     
     <item>
@@ -175,15 +166,15 @@ $$COV(X,Y) = E(XY) -E(X)E(Y) = 0$$ したがって$\rho=0$となる。
       <guid>https://hirokinishimoto.github.io/posts/c&#43;&#43;%E3%81%AE%E6%A8%99%E6%BA%96%E3%83%87%E3%83%BC%E3%82%BF%E6%A7%8B%E9%80%A0/</guid>
       <description>stack LIFOのデータ構造
 メンバ関数  push() : 要素の挿入 top() : 先頭の要素の参照 pop() : 先頭の要素の破棄 size() : 現在の要素数  計算コストは全てO(1)
-練習問題
+[練習問題](http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_3_ A&amp;amp;lang=jp)
 queue FIFOのデータ構造
 メンバ関数  push() : 要素の挿入 front() : 先頭の要素の参照 pop() : 先頭の要素の破棄 size() : 現在の要素数  計算コストは全てO(1)
-練習問題
+[練習問題](ttp://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_3_ B&amp;amp;lang=jp)
 priority_queue 挿入されたデータの中で最大の要素の参照が低数時間でできる。 実装には2分ヒープなど
 メンバ関数  push() : 要素の挿入 top() : 先頭の要素の参照 pop() : 先頭の要素の破棄 size() : 現在の要素数  計算コストはtop() : O(1), push(), pop() : O(logN)
-練習問題
+[練習問題](http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_9_ C&amp;amp;lang=jp)
 set 集合を表現するライブラリ
-種類 要素の重複を許さないもの  set : データに順序をつけて管理</description>
+種類 要素の重複を許さないもの   set : データに順序をつけて管理</description>
     </item>
     
     <item>
@@ -194,7 +185,7 @@ set 集合を表現するライブラリ
       <guid>https://hirokinishimoto.github.io/posts/r%E3%81%A7sem/</guid>
       <description>はじめに 本稿では、トイデータを使って、Rで共分散構造分析を行う方法について解説する。
 状況 例えば、下のようなモデルが下のトイデータに整合するかを共分散構造分析で検証したいとする。
-トイデータ # データの読み込み dat &amp;lt;- matrix(c( + -2.11, -1.12, 1.42, 2.23, 1.53, + 0.06, 1.81, -0.59, -0.75, 10.12, + 2.58, -0.20, -1.92, -0.49, -0.35, + 0.69, -0.66, -0.77, -1.92, 0.38, + -1.05, 0.07, -0.37, -0.89, -1.62, + -2.73, 1.40, 0.18, -0.09, 0.13, + 0.95, 0.84, 1.19, 1.19, 0.10, + 0.93, 1.17, -1.70, 1.46, -0.25, + -0.04, -0.12, -0.34, -0.24, 1.88, + 0.16, 1.03, -0.05, -0.73, 0.</description>
+トイデータ # データの読み込み dat &amp;lt;- matrix(c( + -2.11, -1.12, 1.42, 2.23, 1.53, + 0.06, 1.81, -0.59, -0.75, 10.12, + 2.58, -0.20, -1.92, -0.49, -0.35, + 0.69, -0.66, -0.77, -1.92, 0.38, + -1.05, 0.07, -0.37, -0.89, -1.62, + -2.73, 1.40, 0.18, -0.09, 0.13, + 0.95, 0.84, 1.19, 1.19, 0.10, + 0.93, 1.17, -1.70, 1.46, -0.25, + -0.04, -0.12, -0.34, -0.24, 1.88, + 0.16, 1.03, -0.05, -0.73, 0.04 + ), byrow=TRUE, ncol=5) colnames(dat) &amp;lt;- c(&amp;#34;v1&amp;#34;,&amp;#34;v2&amp;#34;,&amp;#34;v3&amp;#34;,&amp;#34;v4&amp;#34;,&amp;#34;v5&amp;#34;) 仮説 下のようなモデルにデータが適合するか検証する。</description>
     </item>
     
     <item>
@@ -212,7 +203,7 @@ set 集合を表現するライブラリ
       <pubDate>Wed, 02 Oct 2019 16:18:19 +0900</pubDate>
       
       <guid>https://hirokinishimoto.github.io/page/contact/</guid>
-      <description> Hello </description>
+      <description>Hello </description>
     </item>
     
     <item>
